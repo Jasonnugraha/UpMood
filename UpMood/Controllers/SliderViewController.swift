@@ -32,6 +32,7 @@ class SliderViewController: UIViewController {
         gradient.cornerRadius = 35
         backemo.layer.addSublayer(gradient)
         backemo.layer.cornerRadius = 35
+        backemo.layer.insertSublayer(gradient, at: 0)
         
         emot = ["☺️", "😊", "🙂", "😒", "😓", "😣", "😥", "😨", "😰"]
         labelemo = ["Calm", "Comfortable", "Okay", "Annoyed", "Nervous", "Anxious", "Worried", "Fearful", "Panicked" ]
