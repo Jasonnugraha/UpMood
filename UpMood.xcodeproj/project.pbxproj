@@ -13,6 +13,9 @@
 		B417041E261B7550004FF9D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B417041C261B7550004FF9D9 /* Main.storyboard */; };
 		B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417041F261B7551004FF9D9 /* Assets.xcassets */; };
 		B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */; };
+		B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */; };
+		B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */; };
+		B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B417041F261B7551004FF9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4170422261B7551004FF9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4170424261B7551004FF9D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmotionStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,14 +103,33 @@
 		B4170415261B7550004FF9D9 /* UpMood */ = {
 			isa = PBXGroup;
 			children = (
+				B4D20FD1261DAB25002B101F /* Struct  */,
 				B4170424261B7551004FF9D9 /* Info.plist */,
 				1BFCB561261C66D800062393 /* Storyboards */,
 				1BFCB560261C66C000062393 /* Support Files */,
 				1BFCB55E261C669A00062393 /* Views */,
 				1BFCB55D261C669600062393 /* Models */,
+				B4D20FBB261D9C7D002B101F /* NIB */,
 				1BFCB55B261C667F00062393 /* Controllers */,
 			);
 			path = UpMood;
+			sourceTree = "<group>";
+		};
+		B4D20FBB261D9C7D002B101F /* NIB */ = {
+			isa = PBXGroup;
+			children = (
+				B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */,
+				B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */,
+			);
+			path = NIB;
+			sourceTree = "<group>";
+		};
+		B4D20FD1261DAB25002B101F /* Struct  */ = {
+			isa = PBXGroup;
+			children = (
+				B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */,
+			);
+			name = "Struct ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +191,7 @@
 			files = (
 				B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */,
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
+				B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */,
 				B417041E261B7550004FF9D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +205,8 @@
 			files = (
 				B417041B261B7550004FF9D9 /* ViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
+				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
+				B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
