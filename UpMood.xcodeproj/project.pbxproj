@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70697DB0261D49D7003ABAE0 /* DataExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697DAF261D49D7003ABAE0 /* DataExample.swift */; };
 		70D78D16261C788400743822 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D78D15261C788400743822 /* PageViewController.swift */; };
 		70D78D19261C78D100743822 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D78D18261C78D100743822 /* FirstViewController.swift */; };
 		70D78D1C261C78F100743822 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D78D1B261C78F100743822 /* SecondViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70697DAF261D49D7003ABAE0 /* DataExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExample.swift; sourceTree = "<group>"; };
 		70D78D15261C788400743822 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		70D78D18261C78D100743822 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		70D78D1B261C78F100743822 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 				70D78D15261C788400743822 /* PageViewController.swift */,
 				70D78D18261C78D100743822 /* FirstViewController.swift */,
 				70D78D1B261C78F100743822 /* SecondViewController.swift */,
+				70697DAF261D49D7003ABAE0 /* DataExample.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				70D78D1C261C78F100743822 /* SecondViewController.swift in Sources */,
 				70D78D19261C78D100743822 /* FirstViewController.swift in Sources */,
+				70697DB0261D49D7003ABAE0 /* DataExample.swift in Sources */,
 				B417041B261B7550004FF9D9 /* ViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,

@@ -27,3 +27,4 @@ class SecondViewController: UIViewController {
     */
 
 }
+//nentuin jumlah kotaknya pakai function delegate

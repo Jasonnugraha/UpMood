@@ -8,11 +8,16 @@
 import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    let x = 1;
 
     lazy var orderedViewControllers: [UIViewController] = {
         //BUAT KONDISI JUMLAH
         return [self.newVc(viewController: "firstStory"),
-                self.newVc(viewController: "secondStory")]
+               self.newVc(viewController: "secondStory")]
+        /*if x == 1 {
+            return [self.newVc(viewController: "firstStory")]
+        }*/
     }()
     
     //Cek jumlah page 1.0
@@ -20,12 +25,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
         
+        //page view button
         self.delegate = self
         configurePageControl()
     }
@@ -47,6 +52,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
     
+    
+    //BEFORE
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
@@ -65,6 +72,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return orderedViewControllers[previousIndex]
     }
     
+    //AFTER
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
