@@ -35,7 +35,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //        if indexPath.row > 3 {
         let customCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
         let data = dataSeed[indexPath.row]
-        customCell.editCustomCellText(from: data.emoji, emotionText: data.emotion)
+        customCell.editCustomCellText(from: data.emoji, from: data.emotion, status: data.isEditable)
         return customCell
 //        }
         

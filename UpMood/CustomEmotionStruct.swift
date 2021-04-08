@@ -8,7 +8,8 @@
 import Foundation
 
 struct Emotion{
-    var isChecked: Bool
+    var isChecked = false
     var emoji: String
     var emotion: String
+    var isEditable = false
 }
