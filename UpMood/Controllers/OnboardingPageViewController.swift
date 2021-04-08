@@ -8,16 +8,8 @@
 import UIKit
 
 class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    //cek kondisi di LOG
-    //var x: Int?
-    let x = 3
-    //var x = ""
-
 
     lazy var orderedViewControllers: [UIViewController] = {
-        //BUAT KONDISI JUMLAH
-        //return [self.newVc(viewController: "firstStory"),
-               //self.newVc(viewController: "secondStory")]
         
         let sb = UIStoryboard(name: "Onboarding", bundle: nil)
         let vc1 = sb.instantiateViewController(identifier: "onBoardingFirst")
@@ -25,42 +17,13 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         let vc3 = sb.instantiateViewController(identifier: "onBoardingThird")
         
         var viewControllers = [UIViewController]()
-/*
-        for i in 1..<3{
-            viewControllers.append(vc1)
-            //viewControllers.append(vc2)
-        }
- */
- 
-//nested if for am/pm
-        if x == 1 {
-            //return [vc1]
-            viewControllers.append(vc1)
-            //cek index
-            print(viewControllers.firstIndex(of: vc1)!)
-            //let index = 0
-        } else if x == 2 {
-            viewControllers.append(vc1)
-            viewControllers.append(vc2)
-            print(viewControllers.firstIndex(of: vc1)!)
-            print(viewControllers.firstIndex(of: vc2)!)
-        } else if x == 3 {
-            viewControllers.append(vc1)
-            viewControllers.append(vc2)
-            viewControllers.append(vc3)
-        }
- 
- 
-        //return [vc1, vc2]
+        
+        viewControllers.append(vc1)
+        viewControllers.append(vc2)
+        viewControllers.append(vc3)
+
         return viewControllers
-        /*if x == 1 {
-            return [self.newVc(viewController: "firstStory")]
-        }*/
     }()
-    
- 
-    
-    
     
     //Cek jumlah page 1.0
     var pageControl = UIPageControl()
@@ -109,7 +72,6 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
             return nil
         }
         
-        //kalau pakai for error disini
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }

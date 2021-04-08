@@ -1,5 +1,5 @@
 //
-//  StoryViewController1.swift
+//  StartOnboardingViewController.swift
 //  UpMood
 //
 //  Created by DHIKA ADITYA ARE on 08/04/21.
@@ -7,19 +7,23 @@
 
 import UIKit
 
-class StoryViewController1: UIViewController {
+class StartOnboardingViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //view.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-        
-        //button.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        //button.layer.cornerRadius = 10
+        nextButton.layer.cornerRadius = 10
     }
     
 
+    @IBAction func actionNextButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "goToPageViewControler", sender: StartOnboardingViewController.self)
+    }
+    
     /*
     // MARK: - Navigation
 

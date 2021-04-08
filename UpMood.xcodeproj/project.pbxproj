@@ -13,6 +13,7 @@
 		701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */; };
 		701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */; };
 		70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */; };
+		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
 		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
 		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
 		B417041B261B7550004FF9D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417041A261B7550004FF9D9 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController2.swift; sourceTree = "<group>"; };
 		701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController3.swift; sourceTree = "<group>"; };
 		70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		B4170413261B7550004FF9D9 /* UpMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4170416261B7550004FF9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4170418261B7550004FF9D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */,
 				701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */,
 				70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */,
+				70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */,
 				70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */,
 				701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */,
+				70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				701EE3BF261EEB61004AB422 /* PageViewController.swift in Sources */,
 			);
