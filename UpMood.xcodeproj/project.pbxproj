@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */; };
 		5B1D0C15261EE2BE00F02203 /* EditLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */; };
+		5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2093F9261C72DE00810366 /* SliderViewController.swift */; };
 		5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */; };
 		701EE3BC261EEB0A004AB422 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */; };
 		701EE3BF261EEB61004AB422 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3BE261EEB61004AB422 /* PageViewController.swift */; };
@@ -19,12 +20,8 @@
 		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
 		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
 		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
-		B417041B261B7550004FF9D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417041A261B7550004FF9D9 /* ViewController.swift */; };
+		B417041B261B7550004FF9D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417041A261B7550004FF9D9 /* TableViewController.swift */; };
 		B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B417041C261B7550004FF9D9 /* EditModal.storyboard */; };
-		5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2093F9261C72DE00810366 /* SliderViewController.swift */; };
-		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
-		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
-		B417041E261B7550004FF9D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B417041C261B7550004FF9D9 /* Main.storyboard */; };
 		B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417041F261B7551004FF9D9 /* Assets.xcassets */; };
 		B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */; };
 		B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */; };
@@ -35,6 +32,7 @@
 /* Begin PBXFileReference section */
 		5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLogViewController.swift; sourceTree = "<group>"; };
 		5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditLogViewController.xib; sourceTree = "<group>"; };
+		5B2093F9261C72DE00810366 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalViewController.swift; sourceTree = "<group>"; };
 		701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		701EE3BE261EEB61004AB422 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -46,12 +44,7 @@
 		B4170413261B7550004FF9D9 /* UpMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4170416261B7550004FF9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4170418261B7550004FF9D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B417041A261B7550004FF9D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B417041D261B7550004FF9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EditModal.storyboard; sourceTree = "<group>"; };
-		5B2093F9261C72DE00810366 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
-		B4170413261B7550004FF9D9 /* UpMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4170416261B7550004FF9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4170418261B7550004FF9D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B417041A261B7550004FF9D9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B417041D261B7550004FF9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B417041F261B7551004FF9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4170422261B7551004FF9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
-				B417041A261B7550004FF9D9 /* ViewController.swift */,
+				B417041A261B7550004FF9D9 /* TableViewController.swift */,
 				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
 				5B2093F9261C72DE00810366 /* SliderViewController.swift */,
 				701EE3BE261EEB61004AB422 /* PageViewController.swift */,
@@ -233,7 +226,7 @@
 				5B1D0C15261EE2BE00F02203 /* EditLogViewController.xib in Resources */,
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
 				B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */,
-				B417041E261B7550004FF9D9 /* Main.storyboard in Resources */,
+				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
 				701EE3BC261EEB0A004AB422 /* Onboarding.storyboard in Resources */,
 			);
@@ -246,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B417041B261B7550004FF9D9 /* ViewController.swift in Sources */,
+				B417041B261B7550004FF9D9 /* TableViewController.swift in Sources */,
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
