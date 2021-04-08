@@ -1,14 +1,13 @@
 //
-//  PageViewController.swift
-//  walktroughScreen
+//  OnboardingPageViewController.swift
+//  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 06/04/21.
+//  Created by DHIKA ADITYA ARE on 08/04/21.
 //
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    
+class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     //cek kondisi di LOG
     //var x: Int?
     let x = 3
@@ -141,6 +140,4 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
     }
-    
 }
-
