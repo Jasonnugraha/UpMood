@@ -46,6 +46,7 @@
 		1BFCB55B261C667F00062393 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 				B417041A261B7550004FF9D9 /* ViewController.swift */,
 				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
 			);
@@ -79,6 +80,7 @@
 		1BFCB561261C66D800062393 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
 				B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */,
 			);
@@ -88,8 +90,6 @@
 		B417040A261B7550004FF9D9 = {
 			isa = PBXGroup;
 			children = (
-				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
-				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 				B4170415261B7550004FF9D9 /* UpMood */,
 				B4170414261B7550004FF9D9 /* Products */,
 			);

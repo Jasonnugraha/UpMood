@@ -15,6 +15,6 @@ class EditModalViewController: UIViewController {
     
     @IBAction func editbuttontapped(_ sender: Any) {
         let viewcontroller = EditLogViewController(nibName: "EditLogViewController", bundle: nil)
-        self.navigationController?.pushViewController(viewcontroller, animated: true)
+        self.present(viewcontroller, animated: true, completion: nil)
     }
 }
