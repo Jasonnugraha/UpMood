@@ -9,16 +9,58 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    let x = 1;
+    //cek kondisi di LOG
+    //var x: Int?
+    let x = 2
+
 
     lazy var orderedViewControllers: [UIViewController] = {
         //BUAT KONDISI JUMLAH
-        return [self.newVc(viewController: "firstStory"),
-               self.newVc(viewController: "secondStory")]
+        //return [self.newVc(viewController: "firstStory"),
+               //self.newVc(viewController: "secondStory")]
+        
+        let sb = UIStoryboard(name: "Logview", bundle: nil)
+        let vc1 = sb.instantiateViewController(identifier: "firstStory")
+        let vc2 = sb.instantiateViewController(identifier: "secondStory")
+        let vc3 = sb.instantiateViewController(identifier: "thirdStory")
+        
+        var viewControllers = [UIViewController]()
+/*
+        for i in 1..<3{
+            viewControllers.append(vc1)
+            //viewControllers.append(vc2)
+        }
+ */
+ 
+
+        if x == 1 {
+            //return [vc1]
+            viewControllers.append(vc1)
+            //cek index
+            print(viewControllers.firstIndex(of: vc1)!)
+            //let index = 0
+        } else if x == 2 {
+            let z = viewControllers.append(vc1)
+            let a = viewControllers.append(vc2)
+            print(viewControllers.firstIndex(of: vc1)!)
+            print(viewControllers.firstIndex(of: vc2)!)
+        } else if x == 3 {
+            viewControllers.append(vc1)
+            viewControllers.append(vc2)
+            viewControllers.append(vc3)
+        }
+ 
+        
+        //return [vc1, vc2]
+        return viewControllers
         /*if x == 1 {
             return [self.newVc(viewController: "firstStory")]
         }*/
     }()
+    
+ 
+    
+    
     
     //Cek jumlah page 1.0
     var pageControl = UIPageControl()
@@ -47,10 +89,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.view.addSubview(pageControl)
     }
  
-    
+/*
     func newVc(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
+ */
     
     
     //BEFORE
@@ -61,8 +104,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let previousIndex = viewControllerIndex - 1
         
         guard  previousIndex >= 0 else {
-            return orderedViewControllers.last
-            //return nil
+            //return orderedViewControllers.last
+            return nil
         }
         
         guard orderedViewControllers.count > previousIndex else {
@@ -80,8 +123,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let nextIndex = viewControllerIndex + 1
         
         guard  orderedViewControllers.count != nextIndex else {
-            return orderedViewControllers.first
-            //return nil (biar ga infinity)
+            //return orderedViewControllers.first
+            return nil //(biar ga infinity)
         }
         
         guard orderedViewControllers.count > nextIndex else {

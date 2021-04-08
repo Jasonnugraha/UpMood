@@ -1,28 +1,21 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 06/04/21.
+//  Created by DHIKA ADITYA ARE on 07/04/21.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
-    
-    //Buat refrence to managed object context
-    //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    
-    //validasi -> kalau index di log == index
-    
-    
+
     /*
     // MARK: - Navigation
 
@@ -34,4 +27,3 @@ class SecondViewController: UIViewController {
     */
 
 }
-//nentuin jumlah kotaknya pakai function delegate

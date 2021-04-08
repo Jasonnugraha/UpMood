@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var emot: UIImageView!
     @IBOutlet weak var textViewMind: UITextView!
+    //table cell
     @IBOutlet weak var tableCellFeelings: UITableView!
     
     //let dataFeelings: [DataExample] = [DataExample(emot: "😊", detailemot: "parents")]
