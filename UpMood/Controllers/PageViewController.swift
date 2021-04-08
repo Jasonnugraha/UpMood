@@ -11,7 +11,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     //cek kondisi di LOG
     //var x: Int?
-    let x = 2
+    let x = 3
     //var x = ""
 
 
