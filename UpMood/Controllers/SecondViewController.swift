@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
     
     
     //validasi -> kalau index di log == index
+    //validasi -> kalau waktu == AM, jalanin ini
     
     
     /*

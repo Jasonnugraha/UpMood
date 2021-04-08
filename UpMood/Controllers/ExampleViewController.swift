@@ -64,13 +64,15 @@ extension ExampleViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
   
-    /*
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? PageViewController {
-            
+            destinationVC.x = 2
+            //destinationVC.x = "hello"
         }
     }
  */
+ 
     
     
 }

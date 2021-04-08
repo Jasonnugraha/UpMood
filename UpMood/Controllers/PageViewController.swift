@@ -12,6 +12,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     //cek kondisi di LOG
     //var x: Int?
     let x = 2
+    //var x = ""
 
 
     lazy var orderedViewControllers: [UIViewController] = {
@@ -32,7 +33,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         }
  */
  
-
+//nested if for am/pm
         if x == 1 {
             //return [vc1]
             viewControllers.append(vc1)
@@ -40,8 +41,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             print(viewControllers.firstIndex(of: vc1)!)
             //let index = 0
         } else if x == 2 {
-            let z = viewControllers.append(vc1)
-            let a = viewControllers.append(vc2)
+            viewControllers.append(vc1)
+            viewControllers.append(vc2)
             print(viewControllers.firstIndex(of: vc1)!)
             print(viewControllers.firstIndex(of: vc2)!)
         } else if x == 3 {
@@ -50,7 +51,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             viewControllers.append(vc3)
         }
  
-        
+ 
         //return [vc1, vc2]
         return viewControllers
         /*if x == 1 {
@@ -66,6 +67,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     var pageControl = UIPageControl()
     
     override func viewDidLoad() {
+        //print(x)
         super.viewDidLoad()
         self.dataSource = self
         if let firstViewController = orderedViewControllers.first {
@@ -108,6 +110,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             return nil
         }
         
+        //kalau pakai for error disini
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }

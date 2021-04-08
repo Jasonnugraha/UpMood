@@ -90,10 +90,13 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         let tempDetail = dakta.detailemot
         
 
-        
+        //convert string to image
+        let imageOri = "😊".textToImage()
+        emot.image = imageOri
         //Validasi Status Feelingsnya untuk menampilkan gambar (Hanya perlu mengambil statusnya dari DB)
         if tempDetail == "Family"{
-            cell.imageView?.image = #imageLiteral(resourceName: "Arti-emoticon-keluarga-dan-anak.jpeg")
+            //cell.imageView?.image = #imageLiteral(resourceName: "Arti-emoticon-keluarga-dan-anak.jpeg")
+            cell.imageView?.image = imageOri
         } else if tempDetail == "Friends"{
             cell.imageView?.image = #imageLiteral(resourceName: "FriendsTemp")
         } else if tempDetail == "Work"{
