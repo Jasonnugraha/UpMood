@@ -12,16 +12,14 @@ class TableViewController: UIViewController {
     var emot = [String]()
     var labelemo = [String]()
     
+    var dataSeed: [Emotion] = [Emotion(isChecked: false, emoji: "👨‍👨‍👧‍👦", emotion: "Family"),
+                               Emotion(isChecked: true, emoji: "📚", emotion: "Study")]
+    
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var infoemot: UILabel!
     @IBOutlet weak var emoticon: UILabel!
     @IBOutlet weak var backemo: UIView!
     @IBOutlet weak var backslider: UIView!
-    
-    
-    
-    
-    
     @IBAction func slider(_ sender: UISlider) {
         let value = Int (sender.value)
         emoticon.text = emot[value]
@@ -31,11 +29,11 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Slider
         backslider.backgroundColor = UIColor(red: 0.94, green: 0.95, blue: 0.99, alpha: 1)
         backslider.layer.cornerRadius = 10
         view.addSubview(backslider)
       
-        
         let gradient = CAGradientLayer()
         gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
         gradient.colors = [
@@ -53,19 +51,21 @@ class TableViewController: UIViewController {
         emot = ["☺️", "😊", "🙂", "😒", "😓", "😣", "😥", "😨", "😰"]
         labelemo = ["Calm", "Comfortable", "Okay", "Annoyed", "Nervous", "Anxious", "Worried", "Fearful", "Panicked" ]
         
-        
+        // Table Delegate
         emotionTableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
-        
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
     }
     
-    var dataSeed: [Emotion] = [Emotion(isChecked: false, emoji: "👨‍👨‍👧‍👦", emotion: "Family"),
-                               Emotion(isChecked: true, emoji: "📚", emotion: "Study")]
+    
     
 }
 
+// Emotion Controller
+
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSeed.count
     }
@@ -74,32 +74,27 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         let customCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
         let data = dataSeed[indexPath.row]
         customCell.editCustomCellText(from: data.emoji, from: data.emotion, status: data.isEditable)
+        
         return customCell
 
     }
     
     
-    //
-    //  SliderViewController.swift
-    //  Slider
-    //
-    //  Created by Pieter Yonathan on 06/04/21.
-    //
 
-    class SliderViewController: UIViewController {
-
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            
-            
-        }
-        
-        
-        
-        
-    }
+//    class SliderViewController: UIViewController {
+//
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//
+//
+//
+//        }
+//
+//
+//
+//
+//    }
 
     
 

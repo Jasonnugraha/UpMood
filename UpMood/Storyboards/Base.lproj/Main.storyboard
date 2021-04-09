@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,18 +21,11 @@
             <objects>
                 <viewController storyboardIdentifier="test1" id="BYZ-38-t0r" customClass="TableViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHn-Ng-bz5">
-                                <rect key="frame" x="16" y="106" width="358" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVK-ge-kgt">
-                                <rect key="frame" x="16" y="238" width="358" height="43"/>
+                                <rect key="frame" x="16" y="220" width="358" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-4f-fKq">
@@ -42,6 +35,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-2b-eqX">
+                                        <rect key="frame" x="41" y="6" width="275" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ah7-A8-guJ"/>
+                                        </connections>
+                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☺️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-oJ-eqh">
                                         <rect key="frame" x="8" y="0.0" width="35" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,7 +53,7 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-rN-fxQ">
-                                <rect key="frame" x="159" y="138" width="73" height="73"/>
+                                <rect key="frame" x="159" y="120" width="73" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☺️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRN-je-AgL">
@@ -66,49 +66,49 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.35999999999999999" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHn-Ng-bz5">
+                                <rect key="frame" x="16" y="77" width="358" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-6X-Ifs">
-                                <rect key="frame" x="18" y="370" width="378" height="200"/>
+                                <rect key="frame" x="0.0" y="302" width="390" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emotionCell" id="Giq-X6-UIQ">
-                                        <rect key="frame" x="20" y="55.5" width="338" height="44"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Giq-X6-UIQ" id="rKb-zK-f3e">
-                                            <rect key="frame" x="0.0" y="0.0" width="338" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-2b-eqX">
-                                <rect key="frame" x="70" y="289" width="275" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ah7-A8-guJ"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="backemo" destination="HRN-je-AgL" id="tsu-O0-4Lp"/>
-                        <outlet property="backslider" destination="Z3A-2b-eqX" id="nLI-HU-Tw2"/>
-                        <outlet property="emoticon" destination="HRN-je-AgL" id="bCJ-OV-46Z"/>
-                        <outlet property="emotionTableView" destination="YG7-6X-Ifs" id="Vfi-AR-Kfx"/>
-                        <outlet property="infoemot" destination="EHn-Ng-bz5" id="1VR-Tb-WwM"/>
+                        <outlet property="backemo" destination="Aik-rN-fxQ" id="g1k-2G-YPs"/>
+                        <outlet property="backslider" destination="xVK-ge-kgt" id="hLW-4h-eUd"/>
+                        <outlet property="emoticon" destination="HRN-je-AgL" id="dde-81-Ccy"/>
+                        <outlet property="emotionTableView" destination="YG7-6X-Ifs" id="MHv-dF-s8U"/>
+                        <outlet property="infoemot" destination="EHn-Ng-bz5" id="SKj-xn-B7J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-198.55072463768118" y="114.50892857142857"/>
+            <point key="canvasLocation" x="-200" y="114.45497630331754"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t6s-o4-Z9L">
             <objects>
                 <viewController storyboardIdentifier="view2" id="SKO-1i-vcb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="28s-Ro-8Ai">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cqU-jW-7rs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
