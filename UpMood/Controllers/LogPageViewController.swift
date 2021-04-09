@@ -59,24 +59,24 @@ class LogPageViewController: UIViewController, UIPageViewControllerDelegate, UIP
         
         if x == 1 {
             ViewControllers.append(
-                        UIStoryboard(name: "Main", bundle: nil) .
+                        UIStoryboard(name: "LogViews", bundle: nil) .
                             instantiateViewController(withIdentifier: "pageLog1"))
         } else if x == 2 {
             ViewControllers.append(
-                        UIStoryboard(name: "Main", bundle: nil) .
+                        UIStoryboard(name: "LogViews", bundle: nil) .
                             instantiateViewController(withIdentifier: "pageLog1"))
             ViewControllers.append(
-                UIStoryboard(name: "Main", bundle: nil) .
+                UIStoryboard(name: "LogViews", bundle: nil) .
                     instantiateViewController(withIdentifier: "pageLog2"))
         } else if x == 3 {
             ViewControllers.append(
-                        UIStoryboard(name: "Main", bundle: nil) .
+                        UIStoryboard(name: "LogViews", bundle: nil) .
                             instantiateViewController(withIdentifier: "pageLog1"))
             ViewControllers.append(
-                UIStoryboard(name: "Main", bundle: nil) .
+                UIStoryboard(name: "LogViews", bundle: nil) .
                     instantiateViewController(withIdentifier: "pageLog2"))
             ViewControllers.append(
-                UIStoryboard(name: "Main", bundle: nil) .
+                UIStoryboard(name: "LogViews", bundle: nil) .
                     instantiateViewController(withIdentifier: "pageLog3"))
         }
                 
