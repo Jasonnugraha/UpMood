@@ -4,7 +4,8 @@
 //
 //  Created by DHIKA ADITYA ARE on 06/04/21.
 //
-
+// ---------DELETED SOON----- JANGAN DI DELETE DULU YA GANTENG WKWKWK
+/*
 import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
@@ -145,3 +146,4 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
 
 }
+*/
