@@ -28,12 +28,16 @@ class OnBoardingViewController: UIViewController, UIPageViewControllerDelegate, 
         self.pageviewcontroller.delegate = self
 
         ViewControllers.append(
-                    UIStoryboard(name: "Onboarding", bundle: nil) .
+                    UIStoryboard(name: "Main", bundle: nil) .
                         instantiateViewController(withIdentifier: "onFirst"))
                 
         ViewControllers.append(
-                    UIStoryboard(name: "Onboarding", bundle: nil) .
+                    UIStoryboard(name: "Main", bundle: nil) .
                         instantiateViewController(withIdentifier: "onSecond"))
+        
+        ViewControllers.append(
+                    UIStoryboard(name: "Main", bundle: nil) .
+                        instantiateViewController(withIdentifier: "onThird"))
         
         if let firstViewController = ViewControllers.first {
                      self.pageviewcontroller.setViewControllers([firstViewController],
@@ -60,7 +64,8 @@ class OnBoardingViewController: UIViewController, UIPageViewControllerDelegate, 
     
     //gambar button page control
     func configurePageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
+        //default, max Y = 100
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 100, width: UIScreen.main.bounds.width, height: 50))
         pageControl.numberOfPages = ViewControllers.count
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.black
