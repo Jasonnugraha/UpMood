@@ -26,11 +26,11 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        customReasonTextField.backgroundColor = UIColor.clear
-
-        customReasonTextField.layer.borderColor = UIColor.clear.cgColor
-        
-        customEmojiTextField.backgroundColor = UIColor.clear
+//        customReasonTextField.backgroundColor = UIColor.clear
+//
+//        customReasonTextField.layer.borderColor = UIColor.clear.cgColor
+//
+//        customEmojiTextField.backgroundColor = UIColor.clear
         
         // Initialization code
     }
