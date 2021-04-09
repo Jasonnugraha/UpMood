@@ -9,16 +9,12 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-
-    @IBOutlet weak var topBar: UIImageView!
-    @IBOutlet weak var navItemTop: UINavigationBar!
+    @IBOutlet weak var textViewArea: UITextView!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        topBar.backgroundColor = .systemPurple
-        navItemTop.backgroundColor = .blue
         
+        textViewArea.layer.cornerRadius = 10
     }
     
 
