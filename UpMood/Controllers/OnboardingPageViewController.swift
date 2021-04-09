@@ -4,7 +4,7 @@
 //
 //  Created by DHIKA ADITYA ARE on 08/04/21.
 //
-
+/*
 import UIKit
 
 class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
@@ -102,4 +102,4 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
     }
-}
+ }*/

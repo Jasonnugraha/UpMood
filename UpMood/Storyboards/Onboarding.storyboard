@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding Page View Controller-->
+        <!--Page View Controller-->
         <scene sceneID="rQh-B8-mS6">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="E1d-wU-lI8" customClass="OnboardingPageViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRO-45-GhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pageViewController storyboardIdentifier="PageViewControllerOnBoarding" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="E1d-wU-lI8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7RA-dF-Z1G"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xRO-45-GhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="-110"/>
+            <point key="canvasLocation" x="-895" y="-786"/>
         </scene>
         <!--Start Onboarding View Controller-->
         <scene sceneID="tF8-Wr-Sx7">
@@ -61,6 +61,7 @@
                                 </state>
                                 <connections>
                                     <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="aQy-Ld-PFo"/>
+                                    <segue destination="USz-aa-vR5" kind="show" identifier="nextPageControl" id="ZSZ-xf-lZp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,17 +70,42 @@
                     </view>
                     <connections>
                         <outlet property="nextButton" destination="yiC-Nd-lDY" id="cxb-0f-ffz"/>
-                        <segue destination="E1d-wU-lI8" kind="showDetail" identifier="goToPageViewControler" id="Uhv-Ry-4kp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6D-2m-00P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-894" y="-110"/>
         </scene>
+        <!--On Boarding View Controller-->
+        <scene sceneID="6Qv-v8-tDW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgk-Gm-MNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="USz-aa-vR5" customClass="OnBoardingViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GrO-OQ-P2z">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUKSES!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meU-Fk-jh9">
+                                <rect key="frame" x="174" y="357" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WqA-SR-H2t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UnD-BM-CpL"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-154" y="-110"/>
+        </scene>
         <!--Story View Controller1-->
         <scene sceneID="s8f-DR-pxe">
             <objects>
-                <viewController storyboardIdentifier="onBoardingFirst" id="vyj-WL-pLS" customClass="StoryViewController1" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Niv-f5-HCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="onFirst" id="vyj-WL-pLS" customClass="StoryViewController1" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2N7-BW-Ww4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,14 +113,14 @@
                         <color key="backgroundColor" red="0.72156862749999995" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Niv-f5-HCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="574"/>
+            <point key="canvasLocation" x="-198" y="-786"/>
         </scene>
         <!--Story View Controller2-->
         <scene sceneID="mc0-e3-Rea">
             <objects>
-                <viewController storyboardIdentifier="onBoardingSecond" id="Gsk-4T-3KV" customClass="StoryViewController2" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTr-GU-Jpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="onSecond" id="Gsk-4T-3KV" customClass="StoryViewController2" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UuW-A2-sCi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,13 +129,13 @@
                         <color key="tintColor" red="0.72156862749999995" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eTr-GU-Jpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="574"/>
+            <point key="canvasLocation" x="545" y="-786"/>
         </scene>
         <!--Story View Controller3-->
         <scene sceneID="esY-H9-2g4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkS-eK-09L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="onBoardingThird" id="o1d-M6-cys" customClass="StoryViewController3" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQ2-bo-b4a">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -118,7 +144,6 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bkS-eK-09L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1434" y="574"/>
         </scene>

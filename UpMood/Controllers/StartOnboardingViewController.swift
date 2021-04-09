@@ -20,8 +20,7 @@ class StartOnboardingViewController: UIViewController {
     
 
     @IBAction func actionNextButton(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "goToPageViewControler", sender: StartOnboardingViewController.self)
+        self.performSegue(withIdentifier: "nextPageControl", sender: StartOnboardingViewController.self)
     }
     
     /*
