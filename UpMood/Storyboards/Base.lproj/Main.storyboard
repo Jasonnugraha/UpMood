@@ -87,6 +87,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dH-0S-2yx">
+                                <rect key="frame" x="121" y="586" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Page Controller"/>
+                                <connections>
+                                    <segue destination="Jz6-NP-l0U" kind="showDetail" id="0ge-tW-LjU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -116,7 +124,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9QC-nb-3M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="63"/>
+            <point key="canvasLocation" x="642" y="89"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="KkA-0v-NE9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="Jz6-NP-l0U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QWK-cP-ZQo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOw-5v-RV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="574"/>
         </scene>
     </scenes>
     <resources>
