@@ -46,6 +46,8 @@ class CustomTableViewCell: UITableViewCell {
         customEmojiTextField.text = emoji
         customReasonTextField.isUserInteractionEnabled = isEditable
         customEmojiTextField.isUserInteractionEnabled = isEditable
+        customEmojiTextField.borderStyle = .none
+        customReasonTextField.borderStyle = .none
     }
     
     

@@ -55,6 +55,8 @@ class TableViewController: UIViewController {
         emotionTableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+        // Table Styling
+        
     }
     
     
