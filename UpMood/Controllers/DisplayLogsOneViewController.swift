@@ -1,13 +1,13 @@
 //
-//  StoryViewController2.swift
+//  DisplayLogsOneViewController.swift
 //  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 08/04/21.
+//  Created by DHIKA ADITYA ARE on 10/04/21.
 //
 
 import UIKit
 
-class StoryViewController2: UIViewController {
+class DisplayLogsOneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

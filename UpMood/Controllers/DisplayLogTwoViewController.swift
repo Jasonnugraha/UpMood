@@ -1,29 +1,21 @@
 //
-//  StartOnboardingViewController.swift
+//  DisplayLogTwoViewController.swift
 //  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 08/04/21.
+//  Created by DHIKA ADITYA ARE on 10/04/21.
 //
 
 import UIKit
 
-class StartOnboardingViewController: UIViewController {
+class DisplayLogTwoViewController: UIViewController {
 
-    @IBOutlet weak var nextButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nextButton.layer.cornerRadius = 10
     }
     
 
-    @IBAction func actionNextButton(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "goToPageViewControler", sender: StartOnboardingViewController.self)
-    }
-    
     /*
     // MARK: - Navigation
 
