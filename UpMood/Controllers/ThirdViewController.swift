@@ -16,6 +16,7 @@ class ThirdViewController: UIViewController, UINavigationBarDelegate{
         //toolbar.delegate = self
         
         //coba
+/*
         let height: CGFloat = 75
         let navbar = UINavigationBar(frame: CGRect(x: 20, y: 20, width: UIScreen.main.bounds.width, height: height))
         navbar.backgroundColor = UIColor.white
@@ -31,6 +32,7 @@ class ThirdViewController: UIViewController, UINavigationBarDelegate{
         view.addSubview(navbar)
 
         self.view.frame = CGRect(x: 0, y: height, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - height))
+ */
      
 
     }
