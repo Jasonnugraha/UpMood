@@ -10,17 +10,27 @@ import Foundation
 
 class TableViewController: UIViewController {
     
-    var dataSeed: [Emotion] = [Emotion(isChecked: false, emoji: "👨‍👨‍👧‍👦", emotion: "Family"),
-                               Emotion(isChecked: true, emoji: "📚", emotion: "Study")]
+    var dataSeed: [Emotion] = [Emotion(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family",currentEmotion:"Sad"),
+                               Emotion(isChecked: true, emojiLogo: "📚", reason: "Study",currentEmotion: "Happy")]
     
     @IBOutlet weak var emotionTableView: UITableView!
 
+
+    @IBAction func buttonIsPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToLogsStoryboard", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emotionTableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
+        emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToLogsStoryboard"{
+            guard let vc = segue.destination as? Logs else{return}
+        }
     }
 }
 
@@ -34,9 +44,9 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let customCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+        let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
         let data = dataSeed[indexPath.row]
-        customCell.editCustomCellText(from: data.emoji, from: data.emotion, status: data.isEditable)
+        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
         
         return customCell
 

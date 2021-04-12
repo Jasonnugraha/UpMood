@@ -25,9 +25,14 @@
 		B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B417041C261B7550004FF9D9 /* EditModal.storyboard */; };
 		B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417041F261B7551004FF9D9 /* Assets.xcassets */; };
 		B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */; };
+		B4181ED72623129A00E7A022 /* ReusableLogsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181ED52623129A00E7A022 /* ReusableLogsCell.swift */; };
+		B4181ED82623129A00E7A022 /* ReusableLogsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4181ED62623129A00E7A022 /* ReusableLogsCell.xib */; };
+		B4181EDB262314A700E7A022 /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4181EDA262314A700E7A022 /* Logs.storyboard */; };
+		B4181EDF262319E700E7A022 /* LogTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */; };
+		B4181EE726231B1E00E7A022 /* LogsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181EE626231B1E00E7A022 /* LogsStruct.swift */; };
 		B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D12B726205A1800F2CBEF /* ReusableSlider.swift */; };
-		B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */; };
-		B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */; };
+		B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */; };
+		B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */; };
 		B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +57,14 @@
 		B417041F261B7551004FF9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4170422261B7551004FF9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4170424261B7551004FF9D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4181ED52623129A00E7A022 /* ReusableLogsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLogsCell.swift; sourceTree = "<group>"; };
+		B4181ED62623129A00E7A022 /* ReusableLogsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableLogsCell.xib; sourceTree = "<group>"; };
+		B4181EDA262314A700E7A022 /* Logs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Logs.storyboard; sourceTree = "<group>"; };
+		B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCellController.swift; sourceTree = "<group>"; };
+		B4181EE626231B1E00E7A022 /* LogsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsStruct.swift; sourceTree = "<group>"; };
 		B42D12B726205A1800F2CBEF /* ReusableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSlider.swift; sourceTree = "<group>"; };
-		B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableReasonCell.swift; sourceTree = "<group>"; };
+		B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableReasonCell.xib; sourceTree = "<group>"; };
 		B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmotionStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +127,7 @@
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
 				B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */,
 				701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */,
+				B4181EDA262314A700E7A022 /* Logs.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 		B4170415261B7550004FF9D9 /* UpMood */ = {
 			isa = PBXGroup;
 			children = (
+				B4181EDD262319A100E7A022 /* LogPage */,
 				B4D20FD1261DAB25002B101F /* Struct  */,
 				B4170424261B7551004FF9D9 /* Info.plist */,
 				1BFCB561261C66D800062393 /* Storyboards */,
@@ -152,13 +164,23 @@
 			path = UpMood;
 			sourceTree = "<group>";
 		};
+		B4181EDD262319A100E7A022 /* LogPage */ = {
+			isa = PBXGroup;
+			children = (
+				B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */,
+			);
+			path = LogPage;
+			sourceTree = "<group>";
+		};
 		B4D20FBB261D9C7D002B101F /* NIB */ = {
 			isa = PBXGroup;
 			children = (
-				B4D20FCB261DA2BC002B101F /* CustomTableViewCell.swift */,
-				B4D20FCC261DA2BC002B101F /* CustomTableViewCell.xib */,
+				B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */,
+				B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */,
 				B42D12B726205A1800F2CBEF /* ReusableSlider.swift */,
 				B414D3A22620618E0035EE90 /* ReusableSlider.xib */,
+				B4181ED52623129A00E7A022 /* ReusableLogsCell.swift */,
+				B4181ED62623129A00E7A022 /* ReusableLogsCell.xib */,
 			);
 			path = NIB;
 			sourceTree = "<group>";
@@ -167,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */,
+				B4181EE626231B1E00E7A022 /* LogsStruct.swift */,
 			);
 			name = "Struct ";
 			sourceTree = "<group>";
@@ -231,10 +254,12 @@
 				B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */,
 				B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */,
 				5B1D0C15261EE2BE00F02203 /* EditLogViewController.xib in Resources */,
+				B4181EDB262314A700E7A022 /* Logs.storyboard in Resources */,
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
-				B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */,
+				B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */,
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
+				B4181ED82623129A00E7A022 /* ReusableLogsCell.xib in Resources */,
 				701EE3BC261EEB0A004AB422 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,15 +275,18 @@
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
-				B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */,
+				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */,
 				B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */,
 				701EE3C2261EEB8F004AB422 /* StoryViewController1.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
+				B4181EDF262319E700E7A022 /* LogTableViewCellController.swift in Sources */,
 				701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */,
+				B4181EE726231B1E00E7A022 /* LogsStruct.swift in Sources */,
 				70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */,
+				B4181ED72623129A00E7A022 /* ReusableLogsCell.swift in Sources */,
 				701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */,
 				70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,

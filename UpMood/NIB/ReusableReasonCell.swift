@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class ReusableReasonCell: UITableViewCell {
     
     @IBOutlet weak var customCheckListButton: UIButton!
     @IBOutlet weak var customEmojiTextField: UITextField!
@@ -18,20 +18,15 @@ class CustomTableViewCell: UITableViewCell {
         customCheckListButton.isSelected.toggle()
     }
     
-    static let identifier = "CustomTableViewCell"
+    static let identifier = "ReusableReasonCell"
     
     static func nib()->UINib{
-        return UINib(nibName: "CustomTableViewCell", bundle: nil)
+        return UINib(nibName: "ReusableReasonCell", bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        customReasonTextField.backgroundColor = UIColor.clear
-//
-//        customReasonTextField.layer.borderColor = UIColor.clear.cgColor
-//
-//        customEmojiTextField.backgroundColor = UIColor.clear
-        
+
         // Initialization code
     }
 
@@ -41,7 +36,7 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func editCustomCellText(from emoji: String, from emotionText: String, status isEditable: Bool){
+    func editReasonCell(from emoji: String, from emotionText: String, status isEditable: Bool){
         customReasonTextField.text = emotionText
         customEmojiTextField.text = emoji
         customReasonTextField.isUserInteractionEnabled = isEditable
