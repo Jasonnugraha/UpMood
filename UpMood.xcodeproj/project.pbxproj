@@ -16,15 +16,12 @@
 		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
 		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
 		B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417041F261B7551004FF9D9 /* Assets.xcassets */; };
-<<<<<<< HEAD
-=======
 		B4170423261B7551004FF9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */; };
 		B4181ED72623129A00E7A022 /* ReusableLogsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181ED52623129A00E7A022 /* ReusableLogsCell.swift */; };
 		B4181ED82623129A00E7A022 /* ReusableLogsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4181ED62623129A00E7A022 /* ReusableLogsCell.xib */; };
 		B4181EDB262314A700E7A022 /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4181EDA262314A700E7A022 /* Logs.storyboard */; };
 		B4181EDF262319E700E7A022 /* LogTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */; };
 		B4181EE726231B1E00E7A022 /* LogsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4181EE626231B1E00E7A022 /* LogsStruct.swift */; };
->>>>>>> main
 		B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D12B726205A1800F2CBEF /* ReusableSlider.swift */; };
 		B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */; };
 		B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */; };
@@ -102,15 +99,12 @@
 		1BFCB561261C66D800062393 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				70ABE6B926219F2C00196BAD /* Main.storyboard */,
-=======
 				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
 				B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */,
 				701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */,
 				B4181EDA262314A700E7A022 /* Logs.storyboard */,
->>>>>>> main
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -236,11 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */,
-<<<<<<< HEAD
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
 				B4D20FCE261DA2BC002B101F /* CustomTableViewCell.xib in Resources */,
 				70ABE6BA26219F2C00196BAD /* Main.storyboard in Resources */,
-=======
 				5B1D0C15261EE2BE00F02203 /* EditLogViewController.xib in Resources */,
 				B4181EDB262314A700E7A022 /* Logs.storyboard in Resources */,
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
@@ -249,7 +241,6 @@
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
 				B4181ED82623129A00E7A022 /* ReusableLogsCell.xib in Resources */,
 				701EE3BC261EEB0A004AB422 /* Onboarding.storyboard in Resources */,
->>>>>>> main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,19 +254,14 @@
 				70E599BA26240D3500110F63 /* TempDataUpmood.xcdatamodeld in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
-<<<<<<< HEAD
 				B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */,
 				70ABE6B626219EC700196BAD /* DisplayLogTwoViewController.swift in Sources */,
-=======
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,
->>>>>>> main
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				70ABE6C82621B1A600196BAD /* DataExampleViewController.swift in Sources */,
 				B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
-=======
 				B4181EDF262319E700E7A022 /* LogTableViewCellController.swift in Sources */,
 				701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */,
 				B4181EE726231B1E00E7A022 /* LogsStruct.swift in Sources */,
@@ -283,7 +269,6 @@
 				B4181ED72623129A00E7A022 /* ReusableLogsCell.swift in Sources */,
 				701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */,
 				70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */,
->>>>>>> main
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				70ABE6B326219E9B00196BAD /* DisplayLogsOneViewController.swift in Sources */,
 			);
