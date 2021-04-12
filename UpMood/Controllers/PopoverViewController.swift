@@ -1,24 +1,20 @@
 //
-//  StoryViewController2.swift
+//  PopoverViewController.swift
 //  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 08/04/21.
+//  Created by Azura on 09/04/21.
 //
 
 import UIKit
 
-class StoryViewController2: UIViewController, PageObservation {
-    
-    var parentPVC: OnboardingPageViewController!
-    
-    func getParentPageViewController(parentRef: OnboardingPageViewController) {
-        parentPVC = parentRef
-    }
-    
+class PopoverViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SVC2 is Loaded")
+
+        // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation
