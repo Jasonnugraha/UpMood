@@ -113,20 +113,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1BFCB55D261C669600062393 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1BFCB55E261C669A00062393 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1BFCB560261C66C000062393 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,8 +162,6 @@
 				B4DE5DB02624505100B5C7E4 /* Reusable */,
 				1BFCB561261C66D800062393 /* Storyboards */,
 				1BFCB560261C66C000062393 /* Support Files */,
-				1BFCB55E261C669A00062393 /* Views */,
-				1BFCB55D261C669600062393 /* Models */,
 				1BFCB55B261C667F00062393 /* Controllers */,
 			);
 			path = UpMood;
