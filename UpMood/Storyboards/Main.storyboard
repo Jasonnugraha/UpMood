@@ -11,7 +11,7 @@
         <!--Logs-->
         <scene sceneID="MRJ-ic-I4B">
             <objects>
-                <viewController id="UBX-JS-K9i" customClass="DisplayLogsOneViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UBX-JS-K9i" customClass="TempDisplayLogsOneViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cxo-ff-g52">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

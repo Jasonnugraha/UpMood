@@ -12,6 +12,7 @@
 		70ABE6BA26219F2C00196BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70ABE6B926219F2C00196BAD /* Main.storyboard */; };
 		70ABE6C82621B1A600196BAD /* DataExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABE6C72621B1A600196BAD /* DataExampleViewController.swift */; };
 		70E599BA26240D3500110F63 /* TempDataUpmood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70E599B826240D3500110F63 /* TempDataUpmood.xcdatamodeld */; };
+		70E599CC2624441F00110F63 /* TempDisplayLogsOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E599CB2624441F00110F63 /* TempDisplayLogsOneViewController.swift */; };
 		B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = B414D3A22620618E0035EE90 /* ReusableSlider.xib */; };
 		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
 		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 		70ABE6B926219F2C00196BAD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		70ABE6C72621B1A600196BAD /* DataExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExampleViewController.swift; sourceTree = "<group>"; };
 		70E599B926240D3500110F63 /* TempDataUpmood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TempDataUpmood.xcdatamodel; sourceTree = "<group>"; };
+		70E599CB2624441F00110F63 /* TempDisplayLogsOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDisplayLogsOneViewController.swift; sourceTree = "<group>"; };
 		B414D3A22620618E0035EE90 /* ReusableSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableSlider.xib; sourceTree = "<group>"; };
 		B4170413261B7550004FF9D9 /* UpMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4170416261B7550004FF9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				70ABE6B226219E9B00196BAD /* DisplayLogsOneViewController.swift */,
 				70ABE6B526219EC700196BAD /* DisplayLogTwoViewController.swift */,
 				70ABE6C72621B1A600196BAD /* DataExampleViewController.swift */,
+				70E599CB2624441F00110F63 /* TempDisplayLogsOneViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				70E599BA26240D3500110F63 /* TempDataUpmood.xcdatamodeld in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
+				70E599CC2624441F00110F63 /* TempDisplayLogsOneViewController.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* CustomTableViewCell.swift in Sources */,
 				70ABE6B626219EC700196BAD /* DisplayLogTwoViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
