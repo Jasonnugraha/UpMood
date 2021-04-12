@@ -119,6 +119,8 @@
                                 </state>
                                 <connections>
                                     <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="kHi-nK-CPB"/>
+                                    <action selector="onNextBtnTap:" destination="2EV-6u-znl" eventType="touchUpInside" id="pFC-XS-bij"/>
+                                    <action selector="onNextBtnTap:" destination="vyj-WL-pLS" eventType="touchUpInside" id="r1Z-Zv-hW4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +129,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Niv-f5-HCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2EV-6u-znl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-129" y="574"/>
         </scene>

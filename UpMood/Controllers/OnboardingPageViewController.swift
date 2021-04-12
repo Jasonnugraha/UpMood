@@ -33,13 +33,15 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     override func viewDidLoad() {
         //print(x)
         super.viewDidLoad()
-        self.dataSource = self
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
-        }
+        self.dataSource = nil;
+        let firstViewController = orderedViewControllers[0]
+        setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+//        if let firstViewController = orderedViewControllers.first {
+//            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+//        }
         
         //page view button
-        self.delegate = self
+        self.delegate = nil
         configurePageControl()
     }
     
@@ -96,12 +98,24 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         guard orderedViewControllers.count > nextIndex else {
             return nil
         }
-        
+                
         return orderedViewControllers[nextIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
+//        setDataSourceNil()
+    }
+    
+    public func setDataSourceSelf() {
+        print("setDataSourceSelf")
+        self.dataSource = self
+        self.delegate = self
+    }
+    
+    func setDataSourceNil() {
+        self.dataSource = nil;
+        self.delegate = nil
     }
 }
