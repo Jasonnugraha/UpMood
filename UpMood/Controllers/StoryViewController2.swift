@@ -7,14 +7,18 @@
 
 import UIKit
 
-class StoryViewController2: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class StoryViewController2: UIViewController, PageObservation {
+    
+    var parentPVC: OnboardingPageViewController!
+    
+    func getParentPageViewController(parentRef: OnboardingPageViewController) {
+        parentPVC = parentRef
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("SVC2 is Loaded")
+    }
 
     /*
     // MARK: - Navigation

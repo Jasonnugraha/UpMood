@@ -7,17 +7,16 @@
 
 import UIKit
 
-class StoryViewController1: UIViewController {
-    var parentPVC: UIPageViewController!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        parentPVC = self.parent as? UIPageViewController
+class StoryViewController1: UIViewController, PageObservation {
+    
+    var parentPVC: OnboardingPageViewController!
+    
+    func getParentPageViewController(parentRef: OnboardingPageViewController) {
+        parentPVC = parentRef
     }
     
     @IBAction func onNextBtnTap(_ sender: UIButton) {
-        parentPVC.dataSource = parentPVC.self as? UIPageViewControllerDataSource
-        parentPVC.delegate = parentPVC.self as? UIPageViewControllerDelegate
+        parentPVC.setDataSourceSelf()
     }
-    
+
 }
