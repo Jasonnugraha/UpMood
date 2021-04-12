@@ -7,45 +7,63 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController, UINavigationBarDelegate{
+class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    //MARK - Tangkep Data Journaling by Time
+/*    var selectedByTime: Timee?{
+        didSet{
+            loadItem()
+        }
+    }
+ */
+    //MARK - Variable penampung
+    var emot: String?
+    //var tableBcs = [Journaling]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //view.addSubview(toolbar)
-        //toolbar.delegate = self
-        
-        //coba
-/*
-        let height: CGFloat = 75
-        let navbar = UINavigationBar(frame: CGRect(x: 20, y: 20, width: UIScreen.main.bounds.width, height: height))
-        navbar.backgroundColor = UIColor.white
-        navbar.delegate = self
-
-        let navItem = UINavigationItem()
-        navItem.title = "Title"
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "Left Button", style: .plain, target: self, action: nil)
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "Right Button", style: .plain, target: self, action: nil)
-
-        navbar.items = [navItem]
-
-        view.addSubview(navbar)
-
-        self.view.frame = CGRect(x: 0, y: height, width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - height))
- */
-     
-
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Mark - Tableview datasource Method
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return Becauseof.count
+        
+        
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) //identifier = nama cell dari yg akan kita parsing
+        
+        //cell.textLabel?.text = categories[indexPath.row].name //name disini adalah nama atribut yg akan kita panggil dari core data, misal name
+        
+        return cell
+    }
 
+/*
+    //Mark - Data manipulation method
+        func loadTableTime(){
+            do{
+                let request : NSFetchRequest<Journaling> = Journaling.fetchRequests() //ngambil semua Data yg ada di coreData entity Time/Journaling
+            } catch{
+                print("Error loading coredata ... \(error)")
+            }
+            tableView.reloadData
+        }
+
+        func loadItem(with request: NSFetchRequest<Journaling> = Journaling.fetchRequest()){
+            let predicate = NSPredicate(format:"parentTime.name MATCHES %@", selectedByTime!.name!) //parentTime itu didapet dari relatioship pada CoreData //selected by time diambil dari atas
+            request.predicate = predicate
+                    
+            do{
+                itemArray= try context.fetch(request)
+            }catch{
+                print("error")
+            }
+
+        }
+ */
+ 
+
+    
 }
