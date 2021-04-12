@@ -35,13 +35,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-2b-eqX">
-                                        <rect key="frame" x="41" y="6" width="275" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ah7-A8-guJ"/>
-                                        </connections>
-                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☺️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-oJ-eqh">
                                         <rect key="frame" x="8" y="0.0" width="35" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,6 +42,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-2b-eqX">
+                                        <rect key="frame" x="42" y="6" width="275" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ah7-A8-guJ"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             </view>
@@ -92,7 +92,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to Page Controller"/>
                                 <connections>
-                                    <segue destination="Jz6-NP-l0U" kind="showDetail" id="0ge-tW-LjU"/>
+                                    <segue destination="Jz6-NP-l0U" kind="presentation" id="0ge-tW-LjU"/>
                                 </connections>
                             </button>
                         </subviews>

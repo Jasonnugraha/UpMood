@@ -15,12 +15,14 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         let vc1 = sb.instantiateViewController(identifier: "onBoardingFirst")
         let vc2 = sb.instantiateViewController(identifier: "onBoardingSecond")
         let vc3 = sb.instantiateViewController(identifier: "onBoardingThird")
+        let vc4 = sb.instantiateViewController(identifier: "onBoardingFourth")
         
         var viewControllers = [UIViewController]()
         
         viewControllers.append(vc1)
         viewControllers.append(vc2)
         viewControllers.append(vc3)
+        viewControllers.append(vc4)
 
         return viewControllers
     }()
