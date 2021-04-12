@@ -34,6 +34,12 @@
 		B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */; };
 		B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */; };
 		B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */; };
+		B4DE5D9126244EB300B5C7E4 /* LogViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DE5D9026244EB300B5C7E4 /* LogViews.storyboard */; };
+		B4DE5D9626244EC100B5C7E4 /* DummyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5D9326244EC100B5C7E4 /* DummyCodeViewController.swift */; };
+		B4DE5D9726244EC100B5C7E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5D9426244EC100B5C7E4 /* FirstViewController.swift */; };
+		B4DE5D9826244EC100B5C7E4 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5D9526244EC100B5C7E4 /* LogPageViewController.swift */; };
+		B4DE5D9C26244EC900B5C7E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5D9A26244EC800B5C7E4 /* SecondViewController.swift */; };
+		B4DE5D9D26244EC900B5C7E4 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5D9B26244EC900B5C7E4 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableReasonCell.swift; sourceTree = "<group>"; };
 		B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableReasonCell.xib; sourceTree = "<group>"; };
 		B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmotionStruct.swift; sourceTree = "<group>"; };
+		B4DE5D9026244EB300B5C7E4 /* LogViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LogViews.storyboard; path = ../../../../Desktop/LogViews.storyboard; sourceTree = "<group>"; };
+		B4DE5D9326244EC100B5C7E4 /* DummyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyCodeViewController.swift; path = ../../../../Desktop/DummyCodeViewController.swift; sourceTree = "<group>"; };
+		B4DE5D9426244EC100B5C7E4 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../../../../Desktop/FirstViewController.swift; sourceTree = "<group>"; };
+		B4DE5D9526244EC100B5C7E4 /* LogPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogPageViewController.swift; path = ../../../../Desktop/LogPageViewController.swift; sourceTree = "<group>"; };
+		B4DE5D9A26244EC800B5C7E4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../../../../Desktop/SecondViewController.swift; sourceTree = "<group>"; };
+		B4DE5D9B26244EC900B5C7E4 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = ../../../../Desktop/ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
+				B4DE5D9326244EC100B5C7E4 /* DummyCodeViewController.swift */,
+				B4DE5D9426244EC100B5C7E4 /* FirstViewController.swift */,
+				B4DE5D9A26244EC800B5C7E4 /* SecondViewController.swift */,
+				B4DE5D9B26244EC900B5C7E4 /* ThirdViewController.swift */,
+				B4DE5D9526244EC100B5C7E4 /* LogPageViewController.swift */,
 				B417041A261B7550004FF9D9 /* TableViewController.swift */,
 				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
 				5B2093F9261C72DE00810366 /* SliderViewController.swift */,
@@ -123,6 +140,7 @@
 		1BFCB561261C66D800062393 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B4DE5D9026244EB300B5C7E4 /* LogViews.storyboard */,
 				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
 				B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */,
@@ -256,6 +274,7 @@
 				5B1D0C15261EE2BE00F02203 /* EditLogViewController.xib in Resources */,
 				B4181EDB262314A700E7A022 /* Logs.storyboard in Resources */,
 				B4170420261B7551004FF9D9 /* Assets.xcassets in Resources */,
+				B4DE5D9126244EB300B5C7E4 /* LogViews.storyboard in Resources */,
 				B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */,
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
 				B417041E261B7550004FF9D9 /* EditModal.storyboard in Resources */,
@@ -271,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DE5D9C26244EC900B5C7E4 /* SecondViewController.swift in Sources */,
 				B417041B261B7550004FF9D9 /* TableViewController.swift in Sources */,
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
@@ -278,7 +298,9 @@
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
+				B4DE5D9826244EC100B5C7E4 /* LogPageViewController.swift in Sources */,
 				5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */,
+				B4DE5D9626244EC100B5C7E4 /* DummyCodeViewController.swift in Sources */,
 				B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */,
 				701EE3C2261EEB8F004AB422 /* StoryViewController1.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
@@ -290,7 +312,9 @@
 				701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */,
 				70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
+				B4DE5D9D26244EC900B5C7E4 /* ThirdViewController.swift in Sources */,
 				701EE3BF261EEB61004AB422 /* PageViewController.swift in Sources */,
+				B4DE5D9726244EC100B5C7E4 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
