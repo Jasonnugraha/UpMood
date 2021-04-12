@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+//class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+class ThirdViewController: UIViewController{
 
     //MARK - Tangkep Data Journaling by Time
 /*    var selectedByTime: Timee?{
@@ -17,14 +19,15 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
  */
     //MARK - Variable penampung
-    var emot: String?
+//    var emot: String?
     //var tableBcs = [Journaling]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
+
+/*
     //Mark - Tableview datasource Method
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return Becauseof.count
@@ -33,7 +36,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) //identifier = nama cell dari yg akan kita parsing
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pageLog3", for: indexPath) //identifier = nama cell dari yg akan kita parsing
         
         //cell.textLabel?.text = categories[indexPath.row].name //name disini adalah nama atribut yg akan kita panggil dari core data, misal name
         
@@ -62,6 +65,8 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
 
         }
+ */
+ 
  */
  
 
