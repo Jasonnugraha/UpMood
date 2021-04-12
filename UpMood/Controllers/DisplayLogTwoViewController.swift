@@ -9,6 +9,11 @@ import UIKit
 
 class DisplayLogTwoViewController: UIViewController {
 
+    var selectedCategory: Category?{
+        didSet{
+            //loadItems() -> melakukan load data yg disimpan dari core data (nb: entitynya beda)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

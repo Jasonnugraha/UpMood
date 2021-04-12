@@ -23,11 +23,11 @@ class DisplayLogsOneViewController: UIViewController {
                 tableCellFeelings.dataSource = self
                 
                 //remove background color yg ga senada
-                tableCellFeelings.backgroundColor = .white
-                tableCellFeelings.backgroundView = nil
+                tableCellFeelings.backgroundColor = UIColor.clear
+                //tableCellFeelings.backgroundView = nil
                 
                 //TurnOff Scroll Table View
-                tableCellFeelings.isScrollEnabled = false
+                tableCellFeelings.isScrollEnabled = true
     }
 }
 
@@ -49,7 +49,8 @@ extension DisplayLogsOneViewController: UITableViewDelegate, UITableViewDataSour
         //cell.selectionStyle = .blue
         cell.backgroundColor = .systemPurple
         //cell.backgroundView = nil
-        
+
+
         
         ////berjalan mengiterasikan. ini berjalan seusai jumlah count
         //kita ambil array ke berapa pakai row
@@ -61,7 +62,7 @@ extension DisplayLogsOneViewController: UITableViewDelegate, UITableViewDataSour
         //cell.textLabel?.text = "gambar \(indexPath.row)"
         cell.detailTextLabel?.text = "Anxious/Calm/Comfortable"
         
-        cell.textLabel?.text = dakta.detailemot
+        //cell.textLabel?.text = dakta.detailemot
         //cell.detailTextLabel?.text = dakta.detailemot
         let tempDetail = dakta.detailemot
         
@@ -80,6 +81,24 @@ extension DisplayLogsOneViewController: UITableViewDelegate, UITableViewDataSour
 
         return cell
     }
+    
+    //MARK - Table View Delagate Method (do next action with table)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //tableView.backgroundView = .none
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //performSegue(withIdentifier: "displayLog2 ", sender: self)
+        //cek, cell yg mana yg dipilih
+    }
+/*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DisplayLogTwoViewController
+        
+        if let indexPath = tableCellFeelings.indexPathForSelectedRow {
+            //destinationVC.selectedCategory = categories[indexPath.row] //categories ini adalah array dari file displayLogTwoVC
+        }
+    }
+*/
 }
 
 // MARK - String to Image
