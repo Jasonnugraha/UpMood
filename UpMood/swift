@@ -1,0 +1,17 @@
+//
+//  TableCellViewController.swift
+//  UpMood
+//
+//  Created by Meichel Rendio on 11/04/21.
+//
+
+import UIKit
+
+class TableCellViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
