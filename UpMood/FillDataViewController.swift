@@ -28,8 +28,11 @@ class FillDataViewController: UIViewController, UITextFieldDelegate{
     @IBAction func feelingAction(_ sender: UITextField) {
     }
     @IBAction func backToMainAndSave(_ sender: Any) {
+        //pertama-tama -> slider
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let curhat = Curhat(context: self.context)
+
+        
         curhat.feeling = feelingTextField.text
         curhat.date = dateDatePicker.date
         curhat.desc = isiTextField.text

@@ -14,6 +14,15 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var listCurhat:[Curhat]?
+    struct CurhatPerDay {
+        var curhatPerDay:[Curhat]
+        var dayDate : Date
+    }
+    
+    struct CurhatPerMonth{
+        var curhatPerDaylist:[CurhatPerDay]?
+        var monthDate : Date
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +30,6 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         tableSavedData.dataSource = self
         getCurhatFromCoreData()
         sortTable()
-        
-        
     }
     func sortTable(){
         listCurhat?.sort(by: { ($0.date! > $1.date!)
@@ -36,6 +43,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         } catch  {
             
         }
+        //load page sebelumnya (tampilin sisa page yang ada)
         tableSavedData.reloadData()
     }
     func getCurhatFromCoreData(){
