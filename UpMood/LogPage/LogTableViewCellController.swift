@@ -10,7 +10,7 @@ import UIKit
 class LogTableViewCellController: UIViewController {
     
     
-    var logDataSeed: [Logs] = [Logs(emotion: Emotion(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family",currentEmotion:"Sad"), dateStamp: Date())]
+    var logDataSeed: [Logs] = [Logs(emotion: Label(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"), dateStamp: Date(),currentEmotion: "")]
 
     @IBOutlet weak var logsTableView: UITableView!
     

@@ -10,8 +10,8 @@ import Foundation
 
 class TableViewController: UIViewController {
     
-    var dataSeed: [Emotion] = [Emotion(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family",currentEmotion:"Sad"),
-                               Emotion(isChecked: true, emojiLogo: "📚", reason: "Study",currentEmotion: "Happy")]
+    var dataSeed: [Label] = [Label(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
+                               Label(isChecked: true, emojiLogo: "📚", reason: "Study")]
     
     @IBOutlet weak var emotionTableView: UITableView!
 

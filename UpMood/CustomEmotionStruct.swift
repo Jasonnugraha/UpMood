@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Emotion{
+struct Label{
     var isChecked = false
     var emojiLogo: String
     var reason: String
     var isEditable = false
-    var currentEmotion: String
+    
 }

@@ -31,7 +31,7 @@ class ReusableLogsCell: UITableViewCell {
     
     func editLogsCell(from logs:Logs){
         emojiLogsTextField.text = logs.emotion.emojiLogo
-        emotionLogsLabel.text = logs.emotion.currentEmotion
+        emotionLogsLabel.text = logs.currentEmotion
         let date = logs.dateStamp
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMM"

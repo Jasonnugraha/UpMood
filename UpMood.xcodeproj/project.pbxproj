@@ -175,8 +175,8 @@
 		B4D20FBB261D9C7D002B101F /* NIB */ = {
 			isa = PBXGroup;
 			children = (
-				B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */,
 				B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */,
+				B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */,
 				B42D12B726205A1800F2CBEF /* ReusableSlider.swift */,
 				B414D3A22620618E0035EE90 /* ReusableSlider.xib */,
 				B4181ED52623129A00E7A022 /* ReusableLogsCell.swift */,
