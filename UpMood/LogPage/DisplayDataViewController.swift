@@ -38,6 +38,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         
         var previousMonth = listCurhat?.first
         var previousDay = listCurhat?.first
+        var isFirstIndex : Bool = true
         for i in listCurhat! {
             let compareMonth = Calendar.current.compare(previousMonth!.date!, to: i.date!, toGranularity: .month)
             print("\(compareMonth.rawValue) segment : \(segmentCounter)")
@@ -53,8 +54,9 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
             if(compareDay.rawValue == 1){
                 previousDay = i
                 tempListCurhat.append(i)
-            }else if(i.date == previousDay?.date){
+            }else if(i.date == previousDay?.date && isFirstIndex){
                 tempListCurhat.append(i)
+                isFirstIndex = false
             }
             
         }
