@@ -14,16 +14,19 @@ class ReusableSlider: UIView {
     var contentView:UIView?
     var emot = [String]()
     var labelemo = [String]()
+    var gradbackemo = [UIImage]()
     
     @IBOutlet weak var infoemot: UILabel!
     @IBOutlet weak var emoticon: UILabel!
     @IBOutlet weak var backemo: UIView!
     @IBOutlet weak var backslider: UIView!
+    @IBOutlet weak var grtbackemo: UIImageView!
     
     @IBAction func slider(_ sender: UISlider) {
         let value = Int (sender.value)
         emoticon.text = emot[value]
         infoemot.text = labelemo[value]
+        grtbackemo.image = gradbackemo[value]
     }
     
     func initialSetup(){
@@ -31,7 +34,7 @@ class ReusableSlider: UIView {
         backslider.layer.cornerRadius = 10
         self.addSubview(backslider)
       
-        let gradient = CAGradientLayer()
+        /* let gradient = CAGradientLayer()
         gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
         gradient.colors = [
             UIColor(red: 0.43, green: 0.7, blue: 0.93, alpha: 1).cgColor,
@@ -43,10 +46,12 @@ class ReusableSlider: UIView {
         gradient.cornerRadius = 35
         backemo.layer.addSublayer(gradient)
         backemo.layer.cornerRadius = 35
-        backemo.layer.insertSublayer(gradient, at: 0)
+        backemo.layer.insertSublayer(gradient, at: 0) */
         
         emot = ["☺️", "😊", "🙂", "😒", "😓", "😣", "😥", "😨", "😰"]
         labelemo = ["Calm", "Comfortable", "Okay", "Annoyed", "Nervous", "Anxious", "Worried", "Fearful", "Panicked" ]
+        gradbackemo = [ #imageLiteral(resourceName: "01-calm"), #imageLiteral(resourceName: "02-comfortable"), #imageLiteral(resourceName: "03-okay"), #imageLiteral(resourceName: "04-annoyed"), #imageLiteral(resourceName: "05-nervous"), #imageLiteral(resourceName: "06-anxious"), #imageLiteral(resourceName: "07-worried"), #imageLiteral(resourceName: "08-fearful"), #imageLiteral(resourceName: "09-panicked") ]
+
     }
     
     required init?(coder aDecoder: NSCoder) {
