@@ -41,7 +41,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         do {
             try context.save()
         } catch  {
-            
+    
         }
         //load page sebelumnya (tampilin sisa page yang ada)
         tableSavedData.reloadData()

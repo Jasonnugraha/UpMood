@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dates" representedClassName="Dates" syncable="YES" codeGenerationType="category">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="timesChild" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Times" inverseName="parentDates" inverseEntity="Times"/>
+    </entity>
+    <entity name="Journaling" representedClassName="Journaling" syncable="YES" codeGenerationType="category">
+        <attribute name="becauseOf" optional="YES" attributeType="String"/>
+        <attribute name="emot" optional="YES" attributeType="String"/>
+        <attribute name="feelings" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="wdyt" optional="YES" attributeType="String"/>
+        <relationship name="childLabel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Label" inverseName="parentJournaling" inverseEntity="Label"/>
+        <relationship name="parentTimes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Times" inverseName="journalingChild" inverseEntity="Times"/>
+    </entity>
+    <entity name="Label" representedClassName="Label" syncable="YES" codeGenerationType="category">
+        <attribute name="emojiLogo" optional="YES" attributeType="String"/>
+        <attribute name="isChecked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isEditable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <relationship name="parentJournaling" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journaling" inverseName="childLabel" inverseEntity="Journaling"/>
+    </entity>
+    <entity name="Times" representedClassName="Times" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="time" attributeType="Date" defaultDateTimeInterval="639980520" usesScalarValueType="NO"/>
+        <relationship name="journalingChild" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journaling" inverseName="parentTimes" inverseEntity="Journaling"/>
+        <relationship name="parentDates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dates" inverseName="timesChild" inverseEntity="Dates"/>
+    </entity>
+    <elements>
+        <element name="Dates" positionX="-36.509033203125" positionY="144.1869812011719" width="128" height="88"/>
+        <element name="Times" positionX="175.8148193359375" positionY="146.1306457519531" width="128" height="103"/>
+        <element name="Journaling" positionX="379.6734619140625" positionY="104.6674499511719" width="128" height="148"/>
+        <element name="Label" positionX="642.54736328125" positionY="151.2952880859375" width="128" height="118"/>
+    </elements>
+</model>

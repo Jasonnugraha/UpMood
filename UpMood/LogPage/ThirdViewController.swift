@@ -48,6 +48,7 @@ class ThirdViewController: UIViewController{
         backEmo.layer.insertSublayer(gradient, at: 0)
     }
 
+    
 /*
     //Mark - Tableview datasource Method
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

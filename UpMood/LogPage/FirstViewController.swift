@@ -6,30 +6,30 @@
 //
 
 import UIKit
+import CoreData
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
-    
     @IBOutlet weak var feelingsToday: UILabel!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var summary: [Curhat]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textViewArea.delegate = self
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         textViewArea.layer.cornerRadius = 10
+        //let uuid = UUID().uuidString
+        //print(uuid)
         
+        getCurhatFromCoreData()
+      
     }
-/*
-        // MARK: - Navigation
-
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-*/
-        
     func backgroundEmot(){
         let gradient = CAGradientLayer()
         gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
@@ -46,10 +46,28 @@ class FirstViewController: UIViewController {
         backEmo.layer.insertSublayer(gradient, at: 0)
     }
 
+    func getCurhatFromCoreData(){
+        do {
+            try context.fetch(Curhat.fetchRequest())
+            self.textViewArea.reloadInputViews()
+/*            DispatchQueue.main.async {
+                self.tableSavedData.reloadData()
+            }
+*/
+        } catch  {
+            print("error")
+        }
+    }
     
 
-    
-    
+    /*
+            // MARK: - Navigation
+
+            // In a storyboard-based application, you will often want to do a little preparation before navigation
+            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                // Get the new view controller using segue.destination.
+                // Pass the selected object to the new view controller.
+    */
     
 
 }
