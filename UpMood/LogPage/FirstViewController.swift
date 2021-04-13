@@ -27,7 +27,7 @@ class FirstViewController: UIViewController, UITextViewDelegate {
         //let uuid = UUID().uuidString
         //print(uuid)
         
-        getCurhatFromCoreData()
+        //getCurhatFromCoreData()
       
     }
     func backgroundEmot(){
@@ -46,6 +46,7 @@ class FirstViewController: UIViewController, UITextViewDelegate {
         backEmo.layer.insertSublayer(gradient, at: 0)
     }
 
+/*
     func getCurhatFromCoreData(){
         do {
             try context.fetch(Curhat.fetchRequest())
@@ -59,7 +60,7 @@ class FirstViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-
+*/
     /*
             // MARK: - Navigation
 
@@ -68,6 +69,8 @@ class FirstViewController: UIViewController, UITextViewDelegate {
                 // Get the new view controller using segue.destination.
                 // Pass the selected object to the new view controller.
     */
+    
+    
     
 
 }
