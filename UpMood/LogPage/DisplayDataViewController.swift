@@ -64,8 +64,13 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! LogDateViewController
-        destinationVC.curhat = curhatToPass
+        if(segue.identifier=="LogDateIdentifier"){
+            let destinationVC = segue.destination as! LogDateViewController
+            destinationVC.curhat = curhatToPass
+        }else{
+            return
+        }
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
