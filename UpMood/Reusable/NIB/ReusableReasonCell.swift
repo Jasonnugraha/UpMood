@@ -13,9 +13,12 @@ class ReusableReasonCell: UITableViewCell {
     @IBOutlet weak var customEmojiTextField: UITextField!
     @IBOutlet weak var customReasonTextField: UITextField!
     var isChecked: Bool!
+    var delegate: StoryViewController2Delegate?
+    var indexPath: IndexPath?
     
     @IBAction func checklistPressed(_ sender: UIButton) {
         customCheckListButton.isSelected.toggle()
+        delegate?.reasonDidSelected(indexPath: indexPath)
     }
     
     static let identifier = "ReusableReasonCell"
@@ -26,7 +29,6 @@ class ReusableReasonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
         // Initialization code
     }
 
