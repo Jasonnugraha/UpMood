@@ -70,14 +70,14 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Logs" largeTitleDisplayMode="always" id="a9m-Ym-z60">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="CC9-Pr-PGM">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="13f-S4-cpw">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="bvb-sC-Q8Q">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VNF-A5-AlD">
                                 <rect key="frame" x="356" y="11" width="18" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus" catalog="system"/>
                             </button>
                             <connections>
-                                <segue destination="6cb-x7-Q7t" kind="show" id="tNw-vp-tCZ"/>
+                                <segue destination="vSq-wR-6ej" kind="show" id="Su0-Hp-05E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
