@@ -28,9 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="5rw-xf-38f" kind="show" id="rhM-E3-vYG"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -47,20 +44,10 @@
             </objects>
             <point key="canvasLocation" x="967.69230769230762" y="-185.54502369668245"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="s0U-1N-n8K">
-            <objects>
-                <viewControllerPlaceholder id="5rw-xf-38f" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="VGk-JK-8Kk"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFy-Md-Q5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1702" y="-186"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KnT-cB-h0O">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="icq-7p-YSu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="icq-7p-YSu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UXE-Wc-RIW">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>

@@ -221,11 +221,8 @@
 		B4DE5DB3262450AA00B5C7E4 /* EditLogPage */ = {
 			isa = PBXGroup;
 			children = (
-				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 				B417041A261B7550004FF9D9 /* TableViewController.swift */,
-				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
-				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 			);
 			path = EditLogPage;
 			sourceTree = "<group>";
@@ -233,8 +230,6 @@
 		B4DE5DB42624517E00B5C7E4 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */,
-				70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */,
 				701EE3C1261EEB8F004AB422 /* StoryViewController1.swift */,
 				701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */,
 				701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */,
@@ -251,6 +246,9 @@
 			children = (
 				5B2093F9261C72DE00810366 /* SliderViewController.swift */,
 				701EE3BE261EEB61004AB422 /* PageViewController.swift */,
+				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
+				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
+				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 			);
 			path = "Unused Files";
 			sourceTree = "<group>";

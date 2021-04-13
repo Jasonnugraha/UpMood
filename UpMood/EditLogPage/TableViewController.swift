@@ -13,6 +13,7 @@ class TableViewController: UIViewController {
     var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
                                Labels(isChecked: true, emojiLogo: "📚", reason: "Study")]
     
+    
     @IBOutlet weak var emotionTableView: UITableView!
 
 

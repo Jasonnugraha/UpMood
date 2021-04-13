@@ -268,6 +268,7 @@
                                 </state>
                                 <connections>
                                     <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="iZf-Uf-sZE"/>
+                                    <segue destination="caY-yM-Tmp" kind="show" id="fSr-e4-2tL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-EX-Zj6">
@@ -325,6 +326,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USE-Y4-GVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2934" y="574"/>
+        </scene>
+        <!--Logs-->
+        <scene sceneID="0RJ-i5-VYQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Logs" id="caY-yM-Tmp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="efF-CJ-SFA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzN-e2-UC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2992" y="825"/>
         </scene>
     </scenes>
     <resources>
