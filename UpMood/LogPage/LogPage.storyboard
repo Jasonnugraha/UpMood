@@ -11,7 +11,7 @@
         <!--Logs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Logs" id="BYZ-38-t0r" customClass="DisplayDataViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Logs" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="DisplayDataViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="View" customModule="DisplayViewController">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +232,7 @@
         <!--Logs-->
         <scene sceneID="tDh-55-tcC">
             <objects>
-                <navigationController title="Logs" automaticallyAdjustsScrollViewInsets="NO" id="Ncs-0R-OKa" sceneMemberID="viewController">
+                <navigationController title="Logs" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Ncs-0R-OKa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ncm-qs-okY">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>

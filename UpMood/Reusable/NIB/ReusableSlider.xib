@@ -14,6 +14,7 @@
                 <outlet property="backslider" destination="eoF-yq-3kL" id="t2t-O6-5RN"/>
                 <outlet property="emoticon" destination="pnw-zI-dfM" id="jtc-aY-nts"/>
                 <outlet property="horizontalSlider" destination="tC0-JV-j7c" id="E2x-R1-Fq2"/>
+                <outlet property="grtbackemo" destination="94Z-mL-YzY" id="wq6-V3-She"/>
                 <outlet property="infoemot" destination="3KG-BQ-Bh9" id="nKS-7j-aOl"/>
             </connections>
         </placeholder>
