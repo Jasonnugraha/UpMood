@@ -223,6 +223,7 @@
 			children = (
 				B417041A261B7550004FF9D9 /* TableViewController.swift */,
 				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
+				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 			);
 			path = EditLogPage;
 			sourceTree = "<group>";
@@ -248,7 +249,6 @@
 				701EE3BE261EEB61004AB422 /* PageViewController.swift */,
 				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
-				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 			);
 			path = "Unused Files";
 			sourceTree = "<group>";

@@ -15,11 +15,17 @@ class TableViewController: UIViewController {
     
     
     @IBOutlet weak var emotionTableView: UITableView!
-
-
-    @IBAction func buttonIsPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToLogsStoryboard", sender: self)
+    @IBAction func deletedidtapbutton(_ sender: Any) {
+        actionsheetdelete()
     }
+    @IBAction func cancelbutton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+
+/*    @IBAction func buttonIsPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToLogsStoryboard", sender: self)
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +34,25 @@ class TableViewController: UIViewController {
         emotionTableView.dataSource = self
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+// Action Sheet
+    func deleteHandler(alert: UIActionHandler){
+        self.navigationController?.pushViewController(UIViewController(), animated: true)
+    }
+    
+    func actionsheetdelete(){
+            
+            let alertController = UIAlertController(title: nil, message: "Delete this log?", preferredStyle: .actionSheet)
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil ))
+            present(alertController, animated: true)
+            
+            alertController.addAction(UIAlertAction(title: "Delete Log", style: .destructive, handler: nil))
+        }
+    
+/*    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogsStoryboard"{
             guard let vc = segue.destination as? Logs else{return}
         }
-    }
+    } */
 }
 
 // Emotion Controller
