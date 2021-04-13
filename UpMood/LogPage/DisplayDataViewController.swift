@@ -16,7 +16,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     var listCurhat:[Curhat]!
     var groupedListCurhat:[[Curhat]] = [[]]
     var tempListCurhat:[Curhat] = []
-    
+    var curhatToPass:Curhat?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSavedData.delegate = self
@@ -58,12 +58,19 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         groupedListCurhat.append(tempListCurhat)
         print("")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! LogDateViewController
+        destinationVC.curhat = curhatToPass
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return segmentCounter
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //PerformSague
+        self.curhatToPass = groupedListCurhat[indexPath.section+1][indexPath.row]
+        performSegue(withIdentifier: "LogDateIdentifier", sender: self)
     }
     func getCurhatFromCoreData(){
         do {

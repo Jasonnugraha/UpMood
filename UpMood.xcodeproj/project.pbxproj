@@ -48,6 +48,7 @@
 		B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */; };
 		B4DE5DAE2624502F00B5C7E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */; };
 		B4DE5DB72624526E00B5C7E4 /* DummyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */; };
+		B81ED0EF2625CC3E0078257D /* LogDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81ED0EE2625CC3E0078257D /* LogDateViewController.swift */; };
 		FB5890712625575C0079D4A0 /* StoryViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5890702625575C0079D4A0 /* StoryViewController4.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCodeViewController.swift; sourceTree = "<group>"; };
+		B81ED0EE2625CC3E0078257D /* LogDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDateViewController.swift; sourceTree = "<group>"; };
 		FB5890702625575C0079D4A0 /* StoryViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +179,7 @@
 				B4D3296B262454E000B0A064 /* LogViews.storyboard */,
 				B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */,
 				B4DE5DA426244FEF00B5C7E4 /* LogPageViewController.swift */,
+				B81ED0EE2625CC3E0078257D /* LogDateViewController.swift */,
 				B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */,
 				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
 				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
@@ -355,6 +358,7 @@
 				B4181EDF262319E700E7A022 /* LogTableViewCellController.swift in Sources */,
 				701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */,
 				B4294102262481930089AE65 /* TableViewCellController.swift in Sources */,
+				B81ED0EF2625CC3E0078257D /* LogDateViewController.swift in Sources */,
 				B4181EE726231B1E00E7A022 /* LogsStruct.swift in Sources */,
 				70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */,
 				B4DE5DA82624501C00B5C7E4 /* ThirdViewController.swift in Sources */,
