@@ -34,7 +34,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>LogPage</string>
+					<string>LogViews</string>
 				</dict>
 			</array>
 		</dict>
@@ -42,9 +42,9 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>LogViews</string>
 	<key>UIMainStoryboardFile</key>
-	<string>LogPage</string>
+	<string>LogViews</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
