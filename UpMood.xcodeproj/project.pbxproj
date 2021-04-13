@@ -25,6 +25,7 @@
 		709550982625924600361458 /* TimesMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550902625924600361458 /* TimesMo+CoreDataProperties.swift */; };
 		709550992625924600361458 /* JournalingMo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550912625924600361458 /* JournalingMo+CoreDataClass.swift */; };
 		7095509A2625924600361458 /* JournalingMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550922625924600361458 /* JournalingMo+CoreDataProperties.swift */; };
+		709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */; };
 		70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */; };
 		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
 		B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = B414D3A22620618E0035EE90 /* ReusableSlider.xib */; };
@@ -78,6 +79,7 @@
 		709550902625924600361458 /* TimesMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimesMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		709550912625924600361458 /* JournalingMo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalingMo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		709550922625924600361458 /* JournalingMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalingMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDefaultSummaryViewController.swift; sourceTree = "<group>"; };
 		70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		B414D3A22620618E0035EE90 /* ReusableSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableSlider.xib; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
 				B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */,
 				B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */,
+				709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */,
 			);
 			path = LogPage;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */,
+				709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
 				709550962625924600361458 /* LabelMo+CoreDataProperties.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
