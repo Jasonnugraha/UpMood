@@ -11,12 +11,31 @@ class StoryViewController1: UIViewController, PageObservation {
     
     var parentPVC: OnboardingPageViewController!
     
-    func getParentPageViewController(parentRef: OnboardingPageViewController) {
-        parentPVC = parentRef
+    
+    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var emotionSlider: ReusableSlider!
+    var slider: UISlider!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nextBtn.layer.cornerRadius = 10
+        slider = emotionSlider.horizontalSlider
+        slider.addTarget(self, action: #selector(sliderValueDidChange(sender:)), for: .valueChanged)
+        print("slider value", slider.value)
     }
     
-    @IBAction func onNextBtnTap(_ sender: UIButton) {
-        parentPVC.setDataSourceSelf()
+    @objc func sliderValueDidChange(sender: UISlider) {
+        print("sender value", sender.value)
+    }
+    
+    func getParentPageViewController(parentRef: OnboardingPageViewController) {
+        parentPVC = parentRef
+       
     }
 
+    
+//    @IBAction func onNextBtnTap(_ sender: UIButton) {
+//        parentPVC.setDataSourceSelf()
+//    }
+    
 }

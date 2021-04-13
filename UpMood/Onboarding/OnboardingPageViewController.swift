@@ -40,7 +40,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Page content
-        self.dataSource = nil;
+        self.dataSource = self;
         // Set the content (VCs) to be displayed, which is the first page
         let firstViewController = orderedViewControllers[0]
         setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
@@ -111,6 +111,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
 //        print("Prev VC :", previousViewControllers[0])
 //        print("Finished :", finished)
 //        print("Completed :",completed)
+        
     }
     
     func setDataSourceSelf() {
