@@ -17,6 +17,14 @@
 		701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */; };
 		701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */; };
 		706B5CFF26255DA9008208BC /* UpMoodRelationship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 706B5CFD26255DA9008208BC /* UpMoodRelationship.xcdatamodeld */; };
+		709550932625924600361458 /* DatesMo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095508B2625924600361458 /* DatesMo+CoreDataClass.swift */; };
+		709550942625924600361458 /* DatesMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095508C2625924600361458 /* DatesMo+CoreDataProperties.swift */; };
+		709550952625924600361458 /* LabelMo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095508D2625924600361458 /* LabelMo+CoreDataClass.swift */; };
+		709550962625924600361458 /* LabelMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095508E2625924600361458 /* LabelMo+CoreDataProperties.swift */; };
+		709550972625924600361458 /* TimesMo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095508F2625924600361458 /* TimesMo+CoreDataClass.swift */; };
+		709550982625924600361458 /* TimesMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550902625924600361458 /* TimesMo+CoreDataProperties.swift */; };
+		709550992625924600361458 /* JournalingMo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550912625924600361458 /* JournalingMo+CoreDataClass.swift */; };
+		7095509A2625924600361458 /* JournalingMo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550922625924600361458 /* JournalingMo+CoreDataProperties.swift */; };
 		70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */; };
 		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
 		B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = B414D3A22620618E0035EE90 /* ReusableSlider.xib */; };
@@ -62,6 +70,14 @@
 		701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController2.swift; sourceTree = "<group>"; };
 		701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController3.swift; sourceTree = "<group>"; };
 		706B5CFE26255DA9008208BC /* UpMoodRelationship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UpMoodRelationship.xcdatamodel; sourceTree = "<group>"; };
+		7095508B2625924600361458 /* DatesMo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatesMo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7095508C2625924600361458 /* DatesMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatesMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7095508D2625924600361458 /* LabelMo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelMo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7095508E2625924600361458 /* LabelMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7095508F2625924600361458 /* TimesMo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimesMo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		709550902625924600361458 /* TimesMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimesMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		709550912625924600361458 /* JournalingMo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalingMo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		709550922625924600361458 /* JournalingMo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalingMo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		B414D3A22620618E0035EE90 /* ReusableSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableSlider.xib; sourceTree = "<group>"; };
@@ -138,6 +154,21 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		7095509C2625926000361458 /* ModelMo */ = {
+			isa = PBXGroup;
+			children = (
+				7095508B2625924600361458 /* DatesMo+CoreDataClass.swift */,
+				7095508C2625924600361458 /* DatesMo+CoreDataProperties.swift */,
+				7095508D2625924600361458 /* LabelMo+CoreDataClass.swift */,
+				7095508E2625924600361458 /* LabelMo+CoreDataProperties.swift */,
+				7095508F2625924600361458 /* TimesMo+CoreDataClass.swift */,
+				709550902625924600361458 /* TimesMo+CoreDataProperties.swift */,
+				709550912625924600361458 /* JournalingMo+CoreDataClass.swift */,
+				709550922625924600361458 /* JournalingMo+CoreDataProperties.swift */,
+			);
+			path = ModelMo;
+			sourceTree = "<group>";
+		};
 		B417040A261B7550004FF9D9 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +188,7 @@
 		B4170415261B7550004FF9D9 /* UpMood */ = {
 			isa = PBXGroup;
 			children = (
+				7095509C2625926000361458 /* ModelMo */,
 				B4DE5DB52624525C00B5C7E4 /* Unused Files */,
 				B4DE5DB42624517E00B5C7E4 /* Onboarding */,
 				B4DE5DB3262450AA00B5C7E4 /* EditLogPage */,
@@ -334,19 +366,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709550992625924600361458 /* JournalingMo+CoreDataClass.swift in Sources */,
 				B417041B261B7550004FF9D9 /* TableViewController.swift in Sources */,
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
+				709550962625924600361458 /* LabelMo+CoreDataProperties.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				B4DE5DA526244FEF00B5C7E4 /* LogPageViewController.swift in Sources */,
+				709550932625924600361458 /* DatesMo+CoreDataClass.swift in Sources */,
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,
 				B42940FB262481420089AE65 /* SaveFile.xcdatamodeld in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				706B5CFF26255DA9008208BC /* UpMoodRelationship.xcdatamodeld in Sources */,
 				B4DE5DAE2624502F00B5C7E4 /* FirstViewController.swift in Sources */,
 				5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */,
+				709550952625924600361458 /* LabelMo+CoreDataClass.swift in Sources */,
+				709550972625924600361458 /* TimesMo+CoreDataClass.swift in Sources */,
 				B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */,
 				B42940E8262480780089AE65 /* timepicker.swift in Sources */,
 				B42940F6262481270089AE65 /* DisplayDataViewController.swift in Sources */,
@@ -360,9 +397,12 @@
 				B4DE5DA82624501C00B5C7E4 /* ThirdViewController.swift in Sources */,
 				B42940F5262481270089AE65 /* FillDataViewController.swift in Sources */,
 				B4181ED72623129A00E7A022 /* ReusableLogsCell.swift in Sources */,
+				709550982625924600361458 /* TimesMo+CoreDataProperties.swift in Sources */,
 				701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */,
+				709550942625924600361458 /* DatesMo+CoreDataProperties.swift in Sources */,
 				70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
+				7095509A2625924600361458 /* JournalingMo+CoreDataProperties.swift in Sources */,
 				B4DE5DB72624526E00B5C7E4 /* DummyCodeViewController.swift in Sources */,
 				701EE3BF261EEB61004AB422 /* PageViewController.swift in Sources */,
 			);
