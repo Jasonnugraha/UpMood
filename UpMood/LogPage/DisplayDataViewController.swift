@@ -11,6 +11,8 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var tableSavedData: UITableView!
     
+    
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var segmentCounter = 1
     var listCurhat:[Curhat]!
@@ -27,7 +29,9 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         tableSavedData.delegate = self
         tableSavedData.dataSource = self
         getCurhatFromCoreData()

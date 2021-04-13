@@ -173,9 +173,7 @@
 				B42940F3262481270089AE65 /* DisplayDataViewController.swift */,
 				B42940F2262481270089AE65 /* FillDataViewController.swift */,
 				B42940F4262481270089AE65 /* LogPage.storyboard */,
-				B4D32968262454D800B0A064 /* Logs.storyboard */,
 				B4D3296B262454E000B0A064 /* LogViews.storyboard */,
-				B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */,
 				B4DE5DA426244FEF00B5C7E4 /* LogPageViewController.swift */,
 				B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */,
 				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
@@ -245,6 +243,8 @@
 		B4DE5DB52624525C00B5C7E4 /* Unused Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4D32968262454D800B0A064 /* Logs.storyboard */,
+				B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */,
 				5B2093F9261C72DE00810366 /* SliderViewController.swift */,
 				701EE3BE261EEB61004AB422 /* PageViewController.swift */,
 				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
