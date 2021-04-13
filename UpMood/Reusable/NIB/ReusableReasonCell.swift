@@ -12,7 +12,7 @@ class ReusableReasonCell: UITableViewCell {
     @IBOutlet weak var customCheckListButton: UIButton!
     @IBOutlet weak var customEmojiTextField: UITextField!
     @IBOutlet weak var customReasonTextField: UITextField!
-    
+    var isChecked: Bool!
     
     @IBAction func checklistPressed(_ sender: UIButton) {
         customCheckListButton.isSelected.toggle()
@@ -32,7 +32,6 @@ class ReusableReasonCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

@@ -19,6 +19,8 @@ class StoryViewController2: UIViewController, PageObservation {
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     
+    var index: Int!
+    
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
         parentPVC = parentRef
     }
@@ -46,8 +48,13 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
         let data = dataSeed[indexPath.row]
         customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
         
+        customCell.customCheckListButton.addTarget(self, action: #selector(buttonTap(_sender:)), for: .touchUpInside)
         return customCell
 
+    }
+    
+    @objc func buttonTap(_sender: UIButton) {
+        print("tapped")
     }
     
 }
