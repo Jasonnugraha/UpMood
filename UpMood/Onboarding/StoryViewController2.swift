@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Foundation
 
 class StoryViewController2: UIViewController, PageObservation {
     
     var parentPVC: OnboardingPageViewController!
+    var dataSeed: [Label] = [Label(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
+                               Label(isChecked: true, emojiLogo: "📚", reason: "Study")]
+    @IBOutlet weak var emotionTableView: UITableView!
+    @IBOutlet weak var nextBtn: UIButton!
     
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
         parentPVC = parentRef
@@ -17,17 +22,28 @@ class StoryViewController2: UIViewController, PageObservation {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SVC2 is Loaded")
+        nextBtn.layer.cornerRadius = 10
+        emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
+        emotionTableView.delegate = self
+        emotionTableView.dataSource = self
     }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// Emotion Controller
+extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSeed.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
+        let data = dataSeed[indexPath.row]
+        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
+        
+        return customCell
 
+    }
+    
 }
