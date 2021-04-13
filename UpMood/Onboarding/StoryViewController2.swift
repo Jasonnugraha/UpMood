@@ -11,8 +11,10 @@ import Foundation
 class StoryViewController2: UIViewController, PageObservation {
     
     var parentPVC: OnboardingPageViewController!
-    var dataSeed: [Label] = [Label(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
-                               Label(isChecked: true, emojiLogo: "📚", reason: "Study")]
+    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
+                               Labels(isChecked: true, emojiLogo: "📚", reason: "Study")]
+    
+    
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     

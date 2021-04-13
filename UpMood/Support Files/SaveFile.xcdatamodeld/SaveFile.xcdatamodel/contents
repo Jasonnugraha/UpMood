@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Curhat" representedClassName="Curhat" syncable="YES" codeGenerationType="class">
         <attribute name="causeOfFeeling" optional="YES" attributeType="Transformable"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -7,9 +7,9 @@
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="feeling" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="ofLabel" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Label" inverseName="ofCurhat" inverseEntity="Label"/>
+        <relationship name="ofLabel" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LabelsCoreData" inverseName="ofCurhat" inverseEntity="LabelsCoreData"/>
     </entity>
-    <entity name="Label" representedClassName="Label" syncable="YES" codeGenerationType="class">
+    <entity name="LabelsCoreData" representedClassName="LabelsCoreData" syncable="YES" codeGenerationType="class">
         <attribute name="emojiLogo" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isChecked" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -19,6 +19,6 @@
     </entity>
     <elements>
         <element name="Curhat" positionX="-63" positionY="-18" width="128" height="148"/>
-        <element name="Label" positionX="231.05859375" positionY="-1.3828125" width="128" height="133"/>
+        <element name="LabelsCoreData" positionX="231.05859375" positionY="-1.3828125" width="128" height="133"/>
     </elements>
 </model>
