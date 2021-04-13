@@ -8,7 +8,8 @@
 import UIKit
 import CoreData
 class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
     @IBOutlet weak var tableSavedData: UITableView!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -31,7 +32,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         tableSavedData.dataSource = self
         getCurhatFromCoreData()
         sortTable()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     func sortTable(){
         listCurhat?.sort(by: { ($0.date! > $1.date!)
@@ -48,6 +49,8 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         //load page sebelumnya (tampilin sisa page yang ada)
         tableSavedData.reloadData()
     }
+    
+    // ambil curhatan dari coredata
     func getCurhatFromCoreData(){
         do {
             self.listCurhat = try context.fetch(Curhat.fetchRequest())
@@ -74,7 +77,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         cell.dateLabel.text = formatter.string(from: currentContent.date!)
         cell.emojiLabel.text = currentContent.emoji
         cell.feelingLabel.text = currentContent.feeling
-        
         return cell
     }
 }
+

@@ -36,5 +36,13 @@ extension LogTableViewCellController: UITableViewDelegate, UITableViewDataSource
         return logCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let detailedStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = detailedStoryboard.instantiateViewController(identifier: "SecondPageLogsViewController") as! TableViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+    }
+    
     
 }

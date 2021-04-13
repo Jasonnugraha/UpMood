@@ -19,6 +19,6 @@
     </entity>
     <elements>
         <element name="Curhat" positionX="-63" positionY="-18" width="128" height="148"/>
-        <element name="Label" positionX="-63" positionY="18" width="128" height="133"/>
+        <element name="Label" positionX="231.05859375" positionY="-1.3828125" width="128" height="133"/>
     </elements>
 </model>
