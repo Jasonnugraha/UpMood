@@ -159,6 +159,7 @@
 				B4DE5DB52624525C00B5C7E4 /* Unused Files */,
 				B4DE5DB42624517E00B5C7E4 /* Onboarding */,
 				B4DE5DB3262450AA00B5C7E4 /* EditLogPage */,
+				B4AA0F2B2625F2F70058303D /* LogView */,
 				B4181EDD262319A100E7A022 /* LogPage */,
 				B4DE5DB02624505100B5C7E4 /* Reusable */,
 				1BFCB561261C66D800062393 /* Storyboards */,
@@ -171,19 +172,26 @@
 		B4181EDD262319A100E7A022 /* LogPage */ = {
 			isa = PBXGroup;
 			children = (
+				B42940F4262481270089AE65 /* LogPage.storyboard */,
 				B4294101262481930089AE65 /* TableViewCellController.swift */,
 				B42940F3262481270089AE65 /* DisplayDataViewController.swift */,
 				B42940F2262481270089AE65 /* FillDataViewController.swift */,
-				B42940F4262481270089AE65 /* LogPage.storyboard */,
+				B81ED0EE2625CC3E0078257D /* LogDateViewController.swift */,
+			);
+			path = LogPage;
+			sourceTree = "<group>";
+		};
+		B4AA0F2B2625F2F70058303D /* LogView */ = {
+			isa = PBXGroup;
+			children = (
 				B4D3296B262454E000B0A064 /* LogViews.storyboard */,
 				B4DE5DA426244FEF00B5C7E4 /* LogPageViewController.swift */,
-				B81ED0EE2625CC3E0078257D /* LogDateViewController.swift */,
 				B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */,
 				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
 				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
 				B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */,
 			);
-			path = LogPage;
+			path = LogView;
 			sourceTree = "<group>";
 		};
 		B4D20FBB261D9C7D002B101F /* NIB */ = {
