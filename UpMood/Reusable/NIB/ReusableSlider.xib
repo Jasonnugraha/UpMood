@@ -74,7 +74,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-67" y="-9"/>
+            <point key="canvasLocation" x="-67.692307692307693" y="-9.24170616113744"/>
         </view>
     </objects>
     <resources>

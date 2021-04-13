@@ -39,7 +39,7 @@
 		B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D12B726205A1800F2CBEF /* ReusableSlider.swift */; };
 		B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */; };
 		B4D20FCE261DA2BC002B101F /* ReusableReasonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */; };
-		B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */; };
+		B4D20FD3261DAB50002B101F /* CustomLabelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D20FD2261DAB50002B101F /* CustomLabelStruct.swift */; };
 		B4D32969262454D800B0A064 /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D32968262454D800B0A064 /* Logs.storyboard */; };
 		B4D3296C262454E000B0A064 /* LogViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D3296B262454E000B0A064 /* LogViews.storyboard */; };
 		B4DE5D9126244EB300B5C7E4 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -85,7 +85,7 @@
 		B42D12B726205A1800F2CBEF /* ReusableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSlider.swift; sourceTree = "<group>"; };
 		B4D20FCB261DA2BC002B101F /* ReusableReasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableReasonCell.swift; sourceTree = "<group>"; };
 		B4D20FCC261DA2BC002B101F /* ReusableReasonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableReasonCell.xib; sourceTree = "<group>"; };
-		B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmotionStruct.swift; sourceTree = "<group>"; };
+		B4D20FD2261DAB50002B101F /* CustomLabelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelStruct.swift; sourceTree = "<group>"; };
 		B4D32968262454D800B0A064 /* Logs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logs.storyboard; sourceTree = "<group>"; };
 		B4D3296B262454E000B0A064 /* LogViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogViews.storyboard; sourceTree = "<group>"; };
 		B4DE5DA426244FEF00B5C7E4 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
@@ -127,10 +127,7 @@
 		1BFCB561261C66D800062393 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
-				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
 				B4170421261B7551004FF9D9 /* LaunchScreen.storyboard */,
-				701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -178,9 +175,9 @@
 				B4D3296B262454E000B0A064 /* LogViews.storyboard */,
 				B4181EDE262319E700E7A022 /* LogTableViewCellController.swift */,
 				B4DE5DA426244FEF00B5C7E4 /* LogPageViewController.swift */,
-				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
-				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
 				B4DE5DAD2624502F00B5C7E4 /* FirstViewController.swift */,
+				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
+				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
 				B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */,
 			);
 			path = LogPage;
@@ -213,7 +210,7 @@
 		B4DE5DB22624508500B5C7E4 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				B4D20FD2261DAB50002B101F /* CustomEmotionStruct.swift */,
+				B4D20FD2261DAB50002B101F /* CustomLabelStruct.swift */,
 				B4181EE626231B1E00E7A022 /* LogsStruct.swift */,
 			);
 			path = Struct;
@@ -225,6 +222,8 @@
 				5B1D0C12261EE2BE00F02203 /* EditLogViewController.swift */,
 				B417041A261B7550004FF9D9 /* TableViewController.swift */,
 				5BF9BE0B261DA76400E16DA5 /* EditModalViewController.swift */,
+				B417041C261B7550004FF9D9 /* EditModal.storyboard */,
+				5B1D0C13261EE2BE00F02203 /* EditLogViewController.xib */,
 			);
 			path = EditLogPage;
 			sourceTree = "<group>";
@@ -237,6 +236,7 @@
 				701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */,
 				70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */,
 				70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */,
+				701EE3BB261EEB0A004AB422 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				5B1D0C14261EE2BE00F02203 /* EditLogViewController.swift in Sources */,
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */,
-				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
+				B4D20FD3261DAB50002B101F /* CustomLabelStruct.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				B4DE5DA526244FEF00B5C7E4 /* LogPageViewController.swift in Sources */,
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,

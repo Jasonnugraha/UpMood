@@ -8,7 +8,7 @@
 import Foundation
 
 struct Logs{
-    var emotion: Label
+    var emotion: Labels
     var dateStamp: Date
     var currentEmotion: String
     var notesDetail: String = ""

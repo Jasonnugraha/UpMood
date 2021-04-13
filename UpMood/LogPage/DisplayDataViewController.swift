@@ -26,10 +26,12 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableSavedData.delegate = self
         tableSavedData.dataSource = self
         getCurhatFromCoreData()
         sortTable()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     func sortTable(){
         listCurhat?.sort(by: { ($0.date! > $1.date!)

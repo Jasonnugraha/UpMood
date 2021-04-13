@@ -7,8 +7,18 @@
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="feeling" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="ofLabel" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Label" inverseName="ofCurhat" inverseEntity="Label"/>
+    </entity>
+    <entity name="Label" representedClassName="Label" syncable="YES" codeGenerationType="class">
+        <attribute name="emojiLogo" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isChecked" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isEditable" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <relationship name="ofCurhat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curhat" inverseName="ofLabel" inverseEntity="Curhat"/>
     </entity>
     <elements>
-        <element name="Curhat" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Curhat" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Label" positionX="-63" positionY="18" width="128" height="133"/>
     </elements>
 </model>
