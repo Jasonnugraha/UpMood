@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 @IBDesignable
 class ReusableSlider: UIView {
     
@@ -19,6 +18,7 @@ class ReusableSlider: UIView {
     @IBOutlet weak var emoticon: UILabel!
     @IBOutlet weak var backemo: UIView!
     @IBOutlet weak var backslider: UIView!
+    @IBOutlet weak var horizontalSlider: UISlider!
     
     @IBAction func slider(_ sender: UISlider) {
         let value = Int (sender.value)

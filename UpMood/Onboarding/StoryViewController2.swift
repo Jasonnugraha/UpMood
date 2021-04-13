@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 
+@IBDesignable
 class StoryViewController2: UIViewController, PageObservation {
     
     var parentPVC: OnboardingPageViewController!
@@ -24,12 +25,13 @@ class StoryViewController2: UIViewController, PageObservation {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("SVC2 Loaded")
         nextBtn.layer.cornerRadius = 10
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
     }
-
+    
 }
 
 // Emotion Controller

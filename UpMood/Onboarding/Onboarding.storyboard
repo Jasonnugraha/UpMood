@@ -105,11 +105,6 @@
                                     <action selector="onNextBtnTap:" destination="vyj-WL-pLS" eventType="touchUpInside" id="r1Z-Zv-hW4"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIg-Gr-j2Y" customClass="ReusableSlider" customModule="UpMood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="260" width="390" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2X-V2-mrV">
                                 <rect key="frame" x="90" y="196" width="211" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,10 +112,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-PQ-r3j" customClass="ReusableSlider" customModule="UpMood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="286" width="390" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ah5-ec-OvR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="emotionSlider" destination="4qc-PQ-r3j" id="Nuy-4e-PaM"/>
+                        <outlet property="nextBtn" destination="tRs-gm-LI2" id="iqp-6X-xUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Niv-f5-HCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2EV-6u-znl" userLabel="Exit" sceneMemberID="exit"/>
@@ -178,6 +182,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.72156862749999995" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6kt-t4-AU0"/>
                     <connections>
                         <outlet property="emotionTableView" destination="vsC-il-HO3" id="aAF-sK-mpf"/>
                         <outlet property="nextBtn" destination="ITi-SY-lcU" id="6dN-OT-luA"/>
