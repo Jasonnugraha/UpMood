@@ -155,15 +155,15 @@
             </objects>
             <point key="canvasLocation" x="2969" y="-154"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="zDR-4q-uwj">
+        <!--LogViews-->
+        <scene sceneID="Xqv-or-HBY">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="vSq-wR-6ej" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4Rm-5n-fOK"/>
+                <viewControllerPlaceholder storyboardName="LogViews" id="xxw-UU-jBw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bXq-2M-SVU"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JSC-DJ-k0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMM-A4-d16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="48"/>
+            <point key="canvasLocation" x="1535" y="-114"/>
         </scene>
         <!--Log Date View Controller-->
         <scene sceneID="tNx-QC-Dbl">
@@ -211,6 +211,7 @@
                                             <outlet property="dateLabel" destination="4b8-nE-704" id="faQ-Nv-XBY"/>
                                             <outlet property="emojiLabel" destination="c63-q9-qqO" id="5pe-16-Qmr"/>
                                             <outlet property="feelingLabel" destination="s14-Gv-eff" id="iR5-ku-Bbm"/>
+                                            <segue destination="xxw-UU-jBw" kind="show" id="2xN-ll-P5G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -246,36 +247,8 @@
             </objects>
             <point key="canvasLocation" x="-1154" y="-154"/>
         </scene>
-        <!--Log Date View Controller-->
-        <scene sceneID="RKr-BK-c3w">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="r8Q-CE-v2Z" customClass="LogDateViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aWU-LD-16f">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorTransitionMaskImage="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cBE-Bx-1VU">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="9yG-fR-7xX">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" landscapeImage="chevron.backward" id="b7w-Kv-h09"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="b1x-Xx-sYy"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="O6b-oc-wSu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ckp-Si-ITi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1709" y="-154"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
