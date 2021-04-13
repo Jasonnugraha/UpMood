@@ -1,18 +1,18 @@
 //
-//  StoryViewController3.swift
+//  StoryViewController4.swift
 //  UpMood
 //
-//  Created by DHIKA ADITYA ARE on 08/04/21.
+//  Created by Azura on 13/04/21.
 //
 
 import UIKit
 
-class StoryViewController3: UIViewController {
+class StoryViewController4: UIViewController {
 
-    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var submitBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextBtn.layer.cornerRadius = 10
+        submitBtn.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
