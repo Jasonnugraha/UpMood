@@ -11,12 +11,13 @@ import CoreData
 class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataSource , UIPageViewControllerDelegate {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var summary1: Curhat?
-
+    //var summary1: Curhat?
+    var summary1: [Curhat]?
+    var klikIndex: Int?
     var pageControl = UIPageControl()
     let pageVC3 = UIPageControl()
-    var numberOfPages = 3
- 
+    var numberOfPages = 0
+    var i = 0
     lazy var VCArr : [FirstViewController] = {
            return []
        }()
@@ -28,12 +29,13 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
     //var numberOfPages = 3
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        numberOfPages = summary1!.count
         for _ in 0...numberOfPages - 1 {
             let viewController = self.VCInstance(name : "pageLog1") as! FirstViewController
-            viewController.summary = summary1
+            viewController.summary = summary1![i]
             //VCArr.append(self.VCInstance(name : "pageLog1") as! FirstViewController)
             VCArr.append(viewController)
+            i+=1
         }
  
 
@@ -60,7 +62,6 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         if let firstVC = VCArr.first {
             setViewControllers([firstVC] , direction: .forward , animated: true, completion: nil)
             setViewControllers([firstVC] , direction: .reverse , animated: true, completion: nil)
-
         }
  
         
@@ -92,9 +93,8 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
         guard let viewControllerIndex = VCArr.index(of: viewController as! FirstViewController) else {
             return nil
-
         }
-
+//3 = 4
         let previousIndex = viewControllerIndex-1
         guard previousIndex >= 0  else {
             return nil
@@ -107,7 +107,7 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         return VCArr[previousIndex]
     }
 
-// MARK - AAfter
+// MARK - After
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
         guard let viewControllerIndex = VCArr.firstIndex(of: viewController as! FirstViewController) else {
             return nil
@@ -129,6 +129,7 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
     public func presentationCount(for pageViewController: UIPageViewController) -> Int{
         return 3
     }
+ 
 
 
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int{

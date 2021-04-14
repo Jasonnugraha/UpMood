@@ -14,6 +14,7 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     var listCurhat : [Curhat]?
     var listTodayCurhat : [Curhat]? = []
     var curhatanHariIni: Curhat?
+    var sendIndex: Int?
     @IBOutlet weak var tableDisplayDate: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
@@ -66,7 +67,9 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.curhatanHariIni = listTodayCurhat?[indexPath.row]
+        self.sendIndex = indexPath.row
         performSegue(withIdentifier: "summaryView", sender: self)
+        
     }
     
 
@@ -78,7 +81,8 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         if(segue.identifier == "summaryView"){
             //let destinationVC = segue.destination as! FirstViewController //ini udah bener
             let destinationVC = segue.destination as! NewLogPageViewController
-            destinationVC.summary1 = self.curhatanHariIni
+            destinationVC.summary1 = self.listTodayCurhat
+            destinationVC.klikIndex = self.sendIndex
         } else {
             return
         }
