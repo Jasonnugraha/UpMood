@@ -70,7 +70,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Logs" largeTitleDisplayMode="always" id="a9m-Ym-z60">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="bvb-sC-Q8Q" customClass="Onboarding">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" style="plain" id="bvb-sC-Q8Q" customClass="Onboarding">
                             <connections>
                                 <segue destination="90U-pc-MyP" kind="show" identifier="ButtonToOnboarding" id="pqx-Fb-dwT"/>
                             </connections>
@@ -251,7 +251,7 @@
                     <navigationItem key="navigationItem" id="5v0-zf-Niz">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="igO-aH-rI6">
                             <connections>
-                                <segue destination="6cb-x7-Q7t" kind="show" id="rfr-eB-FRc"/>
+                                <segue destination="90U-pc-MyP" kind="show" id="LOP-f9-Sne"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,7 +284,11 @@
             <point key="canvasLocation" x="-1154" y="-154"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LOP-f9-Sne"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
