@@ -26,8 +26,8 @@ class TableViewController: UIViewController {
     // core data variable preparation
     var curhat : Curhat?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    
+    var listOfEmoji: [String] = []
+    var listOfDesc: [String] = []
     
     @IBOutlet weak var editDatePicker: UIDatePicker!
     @IBOutlet weak var reusableSlider: ReusableSlider!
@@ -58,9 +58,10 @@ class TableViewController: UIViewController {
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
         reusableSlider.delegate = self
+        
+        listOfEmoji = (curhat?.causeOfFeelingEmoji)!
+        listOfDesc = (curhat?.causeOfFeelingDesc)!
         print("hello")
-//        print(type(of: curhat?.causeOfFeelingDesc))
-//        getTodayCurhat()
         print("\(curhat?.date) \(curhat?.feeling!)")
         
         
@@ -71,8 +72,11 @@ class TableViewController: UIViewController {
     }
     
     func fetchAndUpdateTheContent(){
-        self.editDatePicker.date = (curhat?.date)!
         
+        
+        print(curhat?.causeOfFeelingDesc)
+        
+        self.editDatePicker.date = (curhat?.date)!
         if curhat!.feeling! == "Calm" {
             self.reusableSlider.horizontalSlider.value = 0
             print("Calm")
@@ -170,13 +174,15 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSeed.count
+        return listOfEmoji.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
-        let data = dataSeed[indexPath.row]
-        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
+//        let data = dataSeed[indexPath.row]
+        
+        customCell.editReasonCell(from: self.listOfEmoji[indexPath.row], from: self.listOfDesc[indexPath.row], status: true)
+        
         
         return customCell
 
