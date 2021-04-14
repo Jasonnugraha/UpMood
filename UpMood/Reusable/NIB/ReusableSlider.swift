@@ -15,6 +15,11 @@ class ReusableSlider: UIView {
     var labelemo = [String]()
     var gradbackemo = [UIImage]()
     
+    //perdelegatean
+    var delegate: TableViewControllerDelegate?
+    var sliderValueDelegate: Int?
+    
+    
     @IBOutlet weak var infoemot: UILabel!
     @IBOutlet weak var emoticon: UILabel!
     @IBOutlet weak var backemo: UIView!
@@ -27,6 +32,7 @@ class ReusableSlider: UIView {
         emoticon.text = emot[value]
         infoemot.text = labelemo[value]
         grtbackemo.image = gradbackemo[value]
+        delegate?.sliderValueChanged(sliderValue: value, infoEmot: infoemot.text)
     }
     
     func initialSetup(){

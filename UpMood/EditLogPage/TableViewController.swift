@@ -8,6 +8,11 @@
 import UIKit
 import Foundation
 
+protocol TableViewControllerDelegate {
+    func sliderValueChanged(sliderValue: Int, infoEmot:String?)
+    func reloadTable()
+}
+
 class TableViewController: UIViewController {
     
     var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
@@ -22,7 +27,10 @@ class TableViewController: UIViewController {
     var curhat : Curhat?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    
+    
     @IBOutlet weak var editDatePicker: UIDatePicker!
+    @IBOutlet weak var reusableSlider: ReusableSlider!
     
     
     @IBOutlet weak var emotionTableView: UITableView!
@@ -39,11 +47,15 @@ class TableViewController: UIViewController {
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+        reusableSlider.delegate = self
         print("hello")
 //        print(type(of: curhat?.causeOfFeelingDesc))
 //        getTodayCurhat()
         print("\(curhat?.date) \(curhat?.feeling)")
+        
+        // ini ambil data
         fetchAndUpdateTheContent()
+//        self.reloadInputViews()
     }
     
     
@@ -51,6 +63,9 @@ class TableViewController: UIViewController {
     
     func fetchAndUpdateTheContent(){
         self.editDatePicker.date = (curhat?.date)!
+        
+        
+        
     }
     
     func deleteContent(){
@@ -79,7 +94,8 @@ class TableViewController: UIViewController {
             let deletebutton = UIAlertAction(title: "Delete Log", style: .destructive){ (action) in
                 //self.navigationController?.pushViewController(UIViewController(), animated: true)
                 self.deleteContent()
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true,completion: nil)
+                
             }
             alertController.addAction(cancelbutton)
             alertController.addAction(deletebutton)
@@ -109,5 +125,19 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         return customCell
 
     }
+    
+}
+
+extension TableViewController:TableViewControllerDelegate{
+    func sliderValueChanged(sliderValue: Int, infoEmot: String?) {
+        print("\(sliderValue)  dan \(infoEmot)")
+    }
+    
+    func reloadTable() {
+        //
+    }
+    
+    
+    
     
 }

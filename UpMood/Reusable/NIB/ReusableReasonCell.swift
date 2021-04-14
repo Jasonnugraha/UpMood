@@ -13,7 +13,10 @@ class ReusableReasonCell: UITableViewCell {
     @IBOutlet weak var customEmojiTextField: UITextField!
     @IBOutlet weak var customReasonTextField: UITextField!
     var isChecked: Bool!
+    
+    //perdelegatean
     var delegate: StoryViewController2Delegate?
+    var delegateTableView : TableViewControllerDelegate?
     var indexPath: IndexPath?
     
     @IBAction func checklistPressed(_ sender: UIButton) {

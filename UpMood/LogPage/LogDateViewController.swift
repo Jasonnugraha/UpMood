@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    var delegateReload:TableViewControllerDelegate?
     
     var curhat : Curhat?
     var listCurhat : [Curhat]?
@@ -23,8 +24,13 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         getCurhatFromCoreData()
         getTodayCurhat()
         printListCurhat()
-        
+//        delegateReload.
     }
+    
+    func viewDidAppear(){
+        super.viewDidAppear(true)
+    }
+    
     func printListCurhat(){
         for item in listTodayCurhat! {
             print( "\(item.date)\n")
@@ -78,6 +84,7 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         if(segue.identifier == "EditLogDate"){
             let destinationVC = segue.destination as! TableViewController
             destinationVC.curhat = self.curhatanHariIni
+            
         } else {
             return
         }
