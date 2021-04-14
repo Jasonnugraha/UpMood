@@ -8,16 +8,22 @@
 import UIKit
 import Foundation
 
-class StoryViewController4: UIViewController {
+class StoryViewController4: UIViewController, OnboardingParentProtocol {
     
 
     var parentPVC: OnboardingPageViewController!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var summaryTableView: UITableView!
     @IBOutlet weak var notesLabel: UILabel!
+    var emotion: String! = "Today you feel"
+    var notes: String! = "Huhuhu"
+    var reasons: Array<Labels>! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDataFromParent()
+        print("after get data from parent")
+        summaryTableView.reloadData()
         submitBtn.layer.cornerRadius = 10
         summaryTableView.delegate = self
         summaryTableView.dataSource = self
@@ -31,8 +37,13 @@ class StoryViewController4: UIViewController {
         }
     }
     
+    // Child Implements Parent's Protocol
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
         parentPVC = parentRef
+    }
+    
+    func getDataFromParent() {
+        emotion = parentPVC.emotionDescription
     }
 
 }
@@ -51,8 +62,8 @@ extension StoryViewController4: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell? =
             tableView.dequeueReusableCell(withIdentifier: "summaryCell", for: indexPath)
-        cell?.textLabel?.text = "Perasaaan iniii"
-        cell?.detailTextLabel?.text = "Reasons terlalu banyak shay"
+        cell?.textLabel?.text = "Today you feel "+emotion
+        cell?.detailTextLabel?.text = emotion
         return cell!
     }
 }

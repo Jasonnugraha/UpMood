@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PageObservation: class {
+protocol OnboardingParentProtocol: class {
     func getParentPageViewController(parentRef: OnboardingPageViewController)
 }
 
@@ -26,8 +26,16 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         let vc3 = sb.instantiateViewController(identifier: "onBoardingThird")
         let vc4 = sb.instantiateViewController(identifier: "onBoardingFourth")
         
-        let vc1withParent = vc1 as! PageObservation
+        // Parent Delegate Child
+        let vc1withParent = vc1 as! OnboardingParentProtocol
         vc1withParent.getParentPageViewController(parentRef: self)
+        
+        let vc2withParent = vc2 as! OnboardingParentProtocol
+        vc2withParent.getParentPageViewController(parentRef: self)
+        let vc3withParent = vc3 as! OnboardingParentProtocol
+        vc3withParent.getParentPageViewController(parentRef: self)
+        let vc4withParent = vc4 as! OnboardingParentProtocol
+        vc4withParent.getParentPageViewController(parentRef: self)
         
         var viewControllers = [UIViewController]()
         
@@ -112,6 +120,11 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
+
+        print("pageControl", self.pageControl.currentPage)
+        if (self.pageControl.currentPage == 3) {
+            
+        }
 //        print("Current VC :", pageContentViewController)
 //        print("Prev VC :", previousViewControllers[0])
 //        print("Finished :", finished)
@@ -130,16 +143,18 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     }
     
     func setFeeling(_emotionValue: Int, _emotionEmoji: String, _emotionDescription: String) {
-        print("value", _emotionValue)
-        print("emoji", _emotionEmoji)
-        print("desc", _emotionDescription)
+//        print("value", _emotionValue)
+//        print("emoji", _emotionEmoji)
+//        print("desc", _emotionDescription)
+        emotionDescription = _emotionDescription
     }
     
     func setReasons(_sender: [Labels]) {
-        print("sender", _sender)
+        print("reasons di parent :", _sender)
     }
     
-    func setNotes(_sender: String?) {
-        print("sender", _sender)
+    func setNotes(_sender: String) {
+//        print("notes di parent :", _sender)
     }
+    
 }

@@ -7,13 +7,13 @@
 
 import UIKit
 
-class StoryViewController1: UIViewController, PageObservation {
+class StoryViewController1: UIViewController, OnboardingParentProtocol {
     
     var parentPVC: OnboardingPageViewController!
     
-    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var emotionSlider: ReusableSlider!
+    
     var emoji: String!
     var desc: String!
     var slider: UISlider!

@@ -14,7 +14,7 @@ protocol StoryViewController2Delegate {
 }
 
 @IBDesignable
-class StoryViewController2: UIViewController, PageObservation {
+class StoryViewController2: UIViewController, OnboardingParentProtocol {
     
     var parentPVC: OnboardingPageViewController!
     var dataSeed: [Labels] = [
@@ -28,7 +28,7 @@ class StoryViewController2: UIViewController, PageObservation {
         Labels(isChecked: false, emojiLogo: "💼", reason: "Work"),
         Labels(isChecked: false, emojiLogo: "📚", reason: "Assignments")
     ]
-    var reasons: [Labels] = []
+    var reasons: Array<Labels> = []
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     
@@ -40,7 +40,6 @@ class StoryViewController2: UIViewController, PageObservation {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SVC2 Loaded")
         nextBtn.layer.cornerRadius = 10
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
@@ -57,8 +56,7 @@ class StoryViewController2: UIViewController, PageObservation {
                 reasons.append(reason)
             }
         }
-        print("reasons: ", reasons)
-//        parentPVC.setReasons(_sender: reasons)
+        parentPVC.setReasons(_sender: reasons)
     }
     
 }

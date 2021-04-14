@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoryViewController3: UIViewController, UITextViewDelegate {
+class StoryViewController3: UIViewController, UITextViewDelegate, OnboardingParentProtocol{
 
     var parentPVC: OnboardingPageViewController!
     var notes: String! = ""
@@ -31,12 +31,7 @@ class StoryViewController3: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onNextBtnTap(_ sender: UIButton) {
-        print("notes type", type(of: notes))
-        print("notes", notes)
-        print("notes!", notes!)
-        let temp = notes! as String
-        parentPVC.setNotes(_sender: temp)
-        
+        parentPVC.setNotes(_sender: notes!)
     }
     
 }
