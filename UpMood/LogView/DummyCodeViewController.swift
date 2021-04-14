@@ -23,8 +23,13 @@ class DummyCodeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //validasi
         if segue.identifier == "goButton"{
+/*
+            let destinationVc = segue.destination as! NewLogPageViewController
+            destinationVc.numberOfPages = 3
+ */
             let destinationVc = segue.destination as! LogPageViewController
             destinationVc.x = 3
+            
         }
     }
     

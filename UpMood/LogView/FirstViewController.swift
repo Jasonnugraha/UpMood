@@ -13,15 +13,15 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     let becauseOf: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
     ]
     let feelings: [DataDefaultFeelings] = [DataDefaultFeelings(emotion: "☺️", feeling: "Calm")]
+    
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var emot: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
-    
-    
     @IBOutlet weak var tableCellFeelings: UITableView!
     
+    //MARK - Context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var summary: [Curhat]?
     //var temp: String?

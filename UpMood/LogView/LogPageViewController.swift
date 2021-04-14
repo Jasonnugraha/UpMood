@@ -10,8 +10,8 @@ import UIKit
 
 class LogPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    //var x: Int?
-    var x = 1
+    var x: Int?
+    //var x = 1
 /*
     lazy var orderedViewControllers: [UIViewController] = {
 
