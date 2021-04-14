@@ -25,6 +25,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
     @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var tableCellFeelings: UITableView!
     @IBOutlet weak var emoticon: UILabel!
     
@@ -37,14 +38,18 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         textViewArea.layer.cornerRadius = 10
         textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
         
+        
+        
         //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
 
         //MARK - Date
         let formatter = DateFormatter()
         formatter.timeStyle = .short
-//      formatter.dateStyle = .short
         labelTime.text = formatter.string(from: (summary?.date)!)
+    
+        formatter.dateFormat = "dd MMMM yyyy"
+        labelDate.text = formatter.string(from: (summary?.date)!)
         
         //Mark - Feelings & Emot
         feelingsToday.text = summary?.feeling
@@ -61,6 +66,9 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         tableCellFeelings.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         tableCellFeelings.delegate = self
         tableCellFeelings.dataSource = self
+        tableCellFeelings.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)
+        tableCellFeelings.layer.cornerRadius = 10
+        
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
@@ -185,6 +193,10 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
         let data = dataSeed[indexPath.row]
         customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: false)
+        
+        //MARK - ViewCell
+        customCell.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)
+        //customCell.layer.cornerRadius = 10
         
         return customCell
     }
