@@ -7,19 +7,28 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 protocol StoryViewController2Delegate {
     func reasonDidSelected(indexPath: IndexPath?)
 }
 
 @IBDesignable
-class StoryViewController2: UIViewController, PageObservation {
+class StoryViewController2: UIViewController, OnboardingParentProtocol {
     
     var parentPVC: OnboardingPageViewController!
-    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
-                               Labels(isChecked: true, emojiLogo: "📚", reason: "Study")]
-    
-    
+    var dataSeed: [Labels] = [
+        Labels(isChecked: false, emojiLogo: "👯", reason: "Friends"),
+        Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
+        Labels(isChecked: false, emojiLogo: "👤", reason: "Self"),
+        Labels(isChecked: false, emojiLogo: "❤️", reason: "Relationship"),
+        Labels(isChecked: false, emojiLogo: "🏫", reason: "University Environment"),
+        Labels(isChecked: false, emojiLogo: "👥", reason: "Organizations"),
+        Labels(isChecked: false, emojiLogo: "📖", reason: "Study"),
+        Labels(isChecked: false, emojiLogo: "💼", reason: "Work"),
+        Labels(isChecked: false, emojiLogo: "📚", reason: "Assignments")
+    ]
+    var reasons: Array<Labels> = []
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     
@@ -31,11 +40,23 @@ class StoryViewController2: UIViewController, PageObservation {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SVC2 Loaded")
         nextBtn.layer.cornerRadius = 10
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @IBAction func onNextBtnTap(_ sender: UIButton) {
+        for reason in dataSeed {
+            if (reason.isChecked == true) {
+                reasons.append(reason)
+            }
+        }
+        parentPVC.setReasons(_sender: reasons)
     }
     
 }
@@ -74,9 +95,12 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension StoryViewController2: StoryViewController2Delegate {
+    
     func reasonDidSelected(indexPath: IndexPath?) {
-        print("\(dataSeed[indexPath?.row ?? 0])")
+//        print("Before : \(dataSeed[indexPath?.row ?? 0])")
+        // Change the value
+        dataSeed[indexPath?.row ?? 0].isChecked = !dataSeed[indexPath?.row ?? 0].isChecked
+//        print("After : \(dataSeed[indexPath?.row ?? 0])")
+
     }
-    
-    
 }
