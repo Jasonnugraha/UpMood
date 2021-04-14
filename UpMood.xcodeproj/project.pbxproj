@@ -19,6 +19,7 @@
 		709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */; };
 		70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */; };
 		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
+		70C9FC212626D9FF00A84158 /* NewLogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9FC202626D9FF00A84158 /* NewLogPageViewController.swift */; };
 		B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = B414D3A22620618E0035EE90 /* ReusableSlider.xib */; };
 		B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170416261B7550004FF9D9 /* AppDelegate.swift */; };
 		B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4170418261B7550004FF9D9 /* SceneDelegate.swift */; };
@@ -66,6 +67,7 @@
 		709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDefaultSummaryViewController.swift; sourceTree = "<group>"; };
 		70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
+		70C9FC202626D9FF00A84158 /* NewLogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLogPageViewController.swift; sourceTree = "<group>"; };
 		B414D3A22620618E0035EE90 /* ReusableSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableSlider.xib; sourceTree = "<group>"; };
 		B4170413261B7550004FF9D9 /* UpMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4170416261B7550004FF9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
 				B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */,
 				709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */,
+				70C9FC202626D9FF00A84158 /* NewLogPageViewController.swift */,
 			);
 			path = LogView;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				5BF9BE0C261DA76400E16DA5 /* EditModalViewController.swift in Sources */,
 				B4170419261B7550004FF9D9 /* SceneDelegate.swift in Sources */,
 				B4DE5DAE2624502F00B5C7E4 /* FirstViewController.swift in Sources */,
+				70C9FC212626D9FF00A84158 /* NewLogPageViewController.swift in Sources */,
 				5B2093FA261C72DE00810366 /* SliderViewController.swift in Sources */,
 				B42D12B826205A1800F2CBEF /* ReusableSlider.swift in Sources */,
 				B42B489926255AEE002C071D /* SaveFile.xcdatamodeld in Sources */,

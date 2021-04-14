@@ -9,7 +9,16 @@ import UIKit
 
 //class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+
 class ThirdViewController: UIViewController, UITextViewDelegate{
+    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "⛅️", reason: "Weather", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "📝", reason: "School", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💓", reason: "Relationship", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
+    
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
@@ -53,6 +62,7 @@ class ThirdViewController: UIViewController, UITextViewDelegate{
     }
 
     
+    
 /*
     //Mark - Tableview datasource Method
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +104,26 @@ class ThirdViewController: UIViewController, UITextViewDelegate{
  */
  
  */
- 
+
 
     
+}
+
+
+extension ThirdViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSeed.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
+        let data = dataSeed[indexPath.row]
+        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
+        
+        return customCell
+
+    }
+
 }

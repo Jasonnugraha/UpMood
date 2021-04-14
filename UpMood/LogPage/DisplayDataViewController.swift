@@ -26,6 +26,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         tableSavedData.delegate = self
         tableSavedData.dataSource = self
         getCurhatFromCoreData()
+        checkFirstTime()
         sortTable()
         groupTable()
     }
@@ -93,6 +94,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         } catch  {
         }
     }
+    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,5 +117,10 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         cell.emojiLabel.text = currentContent.emoji
         cell.feelingLabel.text = currentContent.feeling
         return cell
+    }
+    func checkFirstTime() {
+        if listCurhat.count == 0 {
+            performSegue(withIdentifier: "gotoOnboarding", sender: self)
+        }
     }
 }

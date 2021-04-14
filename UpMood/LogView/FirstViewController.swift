@@ -13,69 +13,99 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     let becauseOf: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
     ]
     let feelings: [DataDefaultFeelings] = [DataDefaultFeelings(emotion: "☺️", feeling: "Calm")]
+    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "⛅️", reason: "Weather", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "📝", reason: "School", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💓", reason: "Relationship", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
-    @IBOutlet weak var emot: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
-    
-    
+    @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var tableCellFeelings: UITableView!
+    @IBOutlet weak var emoticon: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var summary: [Curhat]?
-    //var temp: String?
-    
+    var summary: Curhat?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewArea.delegate = self
         textViewArea.layer.cornerRadius = 10
         textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
         
+        
+        
         //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
-        emot.image = defaultEmot
+
+        //MARK - Date
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        labelTime.text = formatter.string(from: (summary?.date)!)
+    
+        formatter.dateFormat = "dd MMMM yyyy"
+        labelDate.text = formatter.string(from: (summary?.date)!)
         
-        //let temp = feelings[index(ofAccessibilityElement: <#T##Any#>)]
-        //let tempEmot = temp?.textToImage()
-        //emot.image = tempEmot
-        //let convert = tempEmot
+        //Mark - Feelings & Emot
+        feelingsToday.text = summary?.feeling
+        emoticon.text = summary?.emoji
         
-        //emot.image = convert
-/*
-        let dakta = becauseOf[indexPath.row]
-        let tempDetail = dakta.detailemot
-        cell.textLabel?.text = tempDetail
- */
+        //Mark - textViewArea
+        textViewArea.text = summary?.desc
         
         //MARK - Table Cell BecauseOf
+//        tableCellFeelings.delegate = self
+//        tableCellFeelings.dataSource = self
+//        tableCellFeelings.backgroundColor = UIColor.clear
+//        tableCellFeelings.isScrollEnabled = true
+        tableCellFeelings.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         tableCellFeelings.delegate = self
         tableCellFeelings.dataSource = self
-        tableCellFeelings.backgroundColor = UIColor.clear
-        tableCellFeelings.isScrollEnabled = true
+        tableCellFeelings.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)
+        tableCellFeelings.layer.cornerRadius = 10
+        
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        //let uuid = UUID().uuidString
-        //print(uuid)
-        
-        //getCurhatFromCoreData()
-      
+
     }
     func backgroundEmot(){
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
-        gradient.colors = [
-            UIColor(red: 0.43, green: 0.7, blue: 0.93, alpha: 1).cgColor,
-            UIColor(red: 0.25, green: 0.61, blue: 0.91, alpha: 1).cgColor
-        ]
-        gradient.locations = [0, 1]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 0.95)
-        gradient.cornerRadius = 35
-        backEmo.layer.addSublayer(gradient)
-        backEmo.layer.cornerRadius = 35
-        backEmo.layer.insertSublayer(gradient, at: 0)
+        let tempBackgroundEmot = summary?.feeling
+        if tempBackgroundEmot == "calm"{
+            backEmo.image = #imageLiteral(resourceName: "01-calm")
+            //feelingsToday.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        } else if tempBackgroundEmot == "comfortable"{
+            backEmo.image = #imageLiteral(resourceName: "02-comfortable")
+        }
+        else if tempBackgroundEmot == "okay"{
+            backEmo.image = #imageLiteral(resourceName: "03-okay")
+        }
+        else if tempBackgroundEmot == "annoyed"{
+            backEmo.image = #imageLiteral(resourceName: "04-annoyed")
+        }
+        else if tempBackgroundEmot == "nervous"{
+            backEmo.image = #imageLiteral(resourceName: "05-nervous")
+        }
+        else if tempBackgroundEmot == "anxious"{
+            backEmo.image = #imageLiteral(resourceName: "06-anxious")
+        }
+        else if tempBackgroundEmot == "worried"{
+            backEmo.image = #imageLiteral(resourceName: "07-worried")
+        }
+        else if tempBackgroundEmot == "fearful"{
+            backEmo.image = #imageLiteral(resourceName: "08-fearful")
+        }
+        else if tempBackgroundEmot == "panicked"{
+            backEmo.image = #imageLiteral(resourceName: "09-panicked")
+        }else {
+            backEmo.image = #imageLiteral(resourceName: "09-panicked")
+        }
+        
     }
     
 /*
@@ -93,6 +123,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     }
     
 */
+    
 }
 
 /*
@@ -102,7 +133,7 @@ extension FirstViewController: UITextViewDelegate{
     }
 }
 */
-
+/*
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return becauseOf.count
@@ -111,7 +142,6 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feel", for: indexPath)
         let dakta = becauseOf[indexPath.row]
-        //print(dakta)
         
         let tempDetail = dakta.detailemot
         cell.textLabel?.text = tempDetail
@@ -128,18 +158,12 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
         } else if tempDetail == "Weather"{
                     cell.imageView?.image = imageOri3
         }
-/*
-        let dakta2 = feelings[indexPath.row]
-        let ambildata = dakta2.emotion
-        temp = ambildata
-        print(temp!)
-*/
-        
+
         return cell
     }
-    
-    
+ 
 }
+*/
 
     // MARK - String to Image
 extension String {
@@ -160,4 +184,20 @@ extension String {
         }
 }
 
-
+extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSeed.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
+        let data = dataSeed[indexPath.row]
+        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: false)
+        
+        //MARK - ViewCell
+        customCell.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)
+        //customCell.layer.cornerRadius = 10
+        
+        return customCell
+    }
+}
