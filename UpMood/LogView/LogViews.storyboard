@@ -108,7 +108,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-IO-jyT">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-IO-jyT">
                                 <rect key="frame" x="16" y="540" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
@@ -239,7 +239,7 @@
                                 <rect key="frame" x="314" y="116" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-wz-4dS">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-wz-4dS">
                                 <rect key="frame" x="16" y="538" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -346,7 +346,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-7d-OO8">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-7d-OO8">
                                 <rect key="frame" x="16" y="534" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
