@@ -24,8 +24,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var summary: Curhat?
-    //var temp: String?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewArea.delegate = self
@@ -34,19 +33,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
-        //emot.image = defaultEmot
-        
-        //let temp = feelings[index(ofAccessibilityElement: <#T##Any#>)]
-        //let tempEmot = temp?.textToImage()
-        //emot.image = tempEmot
-        //let convert = tempEmot
-        
-        //emot.image = convert
-/*
-        let dakta = becauseOf[indexPath.row]
-        let tempDetail = dakta.detailemot
-        cell.textLabel?.text = tempDetail
- */
+
         //MARK - Date
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -88,6 +75,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         backEmo.layer.addSublayer(gradient)
         backEmo.layer.cornerRadius = 35
         backEmo.layer.insertSublayer(gradient, at: 0)
+       
     }
     
 /*
