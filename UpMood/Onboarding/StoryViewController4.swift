@@ -14,7 +14,7 @@ class StoryViewController4: UIViewController, OnboardingParentProtocol {
     var parentPVC: OnboardingPageViewController!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var summaryTableView: UITableView!
-    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var notesLabel: UITextView!
     var emotion: String! = "Today you feel"
     var notes: String! = "Huhuhu"
     var reasons: Array<Labels>! = []
@@ -27,6 +27,7 @@ class StoryViewController4: UIViewController, OnboardingParentProtocol {
         submitBtn.layer.cornerRadius = 10
         summaryTableView.delegate = self
         summaryTableView.dataSource = self
+        notesLabel.text = parentPVC.notes
     }
     
     
