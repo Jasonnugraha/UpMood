@@ -11,19 +11,13 @@ import CoreData
 class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataSource , UIPageViewControllerDelegate {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var summary: Curhat?
+    var summary1: Curhat?
 
     var pageControl = UIPageControl()
     let pageVC3 = UIPageControl()
-/*
-     lazy var VCArr : [UIViewController] = {
-
-        return [self.VCInstance(name : "page")]
-
-    }()
- */
-    
-    lazy var VCArr : [UIViewController] = {
+    var numberOfPages = 3
+ 
+    lazy var VCArr : [FirstViewController] = {
            return []
        }()
 
@@ -31,12 +25,15 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         return UIStoryboard(name : "LogViews" , bundle : nil).instantiateViewController(withIdentifier: name)
     }
 
-    var numberOfPages = 3
+    //var numberOfPages = 3
     override func viewDidLoad() {
         super.viewDidLoad()
 
         for _ in 0...numberOfPages - 1 {
-            VCArr.append(self.VCInstance(name : "pageLog1"))
+            let viewController = self.VCInstance(name : "pageLog1") as! FirstViewController
+            viewController.summary = summary1
+            //VCArr.append(self.VCInstance(name : "pageLog1") as! FirstViewController)
+            VCArr.append(viewController)
         }
  
 
@@ -59,18 +56,16 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         self.dataSource = self
         self.delegate = self
 
-        if let firstVC = VCArr.first {
 
+        if let firstVC = VCArr.first {
             setViewControllers([firstVC] , direction: .forward , animated: true, completion: nil)
             setViewControllers([firstVC] , direction: .reverse , animated: true, completion: nil)
 
         }
  
-
+        
     }
     
-    
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for subV in self.view.subviews {
@@ -93,9 +88,9 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
     }
 
 
-
+// MARK - Before
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
-        guard let viewControllerIndex = VCArr.index(of: viewController) else {
+        guard let viewControllerIndex = VCArr.index(of: viewController as! FirstViewController) else {
             return nil
 
         }
@@ -103,7 +98,6 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         let previousIndex = viewControllerIndex-1
         guard previousIndex >= 0  else {
             return nil
-
         }
 
         guard VCArr.count > previousIndex else {
@@ -113,8 +107,9 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         return VCArr[previousIndex]
     }
 
+// MARK - AAfter
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
-        guard let viewControllerIndex = VCArr.firstIndex(of: viewController) else {
+        guard let viewControllerIndex = VCArr.firstIndex(of: viewController as! FirstViewController) else {
             return nil
         }
 
@@ -131,23 +126,32 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         return VCArr[nextIndex]
     }
 
-
-
-
-
     public func presentationCount(for pageViewController: UIPageViewController) -> Int{
         return 3
     }
 
 
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int{
-        guard let firstViewController = viewControllers?.first , let firstViewControllerIndex = VCArr.index(of: firstViewController) else {
+        guard let firstViewController = viewControllers?.first , let firstViewControllerIndex = VCArr.index(of: firstViewController as! FirstViewController) else {
             return 0
-        }
-
+    }
 
         return firstViewControllerIndex
     }
-
+ 
+/*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "sendData"){
+            //let destinationVC = segue.destination as! FirstViewController //ini udah bener
+            let destinationVC = segue.destination as! FirstViewController
+            destinationVC.summary = self.summary1
+        } else {
+            return
+        }
+    }
+ */
+    
+    
+    
 
   }

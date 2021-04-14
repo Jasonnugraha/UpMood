@@ -76,9 +76,9 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "summaryView"){
-            let destinationVC = segue.destination as! FirstViewController //ini udah bener
-            //let destinationVC = segue.destination as! NewLogPageViewController
-            destinationVC.summary = self.curhatanHariIni
+            //let destinationVC = segue.destination as! FirstViewController //ini udah bener
+            let destinationVC = segue.destination as! NewLogPageViewController
+            destinationVC.summary1 = self.curhatanHariIni
         } else {
             return
         }
