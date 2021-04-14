@@ -188,7 +188,9 @@
         <!--Main-->
         <scene sceneID="5ch-sz-SMU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="1aA-Pj-bjh" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="1aA-Pj-bjh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Ad-kA-z8z"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K07-ug-ol7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="530"/>

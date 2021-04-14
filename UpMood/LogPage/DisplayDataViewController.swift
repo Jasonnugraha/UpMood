@@ -30,7 +30,17 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         sortTable()
         groupTable()
     }
-    
+    func deleteAllCoreData(){
+        for i in listCurhat {
+            context.delete(i)
+        }
+        do{
+        try context.save()
+        }catch{
+            
+        }
+        
+    }
     func sortTable(){
         listCurhat?.sort(by: { ($0.date! > $1.date!)
         })

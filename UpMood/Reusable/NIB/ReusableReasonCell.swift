@@ -12,7 +12,7 @@ class ReusableReasonCell: UITableViewCell {
     @IBOutlet weak var customCheckListButton: UIButton!
     @IBOutlet weak var customEmojiTextField: UITextField!
     @IBOutlet weak var customReasonTextField: UITextField!
-    var isChecked: Bool!
+    var isChecked: Bool! = false
     
     //perdelegatean
     var delegate: StoryViewController2Delegate?
@@ -21,6 +21,7 @@ class ReusableReasonCell: UITableViewCell {
     
     @IBAction func checklistPressed(_ sender: UIButton) {
         customCheckListButton.isSelected.toggle()
+        isChecked = customCheckListButton.isSelected
         delegate?.reasonDidSelected(indexPath: indexPath)
     }
     
@@ -30,8 +31,15 @@ class ReusableReasonCell: UITableViewCell {
         return UINib(nibName: "ReusableReasonCell", bundle: nil)
     }
     
+    func checkRadioButton(){
+        if isChecked{
+            customCheckListButton.isSelected = isChecked
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        checkRadioButton()
         // Initialization code
     }
 
@@ -47,6 +55,8 @@ class ReusableReasonCell: UITableViewCell {
         customEmojiTextField.isUserInteractionEnabled = label.isEditable
         customCheckListButton.isHidden = !label.isEditable
         customEmojiTextField.borderStyle = .none
+        customCheckListButton.isSelected = label.isChecked
+        isChecked = label.isChecked
         customReasonTextField.borderStyle = .none
     }
     

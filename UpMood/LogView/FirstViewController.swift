@@ -12,6 +12,8 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     //MARK - Data Dummy From Struct
     let becauseOf: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
     ]
+    var listOfEmoji : [String] = []
+    var listOfDesc : [String] = []
     let feelings: [DataDefaultFeelings] = [DataDefaultFeelings(emotion: "☺️", feeling: "Calm")]
     var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
                               Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: false),
@@ -46,8 +48,10 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
         
         
-        
-        //MARK - Default Emot
+        //MARK - UNTUK DISPLAY CAUSE OF FEELING
+        listOfDesc = summary!.causeOfFeelingDesc!
+        listOfEmoji = summary!.causeOfFeelingEmoji!
+               //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
 
         //MARK - Date
@@ -79,7 +83,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-
+        
     }
     func backgroundEmot(){
         let tempBackgroundEmot = summary?.feeling
@@ -204,12 +208,12 @@ extension String {
 
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSeed.count
+        return listOfDesc.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
-        let data = dataSeed[indexPath.row]
+        let data : Labels = Labels(isChecked: false, emojiLogo:listOfEmoji[indexPath.row] , reason:listOfDesc[indexPath.row], isEditable: false)
         customCell.editReasonCell(from: data)
         
         //MARK - ViewCell

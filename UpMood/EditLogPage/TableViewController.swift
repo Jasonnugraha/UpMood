@@ -35,6 +35,23 @@ class TableViewController: UIViewController {
         curhat?.date? = sender.date
     }
     @IBAction func saveButtonDidTapped(_ sender: UIButton) {
+        var tempListOfEmoji:[String] = []
+        var tempListOfDesc:[String] = []
+        var i = 0
+        for item in dataSeed {
+            let currentCell = emotionTableView.cellForRow(at: IndexPath(row: i, section: 0)) as! ReusableReasonCell
+            if (currentCell.isChecked){
+                tempListOfEmoji.append(item.emojiLogo)
+                tempListOfDesc.append(item.reason)
+            }
+            i+=1
+            
+        }
+        curhat?.causeOfFeelingDesc = []
+        curhat?.causeOfFeelingEmoji = []
+        curhat?.causeOfFeelingDesc = tempListOfDesc
+        curhat?.causeOfFeelingEmoji = tempListOfEmoji
+
         do {
             try self.context.save()
         }
@@ -66,13 +83,16 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listOfEmoji = (curhat?.causeOfFeelingEmoji)!
+        listOfDesc = (curhat?.causeOfFeelingDesc)!
+        checkIsChecked()
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
         reusableSlider.delegate = self
         
-        listOfEmoji = (curhat?.causeOfFeelingEmoji)!
-        listOfDesc = (curhat?.causeOfFeelingDesc)!
+        
+        
         print("hello")
         print("\(curhat?.date) \(curhat?.feeling!)")
         
@@ -146,6 +166,19 @@ class TableViewController: UIViewController {
         }
     }
     
+    func checkIsChecked(){
+        for index in listOfDesc {
+            var i = 0;
+            for item in dataSeed {
+                if(index == item.reason){
+                    dataSeed[i].isChecked = true;
+                }
+                i+=1
+            }
+        }
+        emotionTableView.reloadData()
+        
+    }
 // Action Sheet
     
     
@@ -190,6 +223,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
         let data = dataSeed[indexPath.row]
         
@@ -198,6 +232,9 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         return customCell
 
     }
+    
+    
+    
     
 }
 
