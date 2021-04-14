@@ -13,6 +13,13 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     let becauseOf: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
     ]
     let feelings: [DataDefaultFeelings] = [DataDefaultFeelings(emotion: "☺️", feeling: "Calm")]
+    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "⛅️", reason: "Weather", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "📝", reason: "School", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💓", reason: "Relationship", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
+                              Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
@@ -47,10 +54,13 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         textViewArea.text = summary?.desc
         
         //MARK - Table Cell BecauseOf
+//        tableCellFeelings.delegate = self
+//        tableCellFeelings.dataSource = self
+//        tableCellFeelings.backgroundColor = UIColor.clear
+//        tableCellFeelings.isScrollEnabled = true
+        tableCellFeelings.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         tableCellFeelings.delegate = self
         tableCellFeelings.dataSource = self
-        tableCellFeelings.backgroundColor = UIColor.clear
-        tableCellFeelings.isScrollEnabled = true
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
@@ -115,7 +125,7 @@ extension FirstViewController: UITextViewDelegate{
     }
 }
 */
-
+/*
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return becauseOf.count
@@ -143,9 +153,9 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
 
         return cell
     }
-    
-    
+ 
 }
+*/
 
     // MARK - String to Image
 extension String {
@@ -166,4 +176,16 @@ extension String {
         }
 }
 
-
+extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSeed.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
+        let data = dataSeed[indexPath.row]
+        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: false)
+        
+        return customCell
+    }
+}
