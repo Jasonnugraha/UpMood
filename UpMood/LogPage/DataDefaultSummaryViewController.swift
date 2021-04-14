@@ -13,6 +13,11 @@ struct DataDefault{
     //var emot: String = ""
     var detailemot: String = ""
 }
+
+struct DataDefaultFeelings{
+    var emotion: String = ""
+    var feeling: String = ""
+}
 /*
 class DataDefaultSummaryViewController: UIViewController {
 

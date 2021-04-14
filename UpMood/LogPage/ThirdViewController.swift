@@ -9,7 +9,7 @@ import UIKit
 
 //class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-class ThirdViewController: UIViewController{
+class ThirdViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
@@ -26,10 +26,14 @@ class ThirdViewController: UIViewController{
     //var tableBcs = [Journaling]()
     
     override func viewDidLoad() {
+        //MARK - TextField
+        textViewArea.delegate = self
+        textViewArea.layer.cornerRadius = 10
+        //textViewArea.text = "It turns out my morning till end of day was pretty rough. I had missed an important meeting with my organization that led me to have a mild panic attack. It wasn’t pleasant and it made me feel worried that I was missing something the whole day."
+
         super.viewDidLoad()
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        textViewArea.layer.cornerRadius = 10
     }
     
     func backgroundEmot(){

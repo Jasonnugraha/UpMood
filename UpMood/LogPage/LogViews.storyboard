@@ -108,15 +108,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-IO-jyT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-IO-jyT">
                                 <rect key="frame" x="16" y="540" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. 
-What a good way to start the day!  </string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-HL-Hvw">
                                 <rect key="frame" x="304" y="108" width="70" height="70"/>
@@ -218,7 +216,7 @@ What a good way to start the day!  </string>
                                 <rect key="frame" x="314" y="116" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Nobody told me we were supposed to have a meeting. It wasn't in my calendar!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-wz-4dS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-wz-4dS">
                                 <rect key="frame" x="16" y="538" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -325,12 +323,10 @@ What a good way to start the day!  </string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-7d-OO8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You haven't written anything yet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-7d-OO8">
                                 <rect key="frame" x="16" y="534" width="358" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. 
-What a good way to start the day!  </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

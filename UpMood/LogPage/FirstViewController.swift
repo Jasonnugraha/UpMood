@@ -9,8 +9,10 @@ import UIKit
 import CoreData
 
 class FirstViewController: UIViewController, UITextViewDelegate{
-    let dataFeelings: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
+    //MARK - Data Dummy From Struct
+    let becauseOf: [DataDefault] = [DataDefault(detailemot: "Family"), DataDefault(detailemot: "Friends"), DataDefault(detailemot: "Weather")
     ]
+    let feelings: [DataDefaultFeelings] = [DataDefaultFeelings(emotion: "☺️", feeling: "Calm")]
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
@@ -22,30 +24,38 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var summary: [Curhat]?
+    //var temp: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewArea.delegate = self
+        textViewArea.layer.cornerRadius = 10
+        textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
         
         //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
         emot.image = defaultEmot
         
-        //Table Cell Feelings
-
+        //let temp = feelings[index(ofAccessibilityElement: <#T##Any#>)]
+        //let tempEmot = temp?.textToImage()
+        //emot.image = tempEmot
+        //let convert = tempEmot
+        
+        //emot.image = convert
+/*
+        let dakta = becauseOf[indexPath.row]
+        let tempDetail = dakta.detailemot
+        cell.textLabel?.text = tempDetail
+ */
+        
+        //MARK - Table Cell BecauseOf
         tableCellFeelings.delegate = self
         tableCellFeelings.dataSource = self
-                
-                //remove background color yg ga senada
         tableCellFeelings.backgroundColor = UIColor.clear
-                //tableCellFeelings.backgroundView = nil
-                
-                //TurnOff Scroll Table View
         tableCellFeelings.isScrollEnabled = true
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        textViewArea.layer.cornerRadius = 10
         //let uuid = UUID().uuidString
         //print(uuid)
         
@@ -67,7 +77,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         backEmo.layer.cornerRadius = 35
         backEmo.layer.insertSublayer(gradient, at: 0)
     }
-
+    
 /*
     func getCurhatFromCoreData(){
         do {
@@ -85,16 +95,24 @@ class FirstViewController: UIViewController, UITextViewDelegate{
 */
 }
 
+/*
+extension FirstViewController: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        <#code#>
+    }
+}
+*/
+
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataFeelings.count
+        return becauseOf.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feel", for: indexPath)
-        let dakta = dataFeelings[indexPath.row]
+        let dakta = becauseOf[indexPath.row]
+        //print(dakta)
         
-
         let tempDetail = dakta.detailemot
         cell.textLabel?.text = tempDetail
         
@@ -110,7 +128,13 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
         } else if tempDetail == "Weather"{
                     cell.imageView?.image = imageOri3
         }
-
+/*
+        let dakta2 = feelings[indexPath.row]
+        let ambildata = dakta2.emotion
+        temp = ambildata
+        print(temp!)
+*/
+        
         return cell
     }
     

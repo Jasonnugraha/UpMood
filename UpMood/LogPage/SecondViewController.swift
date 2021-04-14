@@ -8,8 +8,9 @@
 import UIKit
 
 
-class SecondViewController: UIViewController {
-    let dataFeelings: [DataDefault] = [DataDefault(detailemot: "Organization"),
+class SecondViewController: UIViewController, UITextViewDelegate {
+    //MARK - Data Dummy From Struct
+    let becauseOf: [DataDefault] = [DataDefault(detailemot: "Organization"),
     ]
     
     @IBOutlet weak var textViewArea: UITextView!
@@ -22,32 +23,26 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //MARK - TextField
+        textViewArea.delegate = self
+        textViewArea.text = "Nobody told me we were supposed to have a meeting. It wasn't in my calendar!"
+        textViewArea.layer.cornerRadius = 10
         
         //MARK - Default Emot
         let defaultEmot = "😒".textToImage()
         emot.image = defaultEmot
         
-        //Table Cell Feelings
-
+        //MARK - Table Cell BecauseOf
         tableCellFeelings.delegate = self
         tableCellFeelings.dataSource = self
-                
-                //remove background color yg ga senada
         tableCellFeelings.backgroundColor = UIColor.clear
-                //tableCellFeelings.backgroundView = nil
-                
-                //TurnOff Scroll Table View
         tableCellFeelings.isScrollEnabled = true
         
+        //MARK - Emot Feelings
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        textViewArea.layer.cornerRadius = 10
     }
-    
-    
-    //validasi -> kalau index di log == index
-    //validasi -> kalau waktu == AM, jalanin ini
-    
+      
     func backgroundEmot(){
         let gradient = CAGradientLayer()
         gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
@@ -75,17 +70,14 @@ class SecondViewController: UIViewController {
     */
 
 }
-//nentuin jumlah kotaknya pakai function delegate
-
-
 extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataFeelings.count
+        return becauseOf.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feel", for: indexPath)
-        let dakta = dataFeelings[indexPath.row]
+        let dakta = becauseOf[indexPath.row]
         
 
         let tempDetail = dakta.detailemot
@@ -130,3 +122,7 @@ extension String {
         return image ?? UIImage()
     }
 }
+
+//Note :
+//validasi -> kalau index di log == index
+//validasi -> kalau waktu == AM, jalanin ini
