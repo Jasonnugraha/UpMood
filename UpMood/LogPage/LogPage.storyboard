@@ -236,7 +236,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableDisplayDate" destination="FrI-eK-Yx6" id="pWa-ZE-dXk"/>
-                        <segue destination="qzD-Ir-EUJ" kind="show" identifier="EditLogDate" id="feK-PT-0dl"/>
+                        <segue destination="qzD-Ir-EUJ" kind="presentation" identifier="EditLogDate" id="eA0-qm-NVB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aC-5U-qIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
