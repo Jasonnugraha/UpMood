@@ -59,7 +59,7 @@ class TableViewController: UIViewController {
         catch{
             
         }
-        performSegue(withIdentifier: "reloadPageDetail", sender: self)
+//        performSegue(withIdentifier: "reloadPageDetail", sender: self)
         //self.dismiss(animated: true, completion: nil)
 //        self.performSegue(withIdentifier: "backtomainpage", sender: self)
     }
