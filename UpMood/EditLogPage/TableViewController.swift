@@ -35,8 +35,18 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var emotionTableView: UITableView!
     @IBAction func deletedidtapbutton(_ sender: Any) {
-        actionsheetdelete()
+        let alertController = UIAlertController(title: nil, message: "Delete this log?", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Delete Log", style: .destructive, handler: self.deleteHandler(alert:) ))
+        self.present(alertController, animated: true, completion: nil)
     }
+    
+    func deleteHandler(alert: UIAlertAction!){
+     self.deleteContent()
+      self.performSegue(withIdentifier: "backtomainpage", sender: self)
+      }
+    
+    
     @IBAction func cancelbutton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -121,28 +131,31 @@ class TableViewController: UIViewController {
     }
     
 // Action Sheet
-    func deleteHandler(alert: UIActionHandler){
-        self.navigationController?.pushViewController(UIViewController(), animated: true)
-    }
     
     
     
-    func actionsheetdelete(){
-            let alertController = UIAlertController(title: nil, message: "Delete this log?", preferredStyle: .actionSheet)
-            let cancelbutton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+  //  func actionsheetdelete(){
+         
+        /*  let cancelbutton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                 self.navigationController?.pushViewController(UIViewController(), animated: true)
             }
                 present(alertController, animated: true)
                 
-            let deletebutton = UIAlertAction(title: "Delete Log", style: .destructive){ (action) in
+        let deletebutton = UIAlertAction(title: "Delete Log", style: .destructive){ (action) in
                 //self.navigationController?.pushViewController(UIViewController(), animated: true)
                 self.deleteContent()
                 self.dismiss(animated: true,completion: nil)
+                self.deleteHandler(alert: nil)
                 
             }
             alertController.addAction(cancelbutton)
-            alertController.addAction(deletebutton)
-            }
+    
+        alertController.addAction(UIAlertAction(title: "Delete Log", style: .destructive, handler: self.deleteHandler))
+            //alertController.addAction(deletebutton)
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Delete Log", style: .destructive, handler: self.deleteHandler))
+    }*/
     
 /*    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogsStoryboard"{
