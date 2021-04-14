@@ -354,7 +354,7 @@
 				B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomLabelStruct.swift in Sources */,
 				709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */,
-				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
+				B4D20FD3261DAB50002B101F /* CustomLabelStruct.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				B4DE5DA526244FEF00B5C7E4 /* LogPageViewController.swift in Sources */,
 				FB5890712625575C0079D4A0 /* StoryViewController4.swift in Sources */,
