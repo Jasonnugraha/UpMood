@@ -30,11 +30,11 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var editDatePicker: UIDatePicker!
     @IBOutlet weak var reusableSlider: ReusableSlider!
-    
+    @IBOutlet weak var editedTextView: UITextView!
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
         curhat?.date? = sender.date
     }
-    @IBAction func saveButtonDidTapped(_ sender: UIButton) {
+    @IBAction func saveButtonDidTapped(_ sender: Any) {
         var tempListOfEmoji:[String] = []
         var tempListOfDesc:[String] = []
         var i = 0
@@ -51,6 +51,7 @@ class TableViewController: UIViewController {
         curhat?.causeOfFeelingEmoji = []
         curhat?.causeOfFeelingDesc = tempListOfDesc
         curhat?.causeOfFeelingEmoji = tempListOfEmoji
+        curhat?.desc = editedTextView.text
 
         do {
             try self.context.save()
@@ -58,7 +59,8 @@ class TableViewController: UIViewController {
         catch{
             
         }
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "reloadPageDetail", sender: self)
+        //self.dismiss(animated: true, completion: nil)
 //        self.performSegue(withIdentifier: "backtomainpage", sender: self)
     }
     
@@ -90,8 +92,8 @@ class TableViewController: UIViewController {
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
         reusableSlider.delegate = self
-        
-        
+        editedTextView.text = curhat?.desc
+        NotificationCenter.default.addObserver(self, selector: #selector(self.functionName), name: NSNotification.Name(rawValue: "NotificationID"), object: nil)
         
         print("hello")
         print("\(curhat?.date) \(curhat?.feeling!)")
@@ -101,6 +103,12 @@ class TableViewController: UIViewController {
         // ini ambil data
         fetchAndUpdateTheContent()
 //        self.reloadInputViews()
+    }
+    
+    @objc func functionName() {
+
+        print("viewDidLoad appear")
+
     }
     
     func fetchAndUpdateTheContent(){
@@ -211,6 +219,12 @@ class TableViewController: UIViewController {
             guard let vc = segue.destination as? Logs else{return}
         }
     } */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "reloadPageDetail"{
+            let vc = segue.destination as! FirstViewController
+            vc.summary = curhat
+        }
+    }
 }
 
 // Emotion Controller

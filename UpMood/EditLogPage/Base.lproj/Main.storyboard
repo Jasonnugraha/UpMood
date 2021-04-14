@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YUX-le-Qbm">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,103 +17,151 @@
             <point key="canvasLocation" x="-197" y="-627"/>
         </scene>
         <!--Log Detail-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="bV2-Tl-rhq">
             <objects>
-                <viewController storyboardIdentifier="secondViewController" id="BYZ-38-t0r" customClass="TableViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="secondViewController" id="YUX-le-Qbm" customClass="TableViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IGv-hV-ocf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-6X-Ifs">
-                                <rect key="frame" x="0.0" y="331" width="390" height="366"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zZa-I8-HBO">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zZa-I8-HBO" id="X9k-JO-DlD">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-ku-d2c">
-                                <rect key="frame" x="178" y="285" width="202" height="55"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="dateValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0gh-RY-Fcw"/>
-                                </connections>
-                            </datePicker>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-Mj-naa" customClass="ReusableSlider" customModule="UpMood" customModuleProvider="target">
-                                <rect key="frame" x="10" y="53" width="370" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpR-AU-oCF">
-                                <rect key="frame" x="16" y="705" width="358" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Delete">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="deletedidtapbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSK-bX-zt2"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0IH-yi-n03">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="zLB-WG-ZHG">
+                                <rect key="frame" x="-12" y="28" width="414" height="788"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qaa-0f-Fd6">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="960"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qv1-Ja-pYH">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="921"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCS-Ke-eEA" customClass="ReusableSlider" customModule="UpMood" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20" width="374" height="241"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LHP-bS-rf2">
+                                                        <rect key="frame" x="0.0" y="330" width="374" height="365"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7Bj-DO-LsW">
+                                                                <rect key="frame" x="20" y="55.333332061767578" width="334" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Bj-DO-LsW" id="1Ee-2K-2yv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
+                                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="zSu-Ku-Wba">
+                                                        <rect key="frame" x="180" y="269" width="186" height="53"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="dateValueChanged:" destination="YUX-le-Qbm" eventType="valueChanged" id="5fJ-eK-SQY"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="90a-tN-AmD">
+                                                        <rect key="frame" x="0.0" y="735" width="374" height="154"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="25S-Zz-df6">
+                                                        <rect key="frame" x="0.0" y="285" width="104" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="FCS-Ke-eEA" firstAttribute="top" secondItem="qv1-Ja-pYH" secondAttribute="top" constant="20" id="6Xy-TK-aFU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="FCS-Ke-eEA" secondAttribute="bottom" constant="660" id="8eb-gM-39A"/>
+                                                    <constraint firstItem="FCS-Ke-eEA" firstAttribute="leading" secondItem="qv1-Ja-pYH" secondAttribute="leading" id="Z8q-SG-EaI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FCS-Ke-eEA" secondAttribute="trailing" id="fu3-oZ-aXf"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRR-83-9LU">
+                                                <rect key="frame" x="0.0" y="921" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deletedidtapbutton:" destination="YUX-le-Qbm" eventType="touchUpInside" id="LrH-kg-W1s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="960" id="Ytv-oQ-K4N"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qaa-0f-Fd6" firstAttribute="trailing" secondItem="t3e-ah-nQh" secondAttribute="trailing" constant="20" id="1F6-mp-zUb"/>
+                                    <constraint firstItem="qaa-0f-Fd6" firstAttribute="top" secondItem="t3e-ah-nQh" secondAttribute="top" id="7bO-s1-bc1"/>
+                                    <constraint firstItem="qaa-0f-Fd6" firstAttribute="leading" secondItem="t3e-ah-nQh" secondAttribute="leading" constant="20" id="8oZ-8Z-fNa"/>
+                                    <constraint firstItem="qaa-0f-Fd6" firstAttribute="centerX" secondItem="zLB-WG-ZHG" secondAttribute="centerX" id="cfK-Ey-Or2"/>
+                                    <constraint firstItem="qaa-0f-Fd6" firstAttribute="bottom" secondItem="t3e-ah-nQh" secondAttribute="bottom" id="s65-ce-afi"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="t3e-ah-nQh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="V1T-uR-4Xk"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARJ-1B-qK7">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Edit Log" largeTitleDisplayMode="always" id="E1k-uI-Mx9">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="SRc-Nw-OcH">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="oEB-jh-st3">
+                                    <navigationItem title="Edit Log" largeTitleDisplayMode="always" id="XwL-aL-OcM">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="475-Cg-nrD">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6IK-B0-JFx">
                                                 <rect key="frame" x="16" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <connections>
-                                                    <action selector="cancelbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mUW-Am-Tv7"/>
+                                                    <action selector="cancelbutton:" destination="YUX-le-Qbm" eventType="touchUpInside" id="iNo-fI-86R"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="guD-Mq-Vh4">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1iq-dW-hFE">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="sr9-G0-zZF">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="O29-VP-I0P">
                                                 <rect key="frame" x="288" y="5" width="86" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Save"/>
                                                 <connections>
-                                                    <action selector="saveButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O98-UK-irw"/>
+                                                    <action selector="saveButtonDidTapped:" destination="YUX-le-Qbm" eventType="touchUpInside" id="oHc-hN-81g"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-nJ-yIi">
-                                <rect key="frame" x="16" y="302" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="cVS-ux-b7T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zLB-WG-ZHG" secondAttribute="trailing" constant="-12" id="DMW-qq-EEo"/>
+                            <constraint firstItem="zLB-WG-ZHG" firstAttribute="top" secondItem="IGv-hV-ocf" secondAttribute="top" constant="28" id="KRc-z7-j8h"/>
+                            <constraint firstItem="zLB-WG-ZHG" firstAttribute="leading" secondItem="IGv-hV-ocf" secondAttribute="leading" constant="-12" id="ghI-bK-Zgv"/>
+                            <constraint firstAttribute="bottom" secondItem="zLB-WG-ZHG" secondAttribute="bottom" constant="28" id="qR9-jT-cGS"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Log Detail" largeTitleDisplayMode="always" id="jUX-12-XRe">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="mEs-zD-jWY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ckx-lQ-oTW">
+                    <navigationItem key="navigationItem" title="Log Detail" largeTitleDisplayMode="always" id="Jsp-Eo-tkg">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="gwd-V5-WT1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="TwQ-hx-cXa">
                                 <rect key="frame" x="16" y="4.6666666666666679" width="86" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="zYV-A0-OvJ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wcg-oh-yWx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lEZ-iA-XAs">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mZP-A2-eTi">
                                 <rect key="frame" x="288" y="5" width="86" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -123,15 +171,27 @@
                     </navigationItem>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
-                        <outlet property="editDatePicker" destination="nbx-ku-d2c" id="tFy-cN-tgj"/>
-                        <outlet property="emotionTableView" destination="YG7-6X-Ifs" id="MHv-dF-s8U"/>
-                        <outlet property="reusableSlider" destination="7ae-Mj-naa" id="bgF-ln-KVj"/>
-                        <segue destination="igW-ue-Jeo" kind="show" identifier="backtomainpage" id="SHY-LQ-kQI"/>
+                        <outlet property="editDatePicker" destination="zSu-Ku-Wba" id="fuq-uL-uWE"/>
+                        <outlet property="editedTextView" destination="90a-tN-AmD" id="oj6-Zl-u1y"/>
+                        <outlet property="emotionTableView" destination="LHP-bS-rf2" id="EwQ-s8-XR4"/>
+                        <outlet property="reusableSlider" destination="FCS-Ke-eEA" id="Lbt-7H-fhs"/>
+                        <segue destination="igW-ue-Jeo" kind="show" identifier="backtomainpage" id="jVo-CA-u1J"/>
+                        <segue destination="jhz-ZD-Nc0" kind="show" identifier="reloadPageDetail" id="p9K-rn-HCT"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKf-Pw-5BP" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="684.61538461538464" y="79.620853080568722"/>
+        </scene>
+        <!--LogViews-->
+        <scene sceneID="phy-Yd-Hbp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogViews" id="jhz-ZD-Nc0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="501-cQ-5L7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYt-St-Lgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="-196"/>
         </scene>
         <!--LogPage-->
         <scene sceneID="POD-vo-NpQ">
@@ -163,6 +223,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

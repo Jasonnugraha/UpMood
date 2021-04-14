@@ -41,6 +41,51 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var summary: Curhat?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print( "viewWillAppear is Called")
+        textViewArea.delegate = self
+        textViewArea.layer.cornerRadius = 10
+        textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
+        
+        
+        //MARK - UNTUK DISPLAY CAUSE OF FEELING
+        listOfDesc = summary!.causeOfFeelingDesc!
+        listOfEmoji = summary!.causeOfFeelingEmoji!
+               //MARK - Default Emot
+        let defaultEmot = "☺️".textToImage()
+
+        //MARK - Date
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        labelTime.text = formatter.string(from: (summary?.date)!)
+    
+        formatter.dateFormat = "dd MMMM yyyy"
+        labelDate.text = formatter.string(from: (summary?.date)!)
+        
+        //Mark - Feelings & Emot
+        feelingsToday.text = summary?.feeling
+        emoticon.text = summary?.emoji
+        
+        //Mark - textViewArea
+        textViewArea.text = summary?.desc
+        
+        //MARK - Table Cell BecauseOf
+//        tableCellFeelings.delegate = self
+//        tableCellFeelings.dataSource = self
+//        tableCellFeelings.backgroundColor = UIColor.clear
+//        tableCellFeelings.isScrollEnabled = true
+        tableCellFeelings.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
+        tableCellFeelings.delegate = self
+        tableCellFeelings.dataSource = self
+        tableCellFeelings.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)
+        tableCellFeelings.layer.cornerRadius = 10
+        
+        
+        backgroundEmot()
+        feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewArea.delegate = self
