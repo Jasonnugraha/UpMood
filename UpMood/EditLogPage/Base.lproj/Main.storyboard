@@ -117,6 +117,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
+                        <outlet property="editDatePicker" destination="nbx-ku-d2c" id="tFy-cN-tgj"/>
                         <outlet property="emotionTableView" destination="YG7-6X-Ifs" id="MHv-dF-s8U"/>
                     </connections>
                 </viewController>

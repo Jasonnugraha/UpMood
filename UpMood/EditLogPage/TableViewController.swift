@@ -20,10 +20,9 @@ class TableViewController: UIViewController {
     
     // core data variable preparation
     var curhat : Curhat?
-//    var listCurhat : [Curhat]?
-//    var listTodayCurhat : [Curhat]? = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet weak var editDatePicker: UIDatePicker!
     
     
     @IBOutlet weak var emotionTableView: UITableView!
@@ -44,24 +43,46 @@ class TableViewController: UIViewController {
 //        print(type(of: curhat?.causeOfFeelingDesc))
 //        getTodayCurhat()
         print("\(curhat?.date) \(curhat?.feeling)")
+        fetchAndUpdateTheContent()
     }
     
     
 
+    
+    func fetchAndUpdateTheContent(){
+        self.editDatePicker.date = (curhat?.date)!
+    }
+    
+    func deleteContent(){
+        context.delete(curhat!)
+        do {
+            try context.save()
+        } catch {
+            
+        }
+    }
     
 // Action Sheet
     func deleteHandler(alert: UIActionHandler){
         self.navigationController?.pushViewController(UIViewController(), animated: true)
     }
     
+    
+    
     func actionsheetdelete(){
-            
             let alertController = UIAlertController(title: nil, message: "Delete this log?", preferredStyle: .actionSheet)
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil ))
-            present(alertController, animated: true)
-            
-            alertController.addAction(UIAlertAction(title: "Delete Log", style: .destructive, handler: nil))
-        }
+            let cancelbutton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                self.navigationController?.pushViewController(UIViewController(), animated: true)
+            }
+                present(alertController, animated: true)
+                
+            let deletebutton = UIAlertAction(title: "Delete Log", style: .destructive){ (action) in
+                //self.navigationController?.pushViewController(UIViewController(), animated: true)
+                self.deleteContent()
+            }
+            alertController.addAction(cancelbutton)
+            alertController.addAction(deletebutton)
+            }
     
 /*    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogsStoryboard"{
