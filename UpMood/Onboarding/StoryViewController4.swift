@@ -31,6 +31,7 @@ class StoryViewController4: UIViewController, OnboardingParentProtocol {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        parentPVC.saveCurhat()
         segue.destination.preferredContentSize = CGSize(width: 300, height: 200)
         if let presentationController = segue.destination.popoverPresentationController {
             presentationController.delegate = self

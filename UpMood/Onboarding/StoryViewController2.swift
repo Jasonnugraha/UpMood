@@ -57,6 +57,7 @@ class StoryViewController2: UIViewController, OnboardingParentProtocol {
             }
         }
         parentPVC.setReasons(_sender: reasons)
+        parentPVC.goToNextPage()
     }
     
 }

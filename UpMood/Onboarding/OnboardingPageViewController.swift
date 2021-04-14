@@ -17,6 +17,9 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     var emotionDescription: String!
     var reasons: [Labels]!
     var notes: String?
+    
+    var causeOfFeelingEmojiArray :[String] = []
+    var causeOfFeelingDescArray :[String] = []
 
     lazy var orderedViewControllers: [UIViewController] = {
         
@@ -116,7 +119,14 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
                 
         return orderedViewControllers[nextIndex]
     }
-    
+    //go to next page
+    func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
+            if let currentViewController = viewControllers?[0] {
+                if let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentViewController) {
+                    setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
+                }
+            }
+        }
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
@@ -146,15 +156,39 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
 //        print("value", _emotionValue)
 //        print("emoji", _emotionEmoji)
 //        print("desc", _emotionDescription)
+        emotionEmoji = _emotionEmoji
         emotionDescription = _emotionDescription
     }
     
     func setReasons(_sender: [Labels]) {
+        reasons = _sender
         print("reasons di parent :", _sender)
+        for item in reasons {
+            if (item.isChecked){
+                causeOfFeelingDescArray.append(item.reason)
+                causeOfFeelingEmojiArray.append(item.emojiLogo)
+            }
+        }
     }
     
     func setNotes(_sender: String) {
-//        print("notes di parent :", _sender)
+        notes = _sender
     }
-    
+    let contexts = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    func saveCurhat(){
+        
+        let curhatToSave = Curhat(context: self.contexts)
+        curhatToSave.emoji = emotionEmoji
+        curhatToSave.date = Date()
+        curhatToSave.desc = notes
+        curhatToSave.feeling = emotionDescription
+        curhatToSave.causeOfFeelingDesc = causeOfFeelingDescArray
+        curhatToSave.causeOfFeelingEmoji = causeOfFeelingEmojiArray
+        
+        do {
+            try contexts.save()
+        } catch  {
+            
+        }
+    }
 }

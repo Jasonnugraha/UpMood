@@ -21,6 +21,10 @@ class StoryViewController1: UIViewController, OnboardingParentProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emotionSlider.horizontalSlider.value = 0
+        emotionValue = Int(emotionSlider.horizontalSlider.value);
+        emoji = emotionSlider.emot[Int(emotionSlider.horizontalSlider.value)]
+        desc = emotionSlider.labelemo[Int(emotionSlider.horizontalSlider.value)]
         nextBtn.layer.cornerRadius = 10
         slider = emotionSlider.horizontalSlider
         slider.addTarget(self, action: #selector(sliderValueDidChange(sender:)), for: .valueChanged)
@@ -42,6 +46,7 @@ class StoryViewController1: UIViewController, OnboardingParentProtocol {
     
     @IBAction func onNextBtnTap(_sender: UIButton) {
         parentPVC.setFeeling(_emotionValue: emotionValue, _emotionEmoji: emoji, _emotionDescription: desc)
+        parentPVC.goToNextPage()
     }
     
 }

@@ -32,6 +32,7 @@ class StoryViewController3: UIViewController, UITextViewDelegate, OnboardingPare
     
     @IBAction func onNextBtnTap(_ sender: UIButton) {
         parentPVC.setNotes(_sender: notes!)
+        parentPVC.goToNextPage()
     }
     
 }
