@@ -106,7 +106,8 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
+        // format date di cell
+        formatter.dateFormat = "d MMM"
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TableViewCellController
         let currentContent = self.groupedListCurhat[indexPath.section+1][indexPath.row]
         cell.dateLabel.text = formatter.string(from: currentContent.date!)

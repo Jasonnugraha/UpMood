@@ -53,7 +53,8 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
+        formatter.timeStyle = .short
+//        formatter.dateStyle = .short
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TableViewCellController
         let currentContent = self.listTodayCurhat![indexPath.row]
         cell.dateLabel.text = formatter.string(from: currentContent.date!)
