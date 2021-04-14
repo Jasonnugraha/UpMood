@@ -16,7 +16,6 @@ class FirstViewController: UIViewController, UITextViewDelegate{
 
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
-    @IBOutlet weak var emot: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var tableCellFeelings: UITableView!
@@ -37,7 +36,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         //MARK - Date
         let formatter = DateFormatter()
         formatter.timeStyle = .short
-//        formatter.dateStyle = .short
+//      formatter.dateStyle = .short
         labelTime.text = formatter.string(from: (summary?.date)!)
         
         //Mark - Feelings & Emot
@@ -55,27 +54,40 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         backgroundEmot()
         feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        //let uuid = UUID().uuidString
-        //print(uuid)
-        
-        //getCurhatFromCoreData()
-      
+
     }
     func backgroundEmot(){
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x:0, y:0, width: 73, height: 73)
-        gradient.colors = [
-            UIColor(red: 0.43, green: 0.7, blue: 0.93, alpha: 1).cgColor,
-            UIColor(red: 0.25, green: 0.61, blue: 0.91, alpha: 1).cgColor
-        ]
-        gradient.locations = [0, 1]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 0.95)
-        gradient.cornerRadius = 35
-        backEmo.layer.addSublayer(gradient)
-        backEmo.layer.cornerRadius = 35
-        backEmo.layer.insertSublayer(gradient, at: 0)
-       
+        let tempBackgroundEmot = summary?.feeling
+        if tempBackgroundEmot == "calm"{
+            backEmo.image = #imageLiteral(resourceName: "01-calm")
+            //feelingsToday.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        } else if tempBackgroundEmot == "comfortable"{
+            backEmo.image = #imageLiteral(resourceName: "02-comfortable")
+        }
+        else if tempBackgroundEmot == "okay"{
+            backEmo.image = #imageLiteral(resourceName: "03-okay")
+        }
+        else if tempBackgroundEmot == "annoyed"{
+            backEmo.image = #imageLiteral(resourceName: "04-annoyed")
+        }
+        else if tempBackgroundEmot == "nervous"{
+            backEmo.image = #imageLiteral(resourceName: "05-nervous")
+        }
+        else if tempBackgroundEmot == "anxious"{
+            backEmo.image = #imageLiteral(resourceName: "06-anxious")
+        }
+        else if tempBackgroundEmot == "worried"{
+            backEmo.image = #imageLiteral(resourceName: "07-worried")
+        }
+        else if tempBackgroundEmot == "fearful"{
+            backEmo.image = #imageLiteral(resourceName: "08-fearful")
+        }
+        else if tempBackgroundEmot == "panicked"{
+            backEmo.image = #imageLiteral(resourceName: "09-panicked")
+        }else {
+            backEmo.image = #imageLiteral(resourceName: "09-panicked")
+        }
+        
     }
     
 /*
@@ -111,7 +123,6 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feel", for: indexPath)
         let dakta = becauseOf[indexPath.row]
-        //print(dakta)
         
         let tempDetail = dakta.detailemot
         cell.textLabel?.text = tempDetail
@@ -128,13 +139,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
         } else if tempDetail == "Weather"{
                     cell.imageView?.image = imageOri3
         }
-/*
-        let dakta2 = feelings[indexPath.row]
-        let ambildata = dakta2.emotion
-        temp = ambildata
-        print(temp!)
-*/
-        
+
         return cell
     }
     

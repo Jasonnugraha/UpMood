@@ -47,12 +47,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVm-bH-AIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366.15384615384613" y="-275.11848341232223"/>
+            <point key="canvasLocation" x="-589" y="-275"/>
         </scene>
-        <!--Log Page View Controller-->
+        <!--New Log Page View Controller-->
         <scene sceneID="h9b-NY-Nb1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="50j-PO-aEB" customClass="LogPageViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="50j-PO-aEB" customClass="NewLogPageViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GPm-Vx-lTB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                 <pageViewController storyboardIdentifier="PageViewControllerLog" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="lpQ-Tz-EDS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5L-0D-JoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="429"/>
+            <point key="canvasLocation" x="-855" y="414"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="I6A-ic-hdt">
@@ -163,6 +163,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7OP-uh-vHc"/>
                     <connections>
                         <outlet property="backEmo" destination="rMg-HL-Hvw" id="S3l-rN-e3g"/>
                         <outlet property="emoticon" destination="RDX-aF-uW7" id="xGk-rS-GAV"/>

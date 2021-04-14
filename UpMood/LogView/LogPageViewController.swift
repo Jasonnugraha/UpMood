@@ -12,6 +12,8 @@ class LogPageViewController: UIViewController, UIPageViewControllerDelegate, UIP
     
     //var x: Int?
     var x = 1
+    //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //var summary: Curhat?
 /*
     lazy var orderedViewControllers: [UIViewController] = {
 

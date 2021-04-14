@@ -15,7 +15,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var segmentCounter = 1
-    var listCurhat:[Curhat]! = []
+    var listCurhat:[Curhat]!
     var groupedListCurhat:[[Curhat]] = [[]]
     var tempListCurhat:[Curhat] = []
     var curhatToPass:Curhat?
@@ -25,10 +25,8 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationController?.navigationBar.prefersLargeTitles = true
         tableSavedData.delegate = self
         tableSavedData.dataSource = self
-        
-        deleteAllCoreData()
-        
         getCurhatFromCoreData()
+        checkFirstTime()
         sortTable()
         groupTable()
     }
@@ -90,9 +88,6 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     func getCurhatFromCoreData(){
         do {
             self.listCurhat = try context.fetch(Curhat.fetchRequest())
-            if listCurhat == nil {
-                performSegue(withIdentifier: "gotoOnboarding", sender: self)
-            }
             DispatchQueue.main.async {
                 self.tableSavedData.reloadData()
             }
@@ -100,13 +95,6 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    func deleteAllCoreData() {
-        getCurhatFromCoreData()
-        for item in listCurhat {
-            context.delete(item)
-        }
-    }
-
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,5 +118,9 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         cell.feelingLabel.text = currentContent.feeling
         return cell
     }
-
+    func checkFirstTime() {
+        if listCurhat.count == 0 {
+            performSegue(withIdentifier: "gotoOnboarding", sender: self)
+        }
+    }
 }
