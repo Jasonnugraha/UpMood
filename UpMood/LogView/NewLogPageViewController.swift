@@ -67,6 +67,7 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         
     }
     
+ /*
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for subV in self.view.subviews {
@@ -87,6 +88,7 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
             }
         }
     }
+ */
 
 
 // MARK - Before
@@ -114,6 +116,7 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
         }
 
         let nextIndex = viewControllerIndex+1
+        
         guard nextIndex < VCArr.count
             else {
                 return nil
@@ -128,18 +131,23 @@ class NewLogPageViewController:  UIPageViewController, UIPageViewControllerDataS
 
     public func presentationCount(for pageViewController: UIPageViewController) -> Int{
         return 3
+        //return
     }
  
-
-
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int{
         guard let firstViewController = viewControllers?.first , let firstViewControllerIndex = VCArr.index(of: firstViewController as! FirstViewController) else {
             return 0
     }
-
         return firstViewControllerIndex
     }
- 
+
+/*
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        //let pageContentViewController = pageviewcontroller.viewControllers![0]
+        let pageContentViewController = pageviewcontroller.viewControllers![0]
+        self.pageControl.currentPage = ViewControllers.firstIndex(of: pageContentViewController)!
+    }
+ */
 /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "sendData"){
