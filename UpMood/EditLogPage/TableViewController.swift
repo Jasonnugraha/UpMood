@@ -51,21 +51,64 @@ class TableViewController: UIViewController {
         print("hello")
 //        print(type(of: curhat?.causeOfFeelingDesc))
 //        getTodayCurhat()
-        print("\(curhat?.date) \(curhat?.feeling)")
+        print("\(curhat?.date) \(curhat?.feeling!)")
+        
+        
         
         // ini ambil data
         fetchAndUpdateTheContent()
 //        self.reloadInputViews()
     }
     
-    
-
-    
     func fetchAndUpdateTheContent(){
         self.editDatePicker.date = (curhat?.date)!
         
+        if curhat!.feeling! == "Calm" {
+            self.reusableSlider.horizontalSlider.value = 0
+            print("Calm")
+                }
+        else if curhat!.feeling! == "Comfortable" {
+            self.reusableSlider.horizontalSlider.value = 1
+            print("Comfortable")
+        }
+        else if curhat!.feeling! == "Okay" {
+            self.reusableSlider.horizontalSlider.value = 2
+            
+            print("Okay")
+        }
+       else if curhat!.feeling! == "Annoyed" {
+            self.reusableSlider.horizontalSlider.value = 3
+            print("Annoyed")
+        }
+      else if curhat!.feeling! == "Nervous" {
+            self.reusableSlider.horizontalSlider.value = 4
+            print("Nervous")
+        }
+      else if curhat!.feeling! == "Anxious" {
+            self.reusableSlider.horizontalSlider.value = 5
+            print("Anxious")
+        }
+       else if curhat!.feeling! == "Worried" {
+            self.reusableSlider.horizontalSlider.value = 6
+            print("Worried")
+        }
+        else if curhat!.feeling! == "Fearful" {
+            self.reusableSlider.horizontalSlider.value = 7
+            print("Fearful")
+        }
+        else if curhat!.feeling! == "Panicked"{
+            self.reusableSlider.horizontalSlider.value = 8
+            print("Panicked")
+        }
         
+        // emot
+        reusableSlider.emoticon.text = reusableSlider.emot[Int(reusableSlider.horizontalSlider.value)]
         
+        // infoemot
+        reusableSlider.infoemot.text = reusableSlider.labelemo[Int(reusableSlider.horizontalSlider.value)]
+        
+        // gradien back emo
+        reusableSlider.grtbackemo.image = reusableSlider.gradbackemo[Int(reusableSlider.horizontalSlider.value)]
     }
     
     func deleteContent(){
