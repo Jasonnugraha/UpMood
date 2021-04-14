@@ -16,6 +16,7 @@
 		701EE3C2261EEB8F004AB422 /* StoryViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C1261EEB8F004AB422 /* StoryViewController1.swift */; };
 		701EE3C5261EEBAA004AB422 /* StoryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */; };
 		701EE3C8261EEBB8004AB422 /* StoryViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */; };
+		709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */; };
 		70996A06261EF7840050DA28 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */; };
 		70996A09261F052D0050DA28 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */; };
 		B414D3A32620618E0035EE90 /* ReusableSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = B414D3A22620618E0035EE90 /* ReusableSlider.xib */; };
@@ -62,6 +63,7 @@
 		701EE3C1261EEB8F004AB422 /* StoryViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController1.swift; sourceTree = "<group>"; };
 		701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController2.swift; sourceTree = "<group>"; };
 		701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController3.swift; sourceTree = "<group>"; };
+		709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDefaultSummaryViewController.swift; sourceTree = "<group>"; };
 		70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		B414D3A22620618E0035EE90 /* ReusableSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableSlider.xib; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				B4DE5DAA2624502A00B5C7E4 /* SecondViewController.swift */,
 				B4DE5DA72624501C00B5C7E4 /* ThirdViewController.swift */,
 				B4DE5DB62624526E00B5C7E4 /* DummyCodeViewController.swift */,
+				709550A42625A4A700361458 /* DataDefaultSummaryViewController.swift */,
 			);
 			path = LogView;
 			sourceTree = "<group>";
@@ -350,6 +353,8 @@
 				B4170417261B7550004FF9D9 /* AppDelegate.swift in Sources */,
 				B4DE5DAB2624502A00B5C7E4 /* SecondViewController.swift in Sources */,
 				B4D20FD3261DAB50002B101F /* CustomLabelStruct.swift in Sources */,
+				709550A52625A4A700361458 /* DataDefaultSummaryViewController.swift in Sources */,
+				B4D20FD3261DAB50002B101F /* CustomEmotionStruct.swift in Sources */,
 				B4D20FCD261DA2BC002B101F /* ReusableReasonCell.swift in Sources */,
 				B4DE5DA526244FEF00B5C7E4 /* LogPageViewController.swift in Sources */,
 				FB5890712625575C0079D4A0 /* StoryViewController4.swift in Sources */,
