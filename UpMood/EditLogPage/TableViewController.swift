@@ -18,6 +18,13 @@ class TableViewController: UIViewController {
                               Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
                               Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
     
+    // core data variable preparation
+    var curhat : Curhat?
+//    var listCurhat : [Curhat]?
+//    var listTodayCurhat : [Curhat]? = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
     
     @IBOutlet weak var emotionTableView: UITableView!
     @IBAction func deletedidtapbutton(_ sender: Any) {
@@ -27,17 +34,20 @@ class TableViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
-/*    @IBAction func buttonIsPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToLogsStoryboard", sender: self)
-    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+        print("hello")
+//        print(type(of: curhat?.causeOfFeelingDesc))
+//        getTodayCurhat()
+        print("\(curhat?.date) \(curhat?.feeling)")
     }
+    
+    
+
     
 // Action Sheet
     func deleteHandler(alert: UIActionHandler){

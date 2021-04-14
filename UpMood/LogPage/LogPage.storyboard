@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r62-8T-Hlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="-187"/>
+            <point key="canvasLocation" x="1966" y="-214"/>
         </scene>
         <!--LogViews-->
         <scene sceneID="Xqv-or-HBY">
@@ -161,7 +161,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMM-A4-d16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="-114"/>
+            <point key="canvasLocation" x="1400" y="-21"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="dv6-EB-rA4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="qzD-Ir-EUJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bVl-ek-Arv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUc-ty-fzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="-90"/>
         </scene>
         <!--Log Date View Controller-->
         <scene sceneID="tNx-QC-Dbl">
@@ -209,7 +219,6 @@
                                             <outlet property="dateLabel" destination="4b8-nE-704" id="faQ-Nv-XBY"/>
                                             <outlet property="emojiLabel" destination="c63-q9-qqO" id="5pe-16-Qmr"/>
                                             <outlet property="feelingLabel" destination="s14-Gv-eff" id="iR5-ku-Bbm"/>
-                                            <segue destination="xxw-UU-jBw" kind="show" id="2xN-ll-P5G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -227,6 +236,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableDisplayDate" destination="FrI-eK-Yx6" id="pWa-ZE-dXk"/>
+                        <segue destination="qzD-Ir-EUJ" kind="show" identifier="EditLogDate" id="feK-PT-0dl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aC-5U-qIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -64,6 +64,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         groupedListCurhat.append(tempListCurhat)
         print("")
     }
+    // preparing kirim data dari logs awal ke logs detail per jam dengan segue name LogDateIdentifier
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier=="LogDateIdentifier"){
@@ -78,7 +79,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     func numberOfSections(in tableView: UITableView) -> Int {
         return segmentCounter
     }
-
+    // kirim the segue nya yang mau dikirim
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.curhatToPass = groupedListCurhat[indexPath.section+1][indexPath.row]
         performSegue(withIdentifier: "LogDateIdentifier", sender: self)
