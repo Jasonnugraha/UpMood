@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 protocol TableViewControllerDelegate {
-    func sliderValueChanged(sliderValue: Int, infoEmot:String?)
+    func sliderValueChanged(sliderValue: Int, infoEmot:String?, currentEmot:String?)
     func reloadTable()
 }
 
@@ -32,6 +32,19 @@ class TableViewController: UIViewController {
     @IBOutlet weak var editDatePicker: UIDatePicker!
     @IBOutlet weak var reusableSlider: ReusableSlider!
     
+    @IBAction func dateValueChanged(_ sender: UIDatePicker) {
+        curhat?.date? = sender.date
+    }
+    @IBAction func saveButtonDidTapped(_ sender: UIButton) {
+        do {
+            try self.context.save()
+        }
+        catch{
+            
+        }
+        self.dismiss(animated: true, completion: nil)
+//        self.performSegue(withIdentifier: "backtomainpage", sender: self)
+    }
     
     @IBOutlet weak var emotionTableView: UITableView!
     @IBAction func deletedidtapbutton(_ sender: Any) {
@@ -42,8 +55,8 @@ class TableViewController: UIViewController {
     }
     
     func deleteHandler(alert: UIAlertAction!){
-     self.deleteContent()
-      self.performSegue(withIdentifier: "backtomainpage", sender: self)
+        self.deleteContent()
+        self.performSegue(withIdentifier: "backtomainpage", sender: self)
       }
     
     
@@ -191,8 +204,10 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension TableViewController:TableViewControllerDelegate{
-    func sliderValueChanged(sliderValue: Int, infoEmot: String?) {
+    func sliderValueChanged(sliderValue: Int, infoEmot: String?, currentEmot:String?) {
         print("\(sliderValue)  dan \(infoEmot)")
+        curhat?.feeling = infoEmot!
+        curhat?.emoji = currentEmot!
     }
     
     func reloadTable() {

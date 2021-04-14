@@ -32,7 +32,7 @@ class ReusableSlider: UIView {
         emoticon.text = emot[value]
         infoemot.text = labelemo[value]
         grtbackemo.image = gradbackemo[value]
-        delegate?.sliderValueChanged(sliderValue: value, infoEmot: infoemot.text)
+        delegate?.sliderValueChanged(sliderValue: value, infoEmot: infoemot.text,currentEmot: emoticon.text)
     }
     
     func initialSetup(){
