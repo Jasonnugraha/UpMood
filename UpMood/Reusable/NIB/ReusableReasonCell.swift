@@ -40,12 +40,12 @@ class ReusableReasonCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func editReasonCell(from emoji: String, from emotionText: String, status isEditable: Bool){
-        customReasonTextField.text = emotionText
-        customEmojiTextField.text = emoji
-        customReasonTextField.isUserInteractionEnabled = isEditable
-        customEmojiTextField.isUserInteractionEnabled = isEditable
-        customCheckListButton.isHidden = !isEditable
+    func editReasonCell(from label:Labels){
+        customReasonTextField.text = label.reason
+        customEmojiTextField.text = label.emojiLogo
+        customReasonTextField.isUserInteractionEnabled = label.isEditable
+        customEmojiTextField.isUserInteractionEnabled = label.isEditable
+        customCheckListButton.isHidden = !label.isEditable
         customEmojiTextField.borderStyle = .none
         customReasonTextField.borderStyle = .none
     }

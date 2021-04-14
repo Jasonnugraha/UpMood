@@ -70,7 +70,7 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
         let data = dataSeed[indexPath.row]
-        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: data.isEditable)
+        customCell.editReasonCell(from: data)
         customCell.indexPath = indexPath
         customCell.delegate = self
 //        customCell.customCheckListButton.tag = indexPath.row

@@ -210,7 +210,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
         let data = dataSeed[indexPath.row]
-        customCell.editReasonCell(from: data.emojiLogo, from: data.reason, status: false)
+        customCell.editReasonCell(from: data)
         
         //MARK - ViewCell
         customCell.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9490196078, blue: 0.9882352941, alpha: 1)

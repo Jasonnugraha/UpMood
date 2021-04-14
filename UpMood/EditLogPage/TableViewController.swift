@@ -10,7 +10,6 @@ import Foundation
 
 protocol TableViewControllerDelegate {
     func sliderValueChanged(sliderValue: Int, infoEmot:String?, currentEmot:String?)
-    func reloadTable()
 }
 
 class TableViewController: UIViewController {
@@ -187,16 +186,15 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfEmoji.count
+        return dataSeed.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCell(withIdentifier: ReusableReasonCell.identifier, for: indexPath) as! ReusableReasonCell
-//        let data = dataSeed[indexPath.row]
+        let data = dataSeed[indexPath.row]
         
-        customCell.editReasonCell(from: self.listOfEmoji[indexPath.row], from: self.listOfDesc[indexPath.row], status: true)
-        
-        
+//        customCell.editReasonCell(from: self.listOfEmoji[indexPath.row], from: self.listOfDesc[indexPath.row], status: true)
+        customCell.editReasonCell(from: data)
         return customCell
 
     }
@@ -209,12 +207,5 @@ extension TableViewController:TableViewControllerDelegate{
         curhat?.feeling = infoEmot!
         curhat?.emoji = currentEmot!
     }
-    
-    func reloadTable() {
-        //
-    }
-    
-    
-    
     
 }
