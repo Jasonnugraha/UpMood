@@ -173,6 +173,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     
     func setNotes(_sender: String) {
         notes = _sender
+        print(notes)
     }
     let contexts = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     func saveCurhat(){
