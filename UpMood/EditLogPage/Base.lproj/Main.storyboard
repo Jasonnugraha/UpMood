@@ -120,11 +120,22 @@
                         <outlet property="editDatePicker" destination="nbx-ku-d2c" id="tFy-cN-tgj"/>
                         <outlet property="emotionTableView" destination="YG7-6X-Ifs" id="MHv-dF-s8U"/>
                         <outlet property="reusableSlider" destination="7ae-Mj-naa" id="bgF-ln-KVj"/>
+                        <segue destination="igW-ue-Jeo" kind="show" identifier="backtomainpage" id="SHY-LQ-kQI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="684.61538461538464" y="79.620853080568722"/>
+        </scene>
+        <!--LogPage-->
+        <scene sceneID="POD-vo-NpQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogPage" id="igW-ue-Jeo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0yf-Yv-mPs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amw-r3-BJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="-11"/>
         </scene>
         <!--test-->
         <scene sceneID="t6s-o4-Z9L">
