@@ -21,6 +21,11 @@ class FirstViewController: UIViewController, UITextViewDelegate{
                               Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
                               Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
 
+
+    @IBAction func buttonEditDidTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toEditPage", sender: self)
+    }
+    
     @IBOutlet weak var textViewArea: UITextView!
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
@@ -28,6 +33,8 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var tableCellFeelings: UITableView!
     @IBOutlet weak var emoticon: UILabel!
+    
+
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var summary: Curhat?
@@ -108,6 +115,16 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toEditPage"){
+            //let destinationVC = segue.destination as! FirstViewController //ini udah bener
+            let destinationVC = segue.destination as! TableViewController
+            destinationVC.curhat = self.summary
+        } else {
+            return
+        }
+    }
+    
 /*
     func getCurhatFromCoreData(){
         do {
@@ -182,6 +199,7 @@ extension String {
 
             return image ?? UIImage()
         }
+
 }
 
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
@@ -201,3 +219,4 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         return customCell
     }
 }
+

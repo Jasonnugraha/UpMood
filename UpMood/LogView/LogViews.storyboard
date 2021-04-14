@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="50j-PO-aEB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J5r-I2-6bE">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -157,22 +156,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuP-pn-ayn">
-                                <rect key="frame" x="344" y="50" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="tintColor" red="0.3411764705882353" green="0.42352941176470588" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EtI-4z-5Vg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="7OP-uh-vHc"/>
+                    <navigationItem key="navigationItem" id="a8I-zR-NHa">
+                        <barButtonItem key="rightBarButtonItem" image="pencil" catalog="system" style="plain" id="PN7-8h-Aec">
+                            <connections>
+                                <action selector="buttonEditDidTapped:" destination="J5r-I2-6bE" id="Whk-14-8hz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backEmo" destination="rMg-HL-Hvw" id="S3l-rN-e3g"/>
@@ -182,11 +178,20 @@
                         <outlet property="labelTime" destination="Kqs-ok-0BP" id="ZwL-0S-0bu"/>
                         <outlet property="tableCellFeelings" destination="ygI-1Y-pKU" id="YDO-0T-kqF"/>
                         <outlet property="textViewArea" destination="Bc1-IO-jyT" id="88V-yP-Lrv"/>
+                        <segue destination="1aA-Pj-bjh" kind="presentation" identifier="toEditPage" id="tj2-cJ-bQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sy-ox-yfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366.15384615384613" y="1092.654028436019"/>
+            <point key="canvasLocation" x="563.07692307692309" y="1092.654028436019"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="5ch-sz-SMU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="1aA-Pj-bjh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K07-ug-ol7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="530"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="B5f-Xn-cIY">
@@ -286,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVz-OI-YhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.61538461538458" y="1092.654028436019"/>
+            <point key="canvasLocation" x="1313.8461538461538" y="1092.654028436019"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="CYr-Wr-qED">
@@ -364,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epy-u1-nJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113.8461538461538" y="1092.654028436019"/>
+            <point key="canvasLocation" x="2043.0769230769231" y="1092.654028436019"/>
         </scene>
     </scenes>
     <resources>

@@ -86,9 +86,9 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "summaryView"){
             //let destinationVC = segue.destination as! FirstViewController //ini udah bener
-            let destinationVC = segue.destination as! NewLogPageViewController
-            destinationVC.summary1 = self.listTodayCurhat
-            destinationVC.klikIndex = self.sendIndex
+            let destinationVC = segue.destination as! FirstViewController
+            destinationVC.summary = self.curhatanHariIni
+//            destinationVC.klikIndex = self.sendIndex
         } else {
             return
         }

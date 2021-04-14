@@ -174,16 +174,6 @@
             </objects>
             <point key="canvasLocation" x="353" y="136"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="dv6-EB-rA4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="qzD-Ir-EUJ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="bVl-ek-Arv"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OUc-ty-fzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1258" y="-90"/>
-        </scene>
         <!--Log Date View Controller-->
         <scene sceneID="tNx-QC-Dbl">
             <objects>
@@ -247,7 +237,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableDisplayDate" destination="FrI-eK-Yx6" id="pWa-ZE-dXk"/>
-                        <segue destination="qzD-Ir-EUJ" kind="show" identifier="EditLogDate" id="feK-PT-0dl"/>
                         <segue destination="xxw-UU-jBw" kind="show" identifier="summaryView" id="iwx-xx-uoR"/>
                     </connections>
                 </viewController>
@@ -275,7 +264,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fNY-MQ-zJb"/>
+        <segue reference="rfr-eB-FRc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
