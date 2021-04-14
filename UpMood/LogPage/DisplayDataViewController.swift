@@ -72,7 +72,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
             let destinationVC = segue.destination as! LogDateViewController
             destinationVC.curhat = curhatToPass
         }else{
-            return
+            
         }
         
     }
@@ -94,7 +94,6 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         } catch  {
         }
     }
-    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

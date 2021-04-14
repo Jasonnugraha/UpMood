@@ -15,13 +15,13 @@ protocol TableViewControllerDelegate {
 
 class TableViewController: UIViewController {
     
-    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "⛅️", reason: "Weather", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "📝", reason: "School", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "💓", reason: "Relationship", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: false),
-                              Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: false)]
+    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "👯‍♀️", reason: "Friend", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "⛅️", reason: "Weather", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "📝", reason: "School", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "💓", reason: "Relationship", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "👤", reason: "Self", isEditable: true),
+                              Labels(isChecked: false, emojiLogo: "💼", reason: "Work", isEditable: true)]
     
     // core data variable preparation
     var curhat : Curhat?

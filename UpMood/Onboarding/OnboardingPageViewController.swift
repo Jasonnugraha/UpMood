@@ -7,11 +7,19 @@
 
 import UIKit
 
-protocol PageObservation: class {
+protocol OnboardingParentProtocol: class {
     func getParentPageViewController(parentRef: OnboardingPageViewController)
 }
 
 class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    var emotionEmoji: String!
+    var emotionDescription: String!
+    var reasons: [Labels]!
+    var notes: String?
+    
+    var causeOfFeelingEmojiArray :[String] = []
+    var causeOfFeelingDescArray :[String] = []
 
     lazy var orderedViewControllers: [UIViewController] = {
         
@@ -21,8 +29,16 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         let vc3 = sb.instantiateViewController(identifier: "onBoardingThird")
         let vc4 = sb.instantiateViewController(identifier: "onBoardingFourth")
         
-        let vc1withParent = vc1 as! PageObservation
+        // Parent Delegate Child
+        let vc1withParent = vc1 as! OnboardingParentProtocol
         vc1withParent.getParentPageViewController(parentRef: self)
+        
+        let vc2withParent = vc2 as! OnboardingParentProtocol
+        vc2withParent.getParentPageViewController(parentRef: self)
+        let vc3withParent = vc3 as! OnboardingParentProtocol
+        vc3withParent.getParentPageViewController(parentRef: self)
+        let vc4withParent = vc4 as! OnboardingParentProtocol
+        vc4withParent.getParentPageViewController(parentRef: self)
         
         var viewControllers = [UIViewController]()
         
@@ -103,10 +119,22 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
                 
         return orderedViewControllers[nextIndex]
     }
-    
+    //go to next page
+    func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
+            if let currentViewController = viewControllers?[0] {
+                if let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentViewController) {
+                    setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
+                }
+            }
+        }
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
+
+        print("pageControl", self.pageControl.currentPage)
+        if (self.pageControl.currentPage == 3) {
+            
+        }
 //        print("Current VC :", pageContentViewController)
 //        print("Prev VC :", previousViewControllers[0])
 //        print("Finished :", finished)
@@ -122,5 +150,45 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     func setDataSourceNil() {
         self.dataSource = nil
 //        self.delegate = nil
+    }
+    
+    func setFeeling(_emotionValue: Int, _emotionEmoji: String, _emotionDescription: String) {
+//        print("value", _emotionValue)
+//        print("emoji", _emotionEmoji)
+//        print("desc", _emotionDescription)
+        emotionEmoji = _emotionEmoji
+        emotionDescription = _emotionDescription
+    }
+    
+    func setReasons(_sender: [Labels]) {
+        reasons = _sender
+        print("reasons di parent :", _sender)
+        for item in reasons {
+            if (item.isChecked){
+                causeOfFeelingDescArray.append(item.reason)
+                causeOfFeelingEmojiArray.append(item.emojiLogo)
+            }
+        }
+    }
+    
+    func setNotes(_sender: String) {
+        notes = _sender
+    }
+    let contexts = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    func saveCurhat(){
+        
+        let curhatToSave = Curhat(context: self.contexts)
+        curhatToSave.emoji = emotionEmoji
+        curhatToSave.date = Date()
+        curhatToSave.desc = notes
+        curhatToSave.feeling = emotionDescription
+        curhatToSave.causeOfFeelingDesc = causeOfFeelingDescArray
+        curhatToSave.causeOfFeelingEmoji = causeOfFeelingEmojiArray
+        
+        do {
+            try contexts.save()
+        } catch  {
+            
+        }
     }
 }

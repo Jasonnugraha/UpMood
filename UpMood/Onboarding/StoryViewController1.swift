@@ -7,17 +7,24 @@
 
 import UIKit
 
-class StoryViewController1: UIViewController, PageObservation {
+class StoryViewController1: UIViewController, OnboardingParentProtocol {
     
     var parentPVC: OnboardingPageViewController!
     
-    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var emotionSlider: ReusableSlider!
+    
+    var emoji: String!
+    var desc: String!
     var slider: UISlider!
+    var emotionValue: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emotionSlider.horizontalSlider.value = 0
+        emotionValue = Int(emotionSlider.horizontalSlider.value);
+        emoji = emotionSlider.emot[Int(emotionSlider.horizontalSlider.value)]
+        desc = emotionSlider.labelemo[Int(emotionSlider.horizontalSlider.value)]
         nextBtn.layer.cornerRadius = 10
         slider = emotionSlider.horizontalSlider
         slider.addTarget(self, action: #selector(sliderValueDidChange(sender:)), for: .valueChanged)
@@ -25,17 +32,21 @@ class StoryViewController1: UIViewController, PageObservation {
     }
     
     @objc func sliderValueDidChange(sender: UISlider) {
-        print("sender value", sender.value)
+//        print("sender value", sender.value)
+        emotionValue = Int(sender.value)
+        emoji = emotionSlider.emot[emotionValue]
+        desc = emotionSlider.labelemo[emotionValue]
+        
     }
     
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
         parentPVC = parentRef
        
     }
-
     
-//    @IBAction func onNextBtnTap(_ sender: UIButton) {
-//        parentPVC.setDataSourceSelf()
-//    }
+    @IBAction func onNextBtnTap(_sender: UIButton) {
+        parentPVC.setFeeling(_emotionValue: emotionValue, _emotionEmoji: emoji, _emotionDescription: desc)
+        parentPVC.goToNextPage()
+    }
     
 }

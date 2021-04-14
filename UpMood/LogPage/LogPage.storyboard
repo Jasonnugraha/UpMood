@@ -70,9 +70,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Logs" largeTitleDisplayMode="always" id="a9m-Ym-z60">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="bvb-sC-Q8Q">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" style="plain" id="bvb-sC-Q8Q" customClass="Onboarding">
                             <connections>
-                                <segue destination="6cb-x7-Q7t" kind="show" id="fNY-MQ-zJb"/>
+                                <segue destination="90U-pc-MyP" kind="show" identifier="ButtonToOnboarding" id="pqx-Fb-dwT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -174,6 +174,26 @@
             </objects>
             <point key="canvasLocation" x="353" y="136"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="dv6-EB-rA4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="qzD-Ir-EUJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bVl-ek-Arv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUc-ty-fzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="-90"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="AtR-pt-FYI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="90U-pc-MyP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y71-uA-k5j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOk-Tl-kvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-440"/>
+        </scene>
         <!--Log Date View Controller-->
         <scene sceneID="tNx-QC-Dbl">
             <objects>
@@ -231,7 +251,7 @@
                     <navigationItem key="navigationItem" id="5v0-zf-Niz">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="igO-aH-rI6">
                             <connections>
-                                <segue destination="6cb-x7-Q7t" kind="show" id="rfr-eB-FRc"/>
+                                <segue destination="90U-pc-MyP" kind="show" id="LOP-f9-Sne"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -264,9 +284,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rfr-eB-FRc"/>
+        <segue reference="LOP-f9-Sne"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
