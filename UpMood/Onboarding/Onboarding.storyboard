@@ -156,7 +156,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="akc-YT-9dT"/>
                                     <action selector="onNextBtnTap:" destination="Gsk-4T-3KV" eventType="touchUpInside" id="wUh-41-WGv"/>
                                 </connections>
                             </button>
@@ -218,7 +217,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="TvC-Ur-cfA"/>
                                     <action selector="onNextBtnTap:" destination="o1d-M6-cys" eventType="touchUpInside" id="dzf-dz-zyg"/>
                                 </connections>
                             </button>

@@ -10,9 +10,11 @@ import UIKit
 class StoryViewController3: UIViewController, UITextViewDelegate {
 
     var parentPVC: OnboardingPageViewController!
+    var notes: String! = ""
+    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var notesText: UITextView!
-    var notes: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.layer.cornerRadius = 10
@@ -29,7 +31,12 @@ class StoryViewController3: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onNextBtnTap(_ sender: UIButton) {
-        parentPVC.setNotes(_sender: notes)
+        print("notes type", type(of: notes))
+        print("notes", notes)
+        print("notes!", notes!)
+        let temp = notes! as String
+        parentPVC.setNotes(_sender: temp)
+        
     }
     
 }

@@ -11,6 +11,7 @@ import Foundation
 class StoryViewController4: UIViewController {
     
 
+    var parentPVC: OnboardingPageViewController!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var summaryTableView: UITableView!
     @IBOutlet weak var notesLabel: UILabel!
@@ -29,6 +30,10 @@ class StoryViewController4: UIViewController {
             presentationController.delegate = self
         }
     }
+    
+    func getParentPageViewController(parentRef: OnboardingPageViewController) {
+        parentPVC = parentRef
+    }
 
 }
 
@@ -46,7 +51,6 @@ extension StoryViewController4: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell? =
             tableView.dequeueReusableCell(withIdentifier: "summaryCell", for: indexPath)
-//        cell = UITableViewCell(style: .subtitle, reuseIdentifier: "summaryCell")
         cell?.textLabel?.text = "Perasaaan iniii"
         cell?.detailTextLabel?.text = "Reasons terlalu banyak shay"
         return cell!

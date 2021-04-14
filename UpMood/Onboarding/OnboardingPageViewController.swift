@@ -16,7 +16,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     var emotionEmoji: String!
     var emotionDescription: String!
     var reasons: [Labels]!
-    var notes: String!
+    var notes: String?
 
     lazy var orderedViewControllers: [UIViewController] = {
         
@@ -129,16 +129,17 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
 //        self.delegate = nil
     }
     
-    func setFeeling(_sender: Int) {
-        print("sender", _sender)
+    func setFeeling(_emotionValue: Int, _emotionEmoji: String, _emotionDescription: String) {
+        print("value", _emotionValue)
+        print("emoji", _emotionEmoji)
+        print("desc", _emotionDescription)
     }
     
     func setReasons(_sender: [Labels]) {
         print("sender", _sender)
     }
     
-    func setNotes(_sender: String) {
+    func setNotes(_sender: String?) {
         print("sender", _sender)
     }
-    
 }

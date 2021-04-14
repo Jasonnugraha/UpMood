@@ -14,6 +14,8 @@ class StoryViewController1: UIViewController, PageObservation {
     
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var emotionSlider: ReusableSlider!
+    var emoji: String!
+    var desc: String!
     var slider: UISlider!
     var emotionValue: Int!
     
@@ -28,6 +30,9 @@ class StoryViewController1: UIViewController, PageObservation {
     @objc func sliderValueDidChange(sender: UISlider) {
 //        print("sender value", sender.value)
         emotionValue = Int(sender.value)
+        emoji = emotionSlider.emot[emotionValue]
+        desc = emotionSlider.labelemo[emotionValue]
+        
     }
     
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
@@ -36,7 +41,7 @@ class StoryViewController1: UIViewController, PageObservation {
     }
     
     @IBAction func onNextBtnTap(_sender: UIButton) {
-        parentPVC.setFeeling(_sender: emotionValue)
+        parentPVC.setFeeling(_emotionValue: emotionValue, _emotionEmoji: emoji, _emotionDescription: desc)
     }
     
 }
