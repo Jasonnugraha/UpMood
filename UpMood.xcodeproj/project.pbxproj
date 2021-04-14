@@ -244,9 +244,9 @@
 				701EE3C1261EEB8F004AB422 /* StoryViewController1.swift */,
 				701EE3C4261EEBAA004AB422 /* StoryViewController2.swift */,
 				701EE3C7261EEBB8004AB422 /* StoryViewController3.swift */,
+				FB5890702625575C0079D4A0 /* StoryViewController4.swift */,
 				70996A05261EF7840050DA28 /* OnboardingPageViewController.swift */,
 				70996A08261F052D0050DA28 /* StartOnboardingViewController.swift */,
-				FB5890702625575C0079D4A0 /* StoryViewController4.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";

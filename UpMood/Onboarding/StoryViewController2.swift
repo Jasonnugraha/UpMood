@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 protocol StoryViewController2Delegate {
     func reasonDidSelected(indexPath: IndexPath?)
@@ -16,8 +17,17 @@ protocol StoryViewController2Delegate {
 class StoryViewController2: UIViewController, PageObservation {
     
     var parentPVC: OnboardingPageViewController!
-    var dataSeed: [Labels] = [Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
-                               Labels(isChecked: true, emojiLogo: "📚", reason: "Study")]
+    var dataSeed: [Labels] = [
+        Labels(isChecked: false, emojiLogo: "👯", reason: "Friends"),
+        Labels(isChecked: false, emojiLogo: "👨‍👨‍👧‍👦", reason: "Family"),
+        Labels(isChecked: false, emojiLogo: "👤", reason: "Self"),
+        Labels(isChecked: false, emojiLogo: "❤️", reason: "Relationship"),
+        Labels(isChecked: false, emojiLogo: "🏫", reason: "University Environment"),
+        Labels(isChecked: false, emojiLogo: "👥", reason: "Organizations"),
+        Labels(isChecked: false, emojiLogo: "📖", reason: "Study"),
+        Labels(isChecked: false, emojiLogo: "💼", reason: "Work"),
+        Labels(isChecked: false, emojiLogo: "📚", reason: "Assignments")
+    ]
     
     
     @IBOutlet weak var emotionTableView: UITableView!
@@ -36,6 +46,26 @@ class StoryViewController2: UIViewController, PageObservation {
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//
+//        // Get NSManagedObjectContext
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//
+//        // Fetch from Core Data with NSFetchRequest
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LabelsCoreData")
+//
+//        // Hand the Request to the Managed Object Context
+//        do {
+//            let labels = try managedContext.fetch(fetchRequest)
+//            print("labels :", labels)
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
     }
     
 }
@@ -75,6 +105,7 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
 
 extension StoryViewController2: StoryViewController2Delegate {
     func reasonDidSelected(indexPath: IndexPath?) {
+        //
         print("\(dataSeed[indexPath?.row ?? 0])")
     }
     
