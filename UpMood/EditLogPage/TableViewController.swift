@@ -79,6 +79,7 @@ class TableViewController: UIViewController {
             let deletebutton = UIAlertAction(title: "Delete Log", style: .destructive){ (action) in
                 //self.navigationController?.pushViewController(UIViewController(), animated: true)
                 self.deleteContent()
+                self.dismiss(animated: true, completion: nil)
             }
             alertController.addAction(cancelbutton)
             alertController.addAction(deletebutton)
