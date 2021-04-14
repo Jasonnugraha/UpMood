@@ -80,11 +80,12 @@
                     <connections>
                         <outlet property="tableSavedData" destination="Y9z-m5-zUy" id="vNB-m2-ube"/>
                         <segue destination="OMg-q2-7RE" kind="show" identifier="LogDateIdentifier" id="LHl-aC-JWX"/>
+                        <segue destination="XSc-FG-c4I" kind="show" identifier="gotoOnboarding" id="hr0-3u-NSk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-229.23076923076923" y="-154.26540284360189"/>
+            <point key="canvasLocation" x="-165" y="-50"/>
         </scene>
         <!--Fill Data View Controller-->
         <scene sceneID="Td8-Wf-D6P">
@@ -161,7 +162,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMM-A4-d16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400" y="-21"/>
+            <point key="canvasLocation" x="1392" y="-21"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="MMT-50-RKl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="XSc-FG-c4I" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LLJ-E9-6lS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMc-II-CSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="136"/>
         </scene>
         <!--Main-->
         <scene sceneID="dv6-EB-rA4">
@@ -237,11 +248,12 @@
                     <connections>
                         <outlet property="tableDisplayDate" destination="FrI-eK-Yx6" id="pWa-ZE-dXk"/>
                         <segue destination="qzD-Ir-EUJ" kind="show" identifier="EditLogDate" id="feK-PT-0dl"/>
+                        <segue destination="xxw-UU-jBw" kind="show" identifier="summaryView" id="iwx-xx-uoR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aC-5U-qIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.76923076923072" y="-154.26540284360189"/>
+            <point key="canvasLocation" x="723" y="-99"/>
         </scene>
         <!--Logs-->
         <scene sceneID="tDh-55-tcC">
@@ -263,7 +275,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rfr-eB-FRc"/>
+        <segue reference="fNY-MQ-zJb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

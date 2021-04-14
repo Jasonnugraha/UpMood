@@ -66,7 +66,7 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.curhatanHariIni = listTodayCurhat?[indexPath.row]
-        performSegue(withIdentifier: "EditLogDate", sender: self)
+        performSegue(withIdentifier: "summaryView", sender: self)
     }
     
 
@@ -75,9 +75,9 @@ class LogDateViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     // kirim data 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "EditLogDate"){
-            let destinationVC = segue.destination as! TableViewController
-            destinationVC.curhat = self.curhatanHariIni
+        if(segue.identifier == "summaryView"){
+            let destinationVC = segue.destination as! FirstViewController
+            destinationVC.summary = self.curhatanHariIni
         } else {
             return
         }

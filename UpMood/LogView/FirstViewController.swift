@@ -18,12 +18,12 @@ class FirstViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var backEmo: UIImageView!
     @IBOutlet weak var emot: UIImageView!
     @IBOutlet weak var feelingsToday: UILabel!
-    
-    
+    @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var tableCellFeelings: UITableView!
+    @IBOutlet weak var emoticon: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var summary: [Curhat]?
+    var summary: Curhat?
     //var temp: String?
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         //MARK - Default Emot
         let defaultEmot = "☺️".textToImage()
-        emot.image = defaultEmot
+        //emot.image = defaultEmot
         
         //let temp = feelings[index(ofAccessibilityElement: <#T##Any#>)]
         //let tempEmot = temp?.textToImage()
@@ -47,6 +47,18 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         let tempDetail = dakta.detailemot
         cell.textLabel?.text = tempDetail
  */
+        //MARK - Date
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+//        formatter.dateStyle = .short
+        labelTime.text = formatter.string(from: (summary?.date)!)
+        
+        //Mark - Feelings & Emot
+        feelingsToday.text = summary?.feeling
+        emoticon.text = summary?.emoji
+        
+        //Mark - textViewArea
+        textViewArea.text = summary?.desc
         
         //MARK - Table Cell BecauseOf
         tableCellFeelings.delegate = self
