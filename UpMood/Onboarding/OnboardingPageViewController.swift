@@ -12,6 +12,11 @@ protocol PageObservation: class {
 }
 
 class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    var emotionEmoji: String!
+    var emotionDescription: String!
+    var reasons: [Labels]!
+    var notes: String!
 
     lazy var orderedViewControllers: [UIViewController] = {
         
@@ -123,4 +128,17 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         self.dataSource = nil
 //        self.delegate = nil
     }
+    
+    func setFeeling(_sender: Int) {
+        print("sender", _sender)
+    }
+    
+    func setReasons(_sender: [Labels]) {
+        print("sender", _sender)
+    }
+    
+    func setNotes(_sender: String) {
+        print("sender", _sender)
+    }
+    
 }

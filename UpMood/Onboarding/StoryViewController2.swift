@@ -28,8 +28,7 @@ class StoryViewController2: UIViewController, PageObservation {
         Labels(isChecked: false, emojiLogo: "💼", reason: "Work"),
         Labels(isChecked: false, emojiLogo: "📚", reason: "Assignments")
     ]
-    
-    
+    var reasons: [Labels] = []
     @IBOutlet weak var emotionTableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     
@@ -50,22 +49,16 @@ class StoryViewController2: UIViewController, PageObservation {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//
-//        // Get NSManagedObjectContext
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        // Fetch from Core Data with NSFetchRequest
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LabelsCoreData")
-//
-//        // Hand the Request to the Managed Object Context
-//        do {
-//            let labels = try managedContext.fetch(fetchRequest)
-//            print("labels :", labels)
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
+    }
+    
+    @IBAction func onNextBtnTap(_ sender: UIButton) {
+        for reason in dataSeed {
+            if (reason.isChecked == true) {
+                reasons.append(reason)
+            }
+        }
+        print("reasons: ", reasons)
+//        parentPVC.setReasons(_sender: reasons)
     }
     
 }
@@ -104,10 +97,12 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension StoryViewController2: StoryViewController2Delegate {
+    
     func reasonDidSelected(indexPath: IndexPath?) {
-        //
-        print("\(dataSeed[indexPath?.row ?? 0])")
+//        print("Before : \(dataSeed[indexPath?.row ?? 0])")
+        // Change the value
+        dataSeed[indexPath?.row ?? 0].isChecked = !dataSeed[indexPath?.row ?? 0].isChecked
+//        print("After : \(dataSeed[indexPath?.row ?? 0])")
+
     }
-    
-    
 }

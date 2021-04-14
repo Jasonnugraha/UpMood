@@ -100,9 +100,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="kHi-nK-CPB"/>
-                                    <action selector="onNextBtnTap:" destination="2EV-6u-znl" eventType="touchUpInside" id="pFC-XS-bij"/>
-                                    <action selector="onNextBtnTap:" destination="vyj-WL-pLS" eventType="touchUpInside" id="r1Z-Zv-hW4"/>
+                                    <action selector="onNextBtnTapWith_sender:" destination="vyj-WL-pLS" eventType="touchUpInside" id="Lre-0H-qsd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2X-V2-mrV">
@@ -127,7 +125,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Niv-f5-HCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="2EV-6u-znl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-129.23076923076923" y="573.69668246445497"/>
         </scene>
@@ -160,6 +157,7 @@
                                 </state>
                                 <connections>
                                     <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="akc-YT-9dT"/>
+                                    <action selector="onNextBtnTap:" destination="Gsk-4T-3KV" eventType="touchUpInside" id="wUh-41-WGv"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vsC-il-HO3">
@@ -221,6 +219,7 @@
                                 </state>
                                 <connections>
                                     <action selector="actionNextButton:" destination="uc2-f6-hEP" eventType="touchUpInside" id="TvC-Ur-cfA"/>
+                                    <action selector="onNextBtnTap:" destination="o1d-M6-cys" eventType="touchUpInside" id="dzf-dz-zyg"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-Tt-vg8">
@@ -277,28 +276,8 @@
                                     <segue destination="BKw-Ys-CeC" kind="show" id="D8B-zG-CZs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-EX-Zj6">
-                                <rect key="frame" x="133" y="109" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click for surprise">
-                                    <color key="titleColor" red="0.3411764706" green="0.42352941179999998" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JdB-sd-lCI" kind="popoverPresentation" popoverAnchorView="nAr-EX-Zj6" id="pHN-0n-KGX">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7t-No-kQb">
-                                <rect key="frame" x="26" y="508" width="346" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-Zo-RQb">
-                                <rect key="frame" x="26" y="378" width="346" height="113"/>
+                                <rect key="frame" x="26" y="411" width="346" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -328,6 +307,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7t-No-kQb">
+                                <rect key="frame" x="26" y="508" width="346" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-EX-Zj6">
+                                <rect key="frame" x="137" y="327" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click for surprise">
+                                    <color key="titleColor" red="0.3411764706" green="0.42352941179999998" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JdB-sd-lCI" kind="popoverPresentation" popoverAnchorView="nAr-EX-Zj6" id="pHN-0n-KGX">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yL4-Mz-8zG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

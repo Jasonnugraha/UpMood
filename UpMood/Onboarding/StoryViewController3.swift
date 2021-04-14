@@ -9,6 +9,7 @@ import UIKit
 
 class StoryViewController3: UIViewController, UITextViewDelegate {
 
+    var parentPVC: OnboardingPageViewController!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var notesText: UITextView!
     var notes: String!
@@ -22,5 +23,13 @@ class StoryViewController3: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         notes = textView.text
     }
-
+    
+    func getParentPageViewController(parentRef: OnboardingPageViewController) {
+        parentPVC = parentRef
+    }
+    
+    @IBAction func onNextBtnTap(_ sender: UIButton) {
+        parentPVC.setNotes(_sender: notes)
+    }
+    
 }

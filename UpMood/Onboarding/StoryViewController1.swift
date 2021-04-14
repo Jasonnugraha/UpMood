@@ -15,6 +15,7 @@ class StoryViewController1: UIViewController, PageObservation {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var emotionSlider: ReusableSlider!
     var slider: UISlider!
+    var emotionValue: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +26,17 @@ class StoryViewController1: UIViewController, PageObservation {
     }
     
     @objc func sliderValueDidChange(sender: UISlider) {
-        print("sender value", sender.value)
+//        print("sender value", sender.value)
+        emotionValue = Int(sender.value)
     }
     
     func getParentPageViewController(parentRef: OnboardingPageViewController) {
         parentPVC = parentRef
        
     }
-
     
-//    @IBAction func onNextBtnTap(_ sender: UIButton) {
-//        parentPVC.setDataSourceSelf()
-//    }
+    @IBAction func onNextBtnTap(_sender: UIButton) {
+        parentPVC.setFeeling(_sender: emotionValue)
+    }
     
 }
