@@ -93,6 +93,8 @@ class TableViewController: UIViewController {
         emotionTableView.dataSource = self
         reusableSlider.delegate = self
         editedTextView.text = curhat?.desc
+        editedTextView.layer.cornerRadius = 8
+        editedTextView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         NotificationCenter.default.addObserver(self, selector: #selector(self.functionName), name: NSNotification.Name(rawValue: "NotificationID"), object: nil)
         
         print("hello")

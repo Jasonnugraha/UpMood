@@ -42,6 +42,7 @@ class StoryViewController2: UIViewController, OnboardingParentProtocol {
         emotionTableView.register(ReusableReasonCell.nib(), forCellReuseIdentifier: ReusableReasonCell.identifier)
         emotionTableView.delegate = self
         emotionTableView.dataSource = self
+        emotionTableView.setCorner(radius: 8)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,12 +80,12 @@ extension StoryViewController2: UITableViewDelegate, UITableViewDataSource {
 
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("select")
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard let cell = tableView.cellForRow(at: indexPath) as? ReusableReasonCell else { return }
-        cell.isChecked = true
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("select")
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        guard let cell = tableView.cellForRow(at: indexPath) as? ReusableReasonCell else { return }
+//        cell.isChecked = true
+//    }
     
     @objc func buttonTap(sender: UIButton) {
         print("tapped")

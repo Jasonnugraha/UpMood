@@ -45,7 +45,8 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         super.viewWillAppear(animated)
         print( "viewWillAppear is Called")
         textViewArea.delegate = self
-        textViewArea.layer.cornerRadius = 10
+        textViewArea.layer.cornerRadius = 8
+        textViewArea.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         textViewArea.text = "Today I feel realy good, I had a good sleep and woke up feeling refreshed. My family also prepared a nice breakfast. We had a nice meal together and then I felt to meet friends. We talked the entire time we ere on the bus until we both reached our destinations. What a good way to start the day!"
         
         
