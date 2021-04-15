@@ -75,7 +75,7 @@
         <!--First View Controller-->
         <scene sceneID="I6A-ic-hdt">
             <objects>
-                <viewController storyboardIdentifier="pageLog1" id="J5r-I2-6bE" customClass="FirstViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pageLog1" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="J5r-I2-6bE" customClass="FirstViewController" customModule="UpMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbC-8j-yqj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
