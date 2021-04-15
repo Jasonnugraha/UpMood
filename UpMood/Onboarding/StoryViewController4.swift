@@ -17,7 +17,8 @@ class StoryViewController4: UIViewController, OnboardingParentProtocol {
     @IBOutlet weak var notesLabel: UITextView!
     var emotion: String! = "Today you feel"
     var notes: String! = "Huhuhu"
-    var reasons: Array<Labels>! = []
+    var reasons: Array<String>! = []
+    var allReasons: String! = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,14 @@ class StoryViewController4: UIViewController, OnboardingParentProtocol {
     
     func getDataFromParent() {
         emotion = parentPVC.emotionDescription
+        reasons = parentPVC.causeOfFeelingDescArray
+        for i in 0..<reasons.count {
+            if (i == 0) {
+                allReasons += reasons[i]
+            } else if (i > 0 && i < reasons.count) {
+                allReasons += ", \(reasons[i])"
+            }
+        }
     }
 
 }
@@ -65,7 +74,7 @@ extension StoryViewController4: UITableViewDataSource, UITableViewDelegate {
         let cell:UITableViewCell? =
             tableView.dequeueReusableCell(withIdentifier: "summaryCell", for: indexPath)
         cell?.textLabel?.text = "Today you feel "+emotion
-        cell?.detailTextLabel?.text = emotion
+        cell?.detailTextLabel?.text = allReasons!
         return cell!
     }
 }
