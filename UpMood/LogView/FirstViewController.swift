@@ -83,7 +83,6 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         
         backgroundEmot()
-        feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         
     }
     override func viewDidLoad() {
@@ -127,39 +126,48 @@ class FirstViewController: UIViewController, UITextViewDelegate{
         
         
         backgroundEmot()
-        feelingsToday.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         
     }
     func backgroundEmot(){
         let tempBackgroundEmot = summary?.feeling
-        if tempBackgroundEmot == "calm"{
+    
+        if tempBackgroundEmot == "Calm"{
             backEmo.image = #imageLiteral(resourceName: "01-calm")
-            //feelingsToday.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            feelingsToday.textColor = #colorLiteral(red: 0.2470588235, green: 0.6117647059, blue: 0.9137254902, alpha: 1)
         } else if tempBackgroundEmot == "comfortable"{
             backEmo.image = #imageLiteral(resourceName: "02-comfortable")
+            feelingsToday.textColor = #colorLiteral(red: 0.2745098039, green: 0.5607843137, blue: 0.9176470588, alpha: 1)
         }
-        else if tempBackgroundEmot == "okay"{
+        else if tempBackgroundEmot == "Okay"{
             backEmo.image = #imageLiteral(resourceName: "03-okay")
+            feelingsToday.textColor = #colorLiteral(red: 0.2980392157, green: 0.5098039216, blue: 0.9176470588, alpha: 1)
         }
-        else if tempBackgroundEmot == "annoyed"{
+        else if tempBackgroundEmot == "Annoyed"{
             backEmo.image = #imageLiteral(resourceName: "04-annoyed")
+            feelingsToday.textColor = #colorLiteral(red: 0.3137254902, green: 0.462745098, blue: 0.9215686275, alpha: 1)
         }
-        else if tempBackgroundEmot == "nervous"{
+        else if tempBackgroundEmot == "Nervous"{
             backEmo.image = #imageLiteral(resourceName: "05-nervous")
+            feelingsToday.textColor = #colorLiteral(red: 0.3333333333, green: 0.4117647059, blue: 0.9215686275, alpha: 1)
         }
-        else if tempBackgroundEmot == "anxious"{
+        else if tempBackgroundEmot == "Anxious"{
             backEmo.image = #imageLiteral(resourceName: "06-anxious")
+            feelingsToday.textColor = #colorLiteral(red: 0.3450980392, green: 0.3607843137, blue: 0.9215686275, alpha: 1)
         }
-        else if tempBackgroundEmot == "worried"{
+        else if tempBackgroundEmot == "Worried"{
             backEmo.image = #imageLiteral(resourceName: "07-worried")
+            feelingsToday.textColor = #colorLiteral(red: 0.3607843137, green: 0.3215686275, blue: 0.9254901961, alpha: 1)
         }
-        else if tempBackgroundEmot == "fearful"{
+        else if tempBackgroundEmot == "Fearful"{
             backEmo.image = #imageLiteral(resourceName: "08-fearful")
+            feelingsToday.textColor = #colorLiteral(red: 0.4156862745, green: 0.3176470588, blue: 0.9215686275, alpha: 1)
         }
-        else if tempBackgroundEmot == "panicked"{
+        else if tempBackgroundEmot == "Panicked"{
             backEmo.image = #imageLiteral(resourceName: "09-panicked")
+            feelingsToday.textColor = #colorLiteral(red: 0.4705882353, green: 0.3176470588, blue: 0.9215686275, alpha: 1)
         }else {
             backEmo.image = #imageLiteral(resourceName: "09-panicked")
+            feelingsToday.textColor = #colorLiteral(red: 0.4705882353, green: 0.3176470588, blue: 0.9215686275, alpha: 1)
         }
         
     }
